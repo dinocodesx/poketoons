@@ -103,13 +103,6 @@ export function BoxManagement({
       />
 
       <div className="box-management__content">
-        <BoxGrid
-          boxIndex={currentBoxIndex}
-          entries={currentBox}
-          selectedLocation={selectedLocation}
-          onSlotClick={handleSlotClick}
-        />
-
         <BoxSidebar
           currentBoxIndex={currentBoxIndex}
           onBoxChange={setCurrentBoxIndex}
@@ -117,6 +110,13 @@ export function BoxManagement({
           canRelease={!!selectedLocation}
           selectedText={selectedText}
           onClose={onClose}
+        />
+
+        <BoxGrid
+          boxIndex={currentBoxIndex}
+          entries={currentBox}
+          selectedLocation={selectedLocation}
+          onSlotClick={handleSlotClick}
         />
       </div>
     </div>
