@@ -22,7 +22,7 @@
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
         var(--panel-bg);
-    border-radius: 24px;
+    border-radius: 0;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
@@ -71,7 +71,7 @@
     width: 100%;
     height: 10px;
     margin-top: 28px;
-    border-radius: 999px;
+    border-radius: 0;
     overflow: hidden;
     background: var(--surface-muted);
     border: 1px solid var(--panel-border);
@@ -116,7 +116,7 @@
 
 .text-input {
     border: 1px solid var(--panel-border);
-    border-radius: 16px;
+    border-radius: 0;
     background: var(--surface-muted);
     padding: 14px 16px;
     color: var(--text-primary);
@@ -139,7 +139,7 @@
 .starter-option {
     border: 1px solid var(--panel-border);
     background: var(--surface-muted);
-    border-radius: 18px;
+    border-radius: 0;
     padding: 18px;
     display: flex;
     flex-direction: column;
@@ -167,7 +167,7 @@
 
 .primary-button,
 .secondary-button {
-    border-radius: 16px;
+    border-radius: 0;
     padding: 12px 18px;
     border: 1px solid var(--panel-border-strong);
     transition:
@@ -217,7 +217,7 @@
     align-items: center;
     gap: 12px;
     padding: 12px 14px;
-    border-radius: 999px;
+    border-radius: 0;
     background: var(--surface-muted);
     border: 1px solid var(--panel-border);
 }
@@ -225,7 +225,7 @@
 .status-dot {
     width: 10px;
     height: 10px;
-    border-radius: 999px;
+    border-radius: 0;
     background: #6a6a72;
 }
 
@@ -240,7 +240,7 @@
 
 .encounter-card {
     gap: 20px;
-    border-radius: 20px;
+    border-radius: 0;
     border: 1px solid var(--panel-border);
     background: var(--surface-muted);
     padding: 18px;
@@ -248,7 +248,7 @@
 
 .encounter-card__media {
     width: min(240px, 42%);
-    border-radius: 18px;
+    border-radius: 0;
     background:
         radial-gradient(
             circle at top,
@@ -288,7 +288,7 @@
 
 .encounter-meta > div {
     border: 1px solid var(--panel-border);
-    border-radius: 14px;
+    border-radius: 0;
     background: #09090c;
     padding: 12px;
     min-width: 112px;
@@ -304,7 +304,7 @@
 .encounter-empty,
 .empty-state {
     border: 1px dashed var(--panel-border);
-    border-radius: 18px;
+    border-radius: 0;
     padding: 22px;
     text-align: center;
     background: rgba(255, 255, 255, 0.02);
@@ -319,7 +319,7 @@
 }
 
 .guess-feedback {
-    border-radius: 16px;
+    border-radius: 0;
     padding: 12px 14px;
     border: 1px solid transparent;
 }
@@ -348,13 +348,13 @@
     gap: 16px;
     align-items: center;
     padding: 14px 16px;
-    border-radius: 18px;
+    border-radius: 0;
     border: 1px solid var(--panel-border);
     background: var(--surface-muted);
 }
 
 .history-badge {
-    border-radius: 999px;
+    border-radius: 0;
     padding: 8px 12px;
     text-transform: uppercase;
     font-size: 0.72rem;
@@ -380,7 +380,7 @@
 .collection-card {
     gap: 14px;
     border: 1px solid var(--panel-border);
-    border-radius: 18px;
+    border-radius: 0;
     background: var(--surface-muted);
     padding: 14px;
     align-items: center;
@@ -415,7 +415,7 @@
 
 .rule-list li {
     padding: 14px 16px;
-    border-radius: 16px;
+    border-radius: 0;
     border: 1px solid var(--panel-border);
     background: var(--surface-muted);
 }
@@ -435,7 +435,7 @@
     .loading-screen__panel,
     .setup-panel {
         padding: 18px;
-        border-radius: 20px;
+        border-radius: 0;
     }
 
     .session-panel__content,

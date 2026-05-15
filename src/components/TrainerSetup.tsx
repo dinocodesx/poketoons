@@ -98,7 +98,7 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
                 padding: "12px",
                 background: "var(--error)",
                 color: "var(--error-border)",
-                borderRadius: "8px",
+                borderRadius: 0,
                 border: "1px solid var(--error-border)",
                 textAlign: "center",
                 fontWeight: "bold",
@@ -117,7 +117,7 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
           width: "min(760px, 100%)",
           background: "var(--panel-bg)",
           border: "1px solid var(--panel-border)",
-          borderRadius: "12px",
+          borderRadius: 0,
           padding: "16px",
         }}
       >
