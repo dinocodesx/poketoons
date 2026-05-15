@@ -121,10 +121,29 @@ export function useGameSession() {
     }
 
     if (!isCorrectPokemonGuess(guess, pokemon)) {
+      const newMistakes = state.activeEncounter.mistakes + 1;
+
+      if (newMistakes >= 3) {
+        dispatch({
+          type: "MISS_ENCOUNTER",
+          payload: { resolvedAt: Date.now() },
+        });
+
+        return {
+          accepted: true,
+          correct: false,
+          message: `Too many mistakes! ${formatPokemonName(
+            pokemon.name,
+          )} ran away.`,
+        };
+      }
+
+      dispatch({ type: "RECORD_MISTAKE" });
+
       return {
         accepted: true,
         correct: false,
-        message: "That name does not match this Pokemon.",
+        message: `That name does not match this Pokemon. (${newMistakes}/3)`,
       };
     }
 

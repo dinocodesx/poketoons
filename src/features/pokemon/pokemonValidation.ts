@@ -11,8 +11,8 @@ export function validatePokemonData(
   catalog: PokemonCatalogEntry[],
   buckets: RarityBucket[],
 ): void {
-  // 1. Ensure all catalog entries are within Pokedex 1-251
-  const invalidIds = catalog.filter((p) => p.id < 1 || p.id > 251);
+  // 1. Ensure all catalog entries are within Pokedex 1-493
+  const invalidIds = catalog.filter((p) => p.id < 1 || p.id > 493);
 
   if (invalidIds.length > 0) {
     throw new Error(
@@ -54,16 +54,16 @@ export function validatePokemonData(
     );
   }
 
-  // 5. Ensure there are always some Pokemon available at catch level 0 (common bucket)
-  const commonBucket = buckets.find((b) => b.key === "common");
-  if (commonBucket) {
-    const level0Count = commonBucket.pokemonIds.filter((id) => {
+  // 5. Ensure there are always some Pokemon available at catch level 0 (early_route bucket)
+  const earlyRouteBucket = buckets.find((b) => b.key === "early_route");
+  if (earlyRouteBucket) {
+    const level0Count = earlyRouteBucket.pokemonIds.filter((id) => {
       const p = catalog.find((entry) => entry.id === id);
       return p && p.minCatchLevel === 0;
     }).length;
 
     if (level0Count === 0) {
-      throw new Error("No Pokemon available in common bucket at catch level 0.");
+      throw new Error("No Pokemon available in early_route bucket at catch level 0.");
     }
   }
 }

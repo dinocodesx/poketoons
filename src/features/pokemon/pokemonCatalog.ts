@@ -26,9 +26,24 @@ export function getPokemonById(id: number): PokemonCatalogEntry | undefined {
 }
 
 /**
- * The specific Pokemon IDs traditionally offered as starters in Generation 1.
+ * Retrieves a rarity bucket by its key.
+ * 
+ * @param key - The rarity key to find.
+ * @returns The bucket, or undefined if not found.
  */
-const STARTER_IDS = [1, 4, 7]; // Bulbasaur, Charmander, Squirtle
+export function getBucketByKey(key: string): RarityBucket | undefined {
+  return rarityBuckets.find((b) => b.key === key);
+}
+
+/**
+ * The specific Pokemon IDs traditionally offered as starters in Generations 1-4.
+ */
+const STARTER_IDS = [
+  1, 4, 7, // Gen 1
+  152, 155, 158, // Gen 2
+  252, 255, 258, // Gen 3
+  387, 390, 393, // Gen 4
+];
 
 /**
  * The catalog entries for the available starter choices.

@@ -3,7 +3,7 @@ import type { PokemonCatalogEntry } from "../pokemon/pokemonTypes";
 /**
  * Represents the current status of an encounter.
  */
-export type EncounterStatus = "active" | "caught" | "missed";
+export type EncounterStatus = "active" | "caught" | "missed" | "fleeing";
 
 /**
  * Represents the current status of a game session.
@@ -13,7 +13,7 @@ export type SessionStatus = "idle" | "active" | "ended";
 /**
  * The possible outcomes of an encounter.
  */
-export type CatchResult = "caught" | "missed";
+export type CatchResult = "caught" | "missed" | "fleeing";
 
 /**
  * Profile data for the player (Trainer).
@@ -57,6 +57,8 @@ export interface ActiveEncounter {
   expiresAt: number;
   /** Current state of the encounter. */
   status: EncounterStatus;
+  /** Number of incorrect guesses in this encounter. */
+  mistakes: number;
 }
 
 /**

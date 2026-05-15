@@ -36,7 +36,9 @@ export function CatchHistoryPanel({
               className={`history-badge ${
                 entry.result === "caught"
                   ? "history-badge--caught"
-                  : "history-badge--missed"
+                  : entry.result === "missed"
+                  ? "history-badge--missed"
+                  : "history-badge--fleeing"
               }`}
             >
               {entry.result}

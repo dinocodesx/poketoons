@@ -36,8 +36,10 @@ export function useGameLoop(
         currentState.activeEncounter &&
         now >= currentState.activeEncounter.expiresAt
       ) {
+        const hasAttempted = currentState.activeEncounter.mistakes > 0;
+        
         dispatch({
-          type: "MISS_ENCOUNTER",
+          type: hasAttempted ? "MISS_ENCOUNTER" : "FLEE_ENCOUNTER",
           payload: { resolvedAt: currentState.activeEncounter.expiresAt },
         });
         return;

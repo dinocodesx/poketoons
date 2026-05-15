@@ -41,6 +41,11 @@ export function EncounterCard({
       </div>
       <div className="encounter-card__details">
         <CountdownTimer label={timer.label} value={timer.displayValue} />
+        {encounter.mistakes > 0 && (
+          <p className="text-error text-[0.8rem] uppercase tracking-wider mt-2">
+            Mistakes: {encounter.mistakes}/3
+          </p>
+        )}
       </div>
     </article>
   );

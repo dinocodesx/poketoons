@@ -351,6 +351,10 @@
         @apply bg-[rgba(169,116,116,0.15)] text-error;
     }
 
+    .history-badge--fleeing {
+        @apply bg-[rgba(240,230,140,0.15)] text-[#f0e68c];
+    }
+
     .collection-grid {
         @apply flex flex-col gap-1.5 h-full;
     }

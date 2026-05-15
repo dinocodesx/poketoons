@@ -16,6 +16,7 @@ import type {
   StorageLocation,
 } from "./gameTypes";
 import { loadPersistedGameState } from "./gameStorage";
+import { getPokemonById, getBucketByKey } from "../pokemon/pokemonCatalog";
 
 /**
  * Helper to create an empty party.
@@ -118,12 +119,25 @@ interface CatchEncounterAction {
   };
 }
 
-/** Action to record a missed encounter (time ran out). */
+/** Action to record a missed encounter (too many mistakes). */
 interface MissEncounterAction {
   type: "MISS_ENCOUNTER";
   payload: {
     resolvedAt: number;
   };
+}
+
+/** Action to record a fleeing encounter (time ran out without attempt). */
+interface FleeEncounterAction {
+  type: "FLEE_ENCOUNTER";
+  payload: {
+    resolvedAt: number;
+  };
+}
+
+/** Action to record an incorrect guess. */
+interface RecordMistakeAction {
+  type: "RECORD_MISTAKE";
 }
 
 /** Action to move a Pokemon from one slot to another (Party <-> Box or Box <-> Box). */
@@ -152,6 +166,8 @@ export type GameAction =
   | SpawnEncounterAction
   | CatchEncounterAction
   | MissEncounterAction
+  | FleeEncounterAction
+  | RecordMistakeAction
   | MovePokemonAction
   | ReleasePokemonAction;
 
@@ -192,12 +208,13 @@ function applyPartyLevelUp(party: (OwnedPokemon | null)[]) {
 }
 
 /**
- * Pure helper to transition the state into a missed encounter state.
+ * Pure helper to transition the state into a resolved (non-caught) encounter state.
  * Shared between manual resolution and timer-based resolution.
  */
-export function applyMissedEncounterState(
+export function applyResolvedEncounterState(
   state: PersistedGameState,
   resolvedAt: number,
+  result: "missed" | "fleeing",
 ): PersistedGameState {
   if (!state.activeEncounter) {
     return state;
@@ -206,7 +223,7 @@ export function applyMissedEncounterState(
   const historyEntry = buildHistoryEntry(
     state.activeEncounter.encounterId,
     state.activeEncounter.pokemonId,
-    "missed",
+    result,
     resolvedAt,
     state.currentSession?.sessionId ?? null,
   );
@@ -247,10 +264,14 @@ function handleCatchEncounter(state: GameState, action: CatchEncounterAction): G
     return state;
   }
 
+  const pokemon = getPokemonById(state.activeEncounter.pokemonId);
+  const bucket = pokemon ? getBucketByKey(pokemon.group) : undefined;
+  const initialLevel = bucket?.minLevel ?? WILD_POKEMON_BASE_LEVEL;
+
   const newPokemon: OwnedPokemon = {
     instanceId: action.payload.ownedPokemonInstanceId,
     pokemonId: state.activeEncounter.pokemonId,
-    level: WILD_POKEMON_BASE_LEVEL,
+    level: initialLevel,
     caughtAt: action.payload.resolvedAt,
     caughtInSessionId: state.currentSession?.sessionId ?? null,
   };
@@ -443,6 +464,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           startedAt: action.payload.startedAt,
           expiresAt: action.payload.expiresAt,
           status: "active",
+          mistakes: 0,
         },
       };
 
@@ -478,6 +500,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
           startedAt: action.payload.startedAt,
           expiresAt: action.payload.expiresAt,
           status: "active",
+          mistakes: 0,
         },
       };
 
@@ -486,8 +509,24 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
 
     case "MISS_ENCOUNTER":
       return {
-        ...applyMissedEncounterState(state, action.payload.resolvedAt),
+        ...applyResolvedEncounterState(state, action.payload.resolvedAt, "missed"),
         isHydrating: state.isHydrating,
+      };
+
+    case "FLEE_ENCOUNTER":
+      return {
+        ...applyResolvedEncounterState(state, action.payload.resolvedAt, "fleeing"),
+        isHydrating: state.isHydrating,
+      };
+
+    case "RECORD_MISTAKE":
+      if (!state.activeEncounter) return state;
+      return {
+        ...state,
+        activeEncounter: {
+          ...state.activeEncounter,
+          mistakes: state.activeEncounter.mistakes + 1,
+        },
       };
 
     case "MOVE_POKEMON":
