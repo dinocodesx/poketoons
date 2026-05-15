@@ -1,8 +1,6 @@
 # PokéToons
 
-A sleek, local-first Pokémon catching game built with React, TypeScript, and Vite. PokéToons focuses on the first 251 Pokémon (Generations I and II), offering a fast-paced, guessing-based gameplay experience with a minimalist dark aesthetic.
-
-![PokéToons Dashboard](./src/assets/hero.png)
+A sleek, local-first Pokémon catching game built with React, TypeScript, and Vite. PokéToons focuses on offering a fast-paced, guessing-based gameplay experience with a minimalist dark aesthetic.
 
 ## 🎮 The Game
 
@@ -19,6 +17,7 @@ In PokéToons, your goal is simple: **Identify and catch 'em all.**
 - **Local-First:** All your progress, trainer data, and collection are saved directly in your browser's `localStorage`. No accounts or internet connection required (except for fetching artwork).
 - **Comprehensive Catalog:** Includes all 251 Pokémon from the Johto and Kanto regions with detailed rarity buckets (Common to Legendary).
 - **Dynamic Leveling:** Pokémon level up through successful catches, capped at Level 100.
+- **Domain-Driven Design:** Clean architecture with logic neatly separated into `encounter`, `pokemon`, `storage`, and `trainer` domains.
 - **Dark Aesthetic:** A minimalist, monochrome UI designed for focus and speed.
 - **Mobile-Responsive:** Play seamlessly on your phone or desktop.
 
@@ -61,11 +60,9 @@ In PokéToons, your goal is simple: **Identify and catch 'em all.**
 ```text
 src/
 ├── app/          # Top-level shell and App component
-├── components/   # UI components (game logic, layouts, UI primitives)
-├── data/         # JSON data for Pokémon catalog and rarity buckets
-├── features/     # Core logic (game state, Pokémon spawning, validation)
-├── hooks/        # Custom React hooks for timers and game loops
-├── lib/          # Generic utility functions
+├── assets/       # Static assets (images, etc)
+├── domains/      # Business logic domains (encounter, pokemon, storage, trainer)
+├── shared/       # Shared UI, data, and generic library functions
 └── index.css     # Global styles and Tailwind configuration
 ```
 
