@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# PokéToons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, local-first Pokémon catching game built with React, TypeScript, and Vite. PokéToons focuses on the first 251 Pokémon (Generations I and II), offering a fast-paced, guessing-based gameplay experience with a minimalist dark aesthetic.
 
-Currently, two official plugins are available:
+![PokéToons Dashboard](./src/assets/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎮 The Game
 
-## React Compiler
+In PokéToons, your goal is simple: **Identify and catch 'em all.**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Core Mechanics
+- **Starter Pokémon:** Begin your journey by choosing Bulbasaur, Charmander, or Squirtle.
+- **Manual Sessions:** You control when the hunt begins and ends. Start a session to trigger encounters.
+- **The Encounter:** A random Pokémon appears! You have **60 seconds** to guess its name.
+- **The Catch:** A correct guess successfully catches the Pokémon and adds it to your collection.
+- **Progression:** Every successful catch increases the level of your most recent 30 Pokémon. As you catch more, rarer and more powerful Pokémon will begin to spawn.
 
-## Expanding the ESLint configuration
+## ✨ Key Features
+- **Local-First:** All your progress, trainer data, and collection are saved directly in your browser's `localStorage`. No accounts or internet connection required (except for fetching artwork).
+- **Comprehensive Catalog:** Includes all 251 Pokémon from the Johto and Kanto regions with detailed rarity buckets (Common to Legendary).
+- **Dynamic Leveling:** Pokémon level up through successful catches, capped at Level 100.
+- **Dark Aesthetic:** A minimalist, monochrome UI designed for focus and speed.
+- **Mobile-Responsive:** Play seamlessly on your phone or desktop.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technical Stack
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **State Management:** Reducer-driven state with custom selectors.
+- **Persistence:** Browser `localStorage`.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- [Node.js](https://nodejs.org/) (Latest LTS recommended)
+- [pnpm](https://pnpm.io/) (or npm/yarn)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/poketoons.git
+   cd poketoons
+   ```
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+### Scripts
+- `pnpm dev`: Starts the development server.
+- `pnpm build`: Builds the application for production.
+- `pnpm lint`: Runs ESLint to check for code quality.
+- `pnpm preview`: Previews the production build locally.
+
+## 📁 Project Structure
+```text
+src/
+├── app/          # Top-level shell and App component
+├── components/   # UI components (game logic, layouts, UI primitives)
+├── data/         # JSON data for Pokémon catalog and rarity buckets
+├── features/     # Core logic (game state, Pokémon spawning, validation)
+├── hooks/        # Custom React hooks for timers and game loops
+├── lib/          # Generic utility functions
+└── index.css     # Global styles and Tailwind configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Disclaimer: This is a fan-made project. Pokémon and Pokémon character names are trademarks of Nintendo.*
