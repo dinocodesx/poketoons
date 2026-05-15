@@ -1,11 +1,11 @@
-import { CatchHistoryPanel } from "../components/CatchHistoryPanel";
-import { CollectionPanel } from "../components/CollectionPanel";
-import { EncounterCard } from "../components/EncounterCard";
-import { GuessForm } from "../components/GuessForm";
-import { LoadingScreen } from "../components/LoadingScreen";
-import { SectionCard } from "../components/SectionCard";
-import { SessionPanel } from "../components/SessionPanel";
-import { TrainerSetup } from "../components/TrainerSetup";
+import { CatchHistoryPanel } from "../components/game/CatchHistoryPanel";
+import { CollectionPanel } from "../components/game/CollectionPanel";
+import { EncounterCard } from "../components/game/EncounterCard";
+import { GuessForm } from "../components/game/GuessForm";
+import { LoadingScreen } from "../components/ui/LoadingScreen";
+import { SectionCard } from "../components/ui/SectionCard";
+import { SessionPanel } from "../components/game/SessionPanel";
+import { TrainerSetup } from "../components/game/TrainerSetup";
 import { useGameSession } from "../features/game/useGameSession";
 import { useEncounterTimer } from "../features/game/useEncounterTimer";
 import {
@@ -56,14 +56,10 @@ function App() {
             onEndSession={game.endSession}
             onStartSession={game.startSession}
             timer={timer}
-            className="h-1/4"
+            className="shrink-0"
           />
 
-          <SectionCard
-            title="Active Encounter"
-            description="Study the artwork and type the exact Pokemon name before the clock runs out."
-            className="h-3/4"
-          >
+          <SectionCard title="Active Encounter" className="flex-1 min-h-0">
             <EncounterCard
               encounter={game.state.activeEncounter}
               pokemon={currentEncounterPokemon}
@@ -91,7 +87,7 @@ function App() {
         </div>
 
         <div className="dashboard-side">
-          <SectionCard className="h-[88px]">
+          <SectionCard className="h-22">
             <div className="flex justify-between items-center h-full">
               <span className="meta-label">Username</span>
               <strong>{game.state.trainer.name}</strong>

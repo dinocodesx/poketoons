@@ -1,12 +1,22 @@
 import type { PropsWithChildren, ReactNode } from "react";
 
+/**
+ * Props for the SectionCard component.
+ */
 interface SectionCardProps extends PropsWithChildren {
+  /** Optional title for the card header. */
   title?: string;
+  /** Optional descriptive text for the card header. */
   description?: string;
+  /** Optional React nodes to display in the header actions area. */
   actions?: ReactNode;
+  /** Additional CSS class names. */
   className?: string;
 }
 
+/**
+ * A reusable layout component that provides a consistent container for content sections.
+ */
 export function SectionCard({
   title,
   description,

@@ -127,11 +127,11 @@
     }
 
     .section-card {
-        @apply p-5.5 max-lg:p-4.5 max-lg:rounded-none flex flex-col;
+        @apply p-4 max-lg:p-3 max-lg:rounded-none flex flex-col;
     }
 
     .section-card__header {
-        @apply flex justify-between gap-4 items-start mb-4.5 max-sm:flex-col;
+        @apply flex justify-between gap-4 items-center mb-3 max-sm:flex-col;
     }
 
     .section-card__header p,
@@ -143,7 +143,7 @@
     }
 
     .section-card__content {
-        @apply flex flex-col gap-4.5 flex-1 min-h-0 overflow-y-auto;
+        @apply flex flex-col gap-3 flex-1 min-h-0 overflow-hidden;
     }
 
     .loading-bar {
@@ -233,7 +233,11 @@
     }
 
     .session-panel__content {
-        @apply justify-between items-center gap-4 max-lg:flex-col max-lg:items-stretch;
+        @apply flex-col items-stretch gap-0;
+    }
+
+    .session-panel .action-row {
+        @apply mt-2;
     }
 
     .status-pill,
@@ -254,48 +258,45 @@
     }
 
     .encounter-card {
-        @apply gap-5 rounded-none border border-panel-border bg-surface-muted p-4.5 max-lg:grid max-lg:grid-cols-1;
+        @apply flex-1 flex flex-col items-center justify-center gap-6 rounded-none border border-panel-border bg-surface-muted p-6 max-lg:p-4 overflow-hidden;
     }
 
     .encounter-card__media {
-        @apply w-[min(240px,42%)] rounded-none border border-panel-border p-5 grid place-items-center max-lg:w-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%),#070707];
+        @apply flex-1 w-full max-w-[480px] grid place-items-center bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_70%)] border-0 p-0 overflow-hidden;
     }
 
     .encounter-card__media img {
-        @apply w-full max-w-45 aspect-square object-contain;
+        @apply w-full h-full max-h-full object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)];
     }
 
     .encounter-card__details {
-        @apply flex-1 flex flex-col gap-4;
-    }
-
-    .encounter-card__details h3 {
-        @apply text-[1.7rem] leading-none;
-    }
-
-    .encounter-meta {
-        @apply gap-3 flex-wrap;
-    }
-
-    .encounter-meta > div {
-        @apply border border-panel-border rounded-none bg-[#09090c] p-3 min-w-28;
-    }
-
-    .encounter-meta span {
-        @apply block text-text-muted text-[0.72rem] mb-1.5;
+        @apply w-full flex flex-col items-center gap-4 text-center shrink-0;
     }
 
     .encounter-empty,
     .empty-state {
-        @apply border border-dashed border-panel-border rounded-none p-5.5 text-center bg-[rgba(255,255,255,0.02)];
+        @apply flex-1 flex flex-col items-center justify-center border border-dashed border-panel-border rounded-none p-6 text-center bg-[rgba(255,255,255,0.01)] overflow-hidden;
+    }
+
+
+    .guess-form {
+        @apply w-full flex flex-col gap-3 mt-auto;
+    }
+
+    .guess-form .field {
+        @apply w-full gap-1.5;
     }
 
     .guess-form__row {
-        @apply gap-3 max-lg:flex-col max-lg:items-stretch;
+        @apply flex items-stretch gap-3 w-full;
     }
 
     .guess-form__row .text-input {
-        @apply flex-1;
+        @apply flex-1 text-[1rem] py-3;
+    }
+
+    .guess-form__row .primary-button {
+        @apply px-8 text-[1rem];
     }
 
     .guess-feedback {

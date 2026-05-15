@@ -13,6 +13,9 @@ import type {
   OwnedPokemon,
 } from "./gameTypes";
 
+/**
+ * The initial state for a fresh game.
+ */
 export const initialPersistedGameState: PersistedGameState = {
   version: GAME_STATE_VERSION,
   trainer: null,
@@ -22,11 +25,15 @@ export const initialPersistedGameState: PersistedGameState = {
   history: [],
 };
 
+/**
+ * The initial state used by the useReducer hook, including hydration status.
+ */
 export const initialGameState: GameState = {
   ...initialPersistedGameState,
   isHydrating: true,
 };
 
+/** Action to create a new trainer profile and assign a starter Pokemon. */
 interface CreateTrainerAction {
   type: "CREATE_TRAINER";
   payload: {
@@ -37,11 +44,13 @@ interface CreateTrainerAction {
   };
 }
 
+/** Action to hydrate the state from persisted storage. */
 interface HydrateAction {
   type: "HYDRATE";
   payload: PersistedGameState;
 }
 
+/** Action to start a new manual catching session. */
 interface StartSessionAction {
   type: "START_SESSION";
   payload: {
@@ -55,6 +64,7 @@ interface StartSessionAction {
   };
 }
 
+/** Action to end the current manual catching session. */
 interface EndSessionAction {
   type: "END_SESSION";
   payload: {
@@ -62,6 +72,7 @@ interface EndSessionAction {
   };
 }
 
+/** Action to spawn a new encounter during an active session. */
 interface SpawnEncounterAction {
   type: "SPAWN_ENCOUNTER";
   payload: {
@@ -73,6 +84,7 @@ interface SpawnEncounterAction {
   };
 }
 
+/** Action to record a successful catch. */
 interface CatchEncounterAction {
   type: "CATCH_ENCOUNTER";
   payload: {
@@ -81,6 +93,7 @@ interface CatchEncounterAction {
   };
 }
 
+/** Action to record a missed encounter (time ran out). */
 interface MissEncounterAction {
   type: "MISS_ENCOUNTER";
   payload: {
@@ -88,7 +101,8 @@ interface MissEncounterAction {
   };
 }
 
-type GameAction =
+/** Union of all possible game actions. */
+export type GameAction =
   | CreateTrainerAction
   | HydrateAction
   | StartSessionAction
@@ -97,6 +111,9 @@ type GameAction =
   | CatchEncounterAction
   | MissEncounterAction;
 
+/**
+ * Helper to build a history entry object.
+ */
 function buildHistoryEntry(
   encounterId: string,
   pokemonId: number,
@@ -113,6 +130,10 @@ function buildHistoryEntry(
   };
 }
 
+/**
+ * Applies level-up logic to the most recently caught Pokemon in the collection.
+ * As per rules, the newest 30 Pokemon gain +1 level (capped at MAX_POKEMON_LEVEL).
+ */
 function applyLevelUpWindow(collection: OwnedPokemon[]) {
   const startIndex = Math.max(0, collection.length - RECENT_LEVEL_UP_COUNT);
 
@@ -128,6 +149,10 @@ function applyLevelUpWindow(collection: OwnedPokemon[]) {
   });
 }
 
+/**
+ * Pure helper to transition the state into a missed encounter state.
+ * Shared between manual resolution and timer-based resolution.
+ */
 export function applyMissedEncounterState(
   state: PersistedGameState,
   resolvedAt: number,
@@ -157,6 +182,9 @@ export function applyMissedEncounterState(
   };
 }
 
+/**
+ * Helper to create a trainer profile object.
+ */
 function createTrainerProfile(
   name: string,
   starterPokemonId: number,
@@ -169,6 +197,14 @@ function createTrainerProfile(
   };
 }
 
+/**
+ * The core reducer managing all game state transitions.
+ * Ensures state is updated immutably and according to game rules.
+ * 
+ * @param state - The current game state.
+ * @param action - The action to apply.
+ * @returns The new game state.
+ */
 export function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
     case "HYDRATE":
@@ -260,6 +296,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         return state;
       }
 
+      // 1. Append the new Pokemon and apply level-up rules
       const newCollection = applyLevelUpWindow([
         ...state.ownedPokemon,
         {
@@ -271,6 +308,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         },
       ]);
 
+      // 2. Build history entry
       const historyEntry = buildHistoryEntry(
         state.activeEncounter.encounterId,
         state.activeEncounter.pokemonId,
@@ -279,6 +317,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         state.currentSession?.sessionId ?? null,
       );
 
+      // 3. Clear active encounter and update history
       return {
         ...state,
         ownedPokemon: newCollection,

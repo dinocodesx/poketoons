@@ -1,12 +1,20 @@
-import { SectionCard } from "./SectionCard";
-import type { HistoryEntry } from "../features/game/gameTypes";
-import { formatPokemonName } from "../lib/string";
+import { SectionCard } from "../ui/SectionCard";
+import type { HistoryEntry } from "../../features/game/gameTypes";
+import { formatPokemonName } from "../../lib/string";
 
+/**
+ * Props for the CatchHistoryPanel component.
+ */
 interface CatchHistoryPanelProps {
+  /** Array of recent encounter history entries. */
   history: HistoryEntry[];
+  /** Additional CSS class names. */
   className?: string;
 }
 
+/**
+ * Displays a list of the most recent Pokemon encounters and their results.
+ */
 export function CatchHistoryPanel({
   history,
   className = "",

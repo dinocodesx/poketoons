@@ -1,8 +1,6 @@
-import { useEffect, useEffectEvent, useReducer } from "react";
+import { useReducer } from "react";
 import { SESSION_CYCLE_MS } from "./gameConstants";
 import { gameReducer, initialGameState } from "./gameReducer";
-import { hydrateGameState } from "./gameHydration";
-import { savePersistedGameState } from "./gameStorage";
 import { selectTotalCaught } from "./gameSelectors";
 import { formatPokemonName } from "../../lib/string";
 import {
@@ -15,87 +13,26 @@ import {
   isCorrectPokemonGuess,
   pickSpawnPokemon,
 } from "../pokemon/pokemonSpawn";
+import { useGamePersistence } from "./useGamePersistence";
+import { useGameLoop } from "./useGameLoop";
+import type { GuessAttemptResult } from "./gameTypes";
 
+/**
+ * The main orchestrator hook for the Pokemon Catching Game.
+ * Combines state management, persistence, and game loop logic into a unified API.
+ * 
+ * @returns An object containing the current game state, choices, and action functions.
+ */
 export function useGameSession() {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
 
-  useEffect(() => {
-    dispatch({
-      type: "HYDRATE",
-      payload: hydrateGameState(Date.now()),
-    });
-  }, []);
+  // Initialize persistence and loop side effects
+  useGamePersistence(state, dispatch);
+  useGameLoop(state, dispatch);
 
-  useEffect(() => {
-    if (state.isHydrating) {
-      return;
-    }
-
-    savePersistedGameState(state);
-  }, [state]);
-
-  const tickSession = useEffectEvent(() => {
-    if (state.isHydrating || state.currentSession?.status !== "active") {
-      return;
-    }
-
-    const now = Date.now();
-
-    if (state.activeEncounter && now >= state.activeEncounter.expiresAt) {
-      dispatch({
-        type: "MISS_ENCOUNTER",
-        payload: {
-          resolvedAt: state.activeEncounter.expiresAt,
-        },
-      });
-
-      return;
-    }
-
-    if (!state.activeEncounter) {
-      const nextEncounterAt = state.currentSession.nextEncounterAt ?? now;
-
-      if (now < nextEncounterAt) {
-        return;
-      }
-
-      const pokemonId = pickSpawnPokemon(
-        pokemonCatalog,
-        rarityBuckets,
-        selectTotalCaught(state),
-      );
-
-      if (!pokemonId) {
-        return;
-      }
-
-      dispatch({
-        type: "SPAWN_ENCOUNTER",
-        payload: {
-          encounterId: crypto.randomUUID(),
-          pokemonId,
-          startedAt: now,
-          expiresAt: now + state.currentSession.cycleDurationMs,
-          nextEncounterAt: now + state.currentSession.cycleDurationMs,
-        },
-      });
-    }
-  });
-
-  useEffect(() => {
-    if (state.isHydrating || state.currentSession?.status !== "active") {
-      return undefined;
-    }
-
-    const intervalId = window.setInterval(() => {
-      tickSession();
-    }, 250);
-
-    return () => {
-      window.clearInterval(intervalId);
-    };
-  }, [state.isHydrating, state.currentSession?.status]);
-
+  /**
+   * Initializes the trainer profile with a name and a starter Pokemon.
+   */
   function createTrainer(name: string, starterPokemonId: number) {
     dispatch({
       type: "CREATE_TRAINER",
@@ -108,6 +45,9 @@ export function useGameSession() {
     });
   }
 
+  /**
+   * Starts a manual catching session and spawns the first encounter.
+   */
   function startSession() {
     if (!state.trainer || state.currentSession?.status === "active") {
       return;
@@ -138,6 +78,9 @@ export function useGameSession() {
     });
   }
 
+  /**
+   * Ends the current catching session and clears the active encounter.
+   */
   function endSession() {
     if (state.currentSession?.status !== "active") {
       return;
@@ -151,7 +94,14 @@ export function useGameSession() {
     });
   }
 
-  function submitGuess(guess: string) {
+  /**
+   * Processes a player's guess for the current encounter.
+   * If correct, the Pokemon is caught and added to the collection.
+   * 
+   * @param guess - The name of the Pokemon guessed by the player.
+   * @returns A result object with feedback for the UI.
+   */
+  function submitGuess(guess: string): GuessAttemptResult {
     if (!state.activeEncounter || state.currentSession?.status !== "active") {
       return {
         accepted: false,

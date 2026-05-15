@@ -1,15 +1,27 @@
 import { useState } from "react";
-import type { GuessAttemptResult } from "../features/game/gameTypes";
+import type { GuessAttemptResult } from "../../features/game/gameTypes";
 
+/**
+ * Props for the GuessForm component.
+ */
 interface GuessFormProps {
+  /** Whether the form should be disabled (e.g., no active encounter). */
   isDisabled: boolean;
+  /** Callback function to process a guess. */
   onSubmitGuess: (guess: string) => GuessAttemptResult;
 }
 
+/**
+ * A form component that allows players to guess the name of the encountered Pokemon.
+ * Provides immediate feedback on whether the guess was correct.
+ */
 export function GuessForm({ isDisabled, onSubmitGuess }: GuessFormProps) {
   const [guess, setGuess] = useState("");
   const [feedback, setFeedback] = useState<GuessAttemptResult | null>(null);
 
+  /**
+   * Handles form submission.
+   */
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 

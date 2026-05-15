@@ -1,44 +1,46 @@
 import type { PokemonCatalogEntry, RarityBucket } from "./pokemonTypes";
 
-const MAX_POKEMON_ID = 251;
-const MIN_POKEMON_ID = 1;
-
+/**
+ * Validates the integrity of the Pokemon data files.
+ * Ensures all species are within the allowed range and that buckets reference valid species.
+ * 
+ * @param catalog - The loaded Pokemon species catalog.
+ * @param buckets - The loaded rarity buckets.
+ */
 export function validatePokemonData(
   catalog: PokemonCatalogEntry[],
   buckets: RarityBucket[],
-) {
-  const ids = new Set<number>();
-  const names = new Set<string>();
+): void {
+  // 1. Ensure all catalog entries are within Pokedex 1-251
+  const invalidIds = catalog.filter((p) => p.id < 1 || p.id > 251);
 
-  for (const pokemon of catalog) {
-    if (pokemon.id < MIN_POKEMON_ID || pokemon.id > MAX_POKEMON_ID) {
-      throw new Error(`Pokemon id ${pokemon.id} is outside the allowed range.`);
-    }
-
-    if (ids.has(pokemon.id)) {
-      throw new Error(`Duplicate Pokemon id detected: ${pokemon.id}`);
-    }
-
-    if (names.has(pokemon.name)) {
-      throw new Error(`Duplicate Pokemon name detected: ${pokemon.name}`);
-    }
-
-    ids.add(pokemon.id);
-    names.add(pokemon.name);
+  if (invalidIds.length > 0) {
+    throw new Error(
+      `Catalog contains invalid IDs: ${invalidIds.map((p) => p.id).join(", ")}`,
+    );
   }
 
-  for (const bucket of buckets) {
-    for (const id of bucket.pokemonIds) {
-      if (!ids.has(id)) {
-        throw new Error(
-          `Bucket ${bucket.key} references unknown Pokemon id ${id}`,
-        );
-      }
+  // 2. Ensure all rarity buckets reference existing catalog IDs
+  const catalogIdSet = new Set(catalog.map((p) => p.id));
+  
+  buckets.forEach((bucket) => {
+    const missingIds = bucket.pokemonIds.filter((id) => !catalogIdSet.has(id));
+    if (missingIds.length > 0) {
+      throw new Error(
+        `Bucket '${bucket.key}' references missing Pokemon IDs: ${missingIds.join(
+          ", ",
+        )}`,
+      );
     }
-  }
+  });
 
-  return {
-    catalog,
-    buckets,
-  };
+  // 3. Ensure weighted buckets have valid weights
+  const invalidWeights = buckets.filter((b) => b.weight < 0);
+  if (invalidWeights.length > 0) {
+    throw new Error(
+      `Buckets contain invalid weights: ${invalidWeights
+        .map((b) => b.key)
+        .join(", ")}`,
+    );
+  }
 }

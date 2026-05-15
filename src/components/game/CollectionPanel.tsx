@@ -1,12 +1,21 @@
 import { PokemonCollectionCard } from "./PokemonCollectionCard";
-import { SectionCard } from "./SectionCard";
-import type { CollectionEntry } from "../features/game/gameTypes";
+import { SectionCard } from "../ui/SectionCard";
+import type { CollectionEntry } from "../../features/game/gameTypes";
 
+/**
+ * Props for the CollectionPanel component.
+ */
 interface CollectionPanelProps {
+  /** Array of owned Pokemon entries from the collection. */
   entries: CollectionEntry[];
+  /** Additional CSS class names. */
   className?: string;
 }
 
+/**
+ * Displays a grid view of the trainer's Pokemon collection.
+ * Shows a limited preview if many Pokemon are owned.
+ */
 export function CollectionPanel({
   entries,
   className = "",

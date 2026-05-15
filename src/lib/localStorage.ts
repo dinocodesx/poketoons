@@ -1,3 +1,9 @@
+/**
+ * Loads a value from browser localStorage.
+ * 
+ * @param key - The storage key.
+ * @returns The parsed value, or null if not found or invalid.
+ */
 export function loadFromLocalStorage<T>(key: string): T | null {
   try {
     const rawValue = window.localStorage.getItem(key);
@@ -12,6 +18,12 @@ export function loadFromLocalStorage<T>(key: string): T | null {
   }
 }
 
+/**
+ * Saves a value to browser localStorage.
+ * 
+ * @param key - The storage key.
+ * @param value - The value to store.
+ */
 export function saveToLocalStorage<T>(key: string, value: T) {
   try {
     window.localStorage.setItem(key, JSON.stringify(value));

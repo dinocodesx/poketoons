@@ -1,34 +1,45 @@
-import {
-  loadFromLocalStorage,
-  saveToLocalStorage,
-} from "../../lib/localStorage";
-import { GAME_STORAGE_KEY, GAME_STATE_VERSION } from "./gameConstants";
-import { initialPersistedGameState } from "./gameReducer";
-import type { GameState, PersistedGameState } from "./gameTypes";
+import { GAME_STORAGE_KEY } from "./gameConstants";
+import type { PersistedGameState } from "./gameTypes";
 
-export function loadPersistedGameState() {
-  const persisted = loadFromLocalStorage<PersistedGameState>(GAME_STORAGE_KEY);
+/**
+ * Saves the current game state to localStorage.
+ * Only persists fields defined in the PersistedGameState interface.
+ * 
+ * @param state - The full game state to persist.
+ */
+export function savePersistedGameState(state: PersistedGameState): void {
+  try {
+    const data: PersistedGameState = {
+      version: state.version,
+      trainer: state.trainer,
+      ownedPokemon: state.ownedPokemon,
+      currentSession: state.currentSession,
+      activeEncounter: state.activeEncounter,
+      history: state.history,
+    };
 
-  if (!persisted || persisted.version !== GAME_STATE_VERSION) {
-    return initialPersistedGameState;
+    localStorage.setItem(GAME_STORAGE_KEY, JSON.stringify(data));
+  } catch (error) {
+    console.error("Failed to save game state:", error);
   }
-
-  return {
-    ...initialPersistedGameState,
-    ...persisted,
-    version: GAME_STATE_VERSION,
-  };
 }
 
-export function savePersistedGameState(state: GameState) {
-  const persistedState: PersistedGameState = {
-    version: state.version,
-    trainer: state.trainer,
-    ownedPokemon: state.ownedPokemon,
-    currentSession: state.currentSession,
-    activeEncounter: state.activeEncounter,
-    history: state.history,
-  };
+/**
+ * Loads the persisted game state from localStorage.
+ * 
+ * @returns The persisted game state, or null if no state is found or an error occurs.
+ */
+export function loadPersistedGameState(): PersistedGameState | null {
+  try {
+    const raw = localStorage.getItem(GAME_STORAGE_KEY);
 
-  saveToLocalStorage(GAME_STORAGE_KEY, persistedState);
+    if (!raw) {
+      return null;
+    }
+
+    return JSON.parse(raw) as PersistedGameState;
+  } catch (error) {
+    console.error("Failed to load game state:", error);
+    return null;
+  }
 }

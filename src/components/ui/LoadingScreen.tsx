@@ -1,3 +1,6 @@
+/**
+ * A full-screen loading state displayed while the game hydrates data from storage.
+ */
 export function LoadingScreen() {
   return (
     <main className="loading-screen">

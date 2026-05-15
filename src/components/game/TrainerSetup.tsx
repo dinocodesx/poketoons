@@ -1,12 +1,20 @@
 import { useState } from "react";
-import type { PokemonCatalogEntry } from "../features/pokemon/pokemonTypes";
-import { formatPokemonName } from "../lib/string";
+import type { PokemonCatalogEntry } from "../../features/pokemon/pokemonTypes";
+import { formatPokemonName } from "../../lib/string";
 
+/**
+ * Props for the TrainerSetup component.
+ */
 interface TrainerSetupProps {
+  /** The list of starter Pokemon species to choose from. */
   starters: PokemonCatalogEntry[];
+  /** Callback to create the trainer profile. */
   onCreateTrainer: (name: string, starterPokemonId: number) => void;
 }
 
+/**
+ * The initial onboarding screen where players choose their name and first Pokemon.
+ */
 export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
   const [trainerName, setTrainerName] = useState("");
   const [starterPokemonId, setStarterPokemonId] = useState<number>(
@@ -14,6 +22,9 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
   );
   const [error, setError] = useState("");
 
+  /**
+   * Handles form submission for trainer creation.
+   */
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 

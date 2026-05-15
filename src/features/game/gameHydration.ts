@@ -2,31 +2,28 @@ import {
   applyMissedEncounterState,
   initialPersistedGameState,
 } from "./gameReducer";
+import type { PersistedGameState } from "./gameTypes";
 import { loadPersistedGameState } from "./gameStorage";
 
-export function hydrateGameState(now: number) {
-  const persistedState = loadPersistedGameState();
+/**
+ * Hydrates the game state from storage and performs a cleanup check.
+ * If there was an active encounter that expired while the user was away,
+ * it is automatically resolved as "missed".
+ * 
+ * @param now - The current timestamp (used for resolution comparison).
+ * @returns The hydrated and cleaned-up persisted game state.
+ */
+export function hydrateGameState(now: number): PersistedGameState {
+  const persisted = loadPersistedGameState();
 
-  if (
-    !persistedState.currentSession ||
-    persistedState.currentSession.status !== "active"
-  ) {
-    return {
-      ...initialPersistedGameState,
-      ...persistedState,
-      activeEncounter: null,
-    };
+  if (!persisted) {
+    return initialPersistedGameState;
   }
 
-  if (
-    persistedState.activeEncounter &&
-    persistedState.activeEncounter.expiresAt <= now
-  ) {
-    return applyMissedEncounterState(
-      persistedState,
-      persistedState.activeEncounter.expiresAt,
-    );
+  // Cleanup: If an encounter expired while the app was closed, resolve it as missed.
+  if (persisted.activeEncounter && now >= persisted.activeEncounter.expiresAt) {
+    return applyMissedEncounterState(persisted, persisted.activeEncounter.expiresAt);
   }
 
-  return persistedState;
+  return persisted;
 }

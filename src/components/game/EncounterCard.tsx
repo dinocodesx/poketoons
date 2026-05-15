@@ -1,17 +1,25 @@
-import { CountdownTimer } from "./CountdownTimer";
-import type { PokemonCatalogEntry } from "../features/pokemon/pokemonTypes";
-import type { ActiveEncounter } from "../features/game/gameTypes";
-import { formatPokemonName } from "../lib/string";
+import { CountdownTimer } from "../ui/CountdownTimer";
+import type { PokemonCatalogEntry } from "../../features/pokemon/pokemonTypes";
+import type { ActiveEncounter } from "../../features/game/gameTypes";
 
+/**
+ * Props for the EncounterCard component.
+ */
 interface EncounterCardProps {
+  /** The currently active encounter data. */
   encounter: ActiveEncounter | null;
+  /** The catalog entry for the Pokemon species in the encounter. */
   pokemon: PokemonCatalogEntry | null;
+  /** The current state of the countdown timer. */
   timer: {
     label: string;
     displayValue: string;
   };
 }
 
+/**
+ * Displays the current wild Pokemon encounter, including its artwork and the catch timer.
+ */
 export function EncounterCard({
   encounter,
   pokemon,
@@ -32,22 +40,6 @@ export function EncounterCard({
         <img alt="Pokemon to guess" src={pokemon.artworkUrl} />
       </div>
       <div className="encounter-card__details">
-        <p className="eyebrow">Wild encounter</p>
-        <h3>Name this Pokemon before time expires</h3>
-        <div className="encounter-meta">
-          <div>
-            <span>Rarity</span>
-            <strong>{formatPokemonName(pokemon.rarity)}</strong>
-          </div>
-          <div>
-            <span>Unlock</span>
-            <strong>{pokemon.minCatchLevel} catches</strong>
-          </div>
-          <div>
-            <span>Group</span>
-            <strong>{pokemon.group}</strong>
-          </div>
-        </div>
         <CountdownTimer label={timer.label} value={timer.displayValue} />
       </div>
     </article>
