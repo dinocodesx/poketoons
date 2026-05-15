@@ -17,7 +17,7 @@ validatePokemonData(pokemonCatalog, rarityBuckets);
 
 /**
  * Retrieves a Pokemon species by its ID.
- * 
+ *
  * @param id - The ID of the Pokemon to find.
  * @returns The catalog entry, or undefined if not found.
  */
@@ -27,7 +27,7 @@ export function getPokemonById(id: number): PokemonCatalogEntry | undefined {
 
 /**
  * Retrieves a rarity bucket by its key.
- * 
+ *
  * @param key - The rarity key to find.
  * @returns The bucket, or undefined if not found.
  */
@@ -36,13 +36,18 @@ export function getBucketByKey(key: string): RarityBucket | undefined {
 }
 
 /**
- * The specific Pokemon IDs traditionally offered as starters in Generations 1-4.
+ * The specific Pokemon IDs traditionally offered as starters in Generations 1-9.
  */
 const STARTER_IDS = [
-  1, 4, 7, // Gen 1
-  152, 155, 158, // Gen 2
-  252, 255, 258, // Gen 3
-  387, 390, 393, // Gen 4
+  1, 4, 7,      // Gen 1: Kanto
+  152, 155, 158, // Gen 2: Johto
+  252, 255, 258, // Gen 3: Hoenn
+  387, 390, 393, // Gen 4: Sinnoh
+  495, 498, 501, // Gen 5: Unova
+  650, 653, 656, // Gen 6: Kalos
+  722, 725, 728, // Gen 7: Alola
+  810, 813, 816, // Gen 8: Galar
+  906, 909, 912  // Gen 9: Paldea
 ];
 
 /**

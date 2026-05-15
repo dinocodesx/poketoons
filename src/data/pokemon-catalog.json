@@ -4928,5 +4928,5325 @@
     "minCatchLevel": 50,
     "evolutionFamily": "254-line",
     "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png"
+  },
+  {
+    "id": 494,
+    "name": "victini",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "255-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/494.png"
+  },
+  {
+    "id": 495,
+    "name": "snivy",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "256-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/495.png"
+  },
+  {
+    "id": 496,
+    "name": "servine",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "256-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/496.png"
+  },
+  {
+    "id": 497,
+    "name": "serperior",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "256-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png"
+  },
+  {
+    "id": 498,
+    "name": "tepig",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "257-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png"
+  },
+  {
+    "id": 499,
+    "name": "pignite",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "257-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/499.png"
+  },
+  {
+    "id": 500,
+    "name": "emboar",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "257-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/500.png"
+  },
+  {
+    "id": 501,
+    "name": "oshawott",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "258-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png"
+  },
+  {
+    "id": 502,
+    "name": "dewott",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "258-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/502.png"
+  },
+  {
+    "id": 503,
+    "name": "samurott",
+    "generation": 5,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "258-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/503.png"
+  },
+  {
+    "id": 504,
+    "name": "patrat",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "259-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/504.png"
+  },
+  {
+    "id": 505,
+    "name": "watchog",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "259-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/505.png"
+  },
+  {
+    "id": 506,
+    "name": "lillipup",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "260-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/506.png"
+  },
+  {
+    "id": 507,
+    "name": "herdier",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "260-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/507.png"
+  },
+  {
+    "id": 508,
+    "name": "stoutland",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "260-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/508.png"
+  },
+  {
+    "id": 509,
+    "name": "purrloin",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "261-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/509.png"
+  },
+  {
+    "id": 510,
+    "name": "liepard",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "261-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/510.png"
+  },
+  {
+    "id": 511,
+    "name": "pansage",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "262-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/511.png"
+  },
+  {
+    "id": 512,
+    "name": "simisage",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "262-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/512.png"
+  },
+  {
+    "id": 513,
+    "name": "pansear",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "263-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/513.png"
+  },
+  {
+    "id": 514,
+    "name": "simisear",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "263-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png"
+  },
+  {
+    "id": 515,
+    "name": "panpour",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "264-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/515.png"
+  },
+  {
+    "id": 516,
+    "name": "simipour",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "264-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png"
+  },
+  {
+    "id": 517,
+    "name": "munna",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "265-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/517.png"
+  },
+  {
+    "id": 518,
+    "name": "musharna",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "265-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/518.png"
+  },
+  {
+    "id": 519,
+    "name": "pidove",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "266-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/519.png"
+  },
+  {
+    "id": 520,
+    "name": "tranquill",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "266-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/520.png"
+  },
+  {
+    "id": 521,
+    "name": "unfezant",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "266-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/521.png"
+  },
+  {
+    "id": 522,
+    "name": "blitzle",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "267-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/522.png"
+  },
+  {
+    "id": 523,
+    "name": "zebstrika",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "267-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/523.png"
+  },
+  {
+    "id": 524,
+    "name": "roggenrola",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "268-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/524.png"
+  },
+  {
+    "id": 525,
+    "name": "boldore",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "268-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/525.png"
+  },
+  {
+    "id": 526,
+    "name": "gigalith",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "268-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/526.png"
+  },
+  {
+    "id": 527,
+    "name": "woobat",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "269-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/527.png"
+  },
+  {
+    "id": 528,
+    "name": "swoobat",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "269-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/528.png"
+  },
+  {
+    "id": 529,
+    "name": "drilbur",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "270-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/529.png"
+  },
+  {
+    "id": 530,
+    "name": "excadrill",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "270-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png"
+  },
+  {
+    "id": 531,
+    "name": "audino",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "271-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/531.png"
+  },
+  {
+    "id": 532,
+    "name": "timburr",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "272-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/532.png"
+  },
+  {
+    "id": 533,
+    "name": "gurdurr",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "272-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/533.png"
+  },
+  {
+    "id": 534,
+    "name": "conkeldurr",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "272-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/534.png"
+  },
+  {
+    "id": 535,
+    "name": "tympole",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "273-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/535.png"
+  },
+  {
+    "id": 536,
+    "name": "palpitoad",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "273-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/536.png"
+  },
+  {
+    "id": 537,
+    "name": "seismitoad",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "273-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/537.png"
+  },
+  {
+    "id": 538,
+    "name": "throh",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "274-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/538.png"
+  },
+  {
+    "id": 539,
+    "name": "sawk",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "275-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/539.png"
+  },
+  {
+    "id": 540,
+    "name": "sewaddle",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "276-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/540.png"
+  },
+  {
+    "id": 541,
+    "name": "swadloon",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "276-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/541.png"
+  },
+  {
+    "id": 542,
+    "name": "leavanny",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "276-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/542.png"
+  },
+  {
+    "id": 543,
+    "name": "venipede",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "277-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/543.png"
+  },
+  {
+    "id": 544,
+    "name": "whirlipede",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "277-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/544.png"
+  },
+  {
+    "id": 545,
+    "name": "scolipede",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "277-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/545.png"
+  },
+  {
+    "id": 546,
+    "name": "cottonee",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "278-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/546.png"
+  },
+  {
+    "id": 547,
+    "name": "whimsicott",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "278-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png"
+  },
+  {
+    "id": 548,
+    "name": "petilil",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "279-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/548.png"
+  },
+  {
+    "id": 549,
+    "name": "lilligant",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "279-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/549.png"
+  },
+  {
+    "id": 550,
+    "name": "basculin",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "280-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/550.png"
+  },
+  {
+    "id": 551,
+    "name": "sandile",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "281-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/551.png"
+  },
+  {
+    "id": 552,
+    "name": "krokorok",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "281-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/552.png"
+  },
+  {
+    "id": 553,
+    "name": "krookodile",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "281-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png"
+  },
+  {
+    "id": 554,
+    "name": "darumaka",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "282-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/554.png"
+  },
+  {
+    "id": 555,
+    "name": "darmanitan",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "282-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/555.png"
+  },
+  {
+    "id": 556,
+    "name": "maractus",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "283-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/556.png"
+  },
+  {
+    "id": 557,
+    "name": "dwebble",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "284-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/557.png"
+  },
+  {
+    "id": 558,
+    "name": "crustle",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "284-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/558.png"
+  },
+  {
+    "id": 559,
+    "name": "scraggy",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "285-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/559.png"
+  },
+  {
+    "id": 560,
+    "name": "scrafty",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "285-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/560.png"
+  },
+  {
+    "id": 561,
+    "name": "sigilyph",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "286-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/561.png"
+  },
+  {
+    "id": 562,
+    "name": "yamask",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "287-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/562.png"
+  },
+  {
+    "id": 563,
+    "name": "cofagrigus",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "287-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/563.png"
+  },
+  {
+    "id": 564,
+    "name": "tirtouga",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "288-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/564.png"
+  },
+  {
+    "id": 565,
+    "name": "carracosta",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "288-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/565.png"
+  },
+  {
+    "id": 566,
+    "name": "archen",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "289-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/566.png"
+  },
+  {
+    "id": 567,
+    "name": "archeops",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "289-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/567.png"
+  },
+  {
+    "id": 568,
+    "name": "trubbish",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "290-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/568.png"
+  },
+  {
+    "id": 569,
+    "name": "garbodor",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "290-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/569.png"
+  },
+  {
+    "id": 570,
+    "name": "zorua",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "291-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png"
+  },
+  {
+    "id": 571,
+    "name": "zoroark",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "291-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png"
+  },
+  {
+    "id": 572,
+    "name": "minccino",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "292-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/572.png"
+  },
+  {
+    "id": 573,
+    "name": "cinccino",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "292-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/573.png"
+  },
+  {
+    "id": 574,
+    "name": "gothita",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "293-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/574.png"
+  },
+  {
+    "id": 575,
+    "name": "gothorita",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "293-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/575.png"
+  },
+  {
+    "id": 576,
+    "name": "gothitelle",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "293-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/576.png"
+  },
+  {
+    "id": 577,
+    "name": "solosis",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "294-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/577.png"
+  },
+  {
+    "id": 578,
+    "name": "duosion",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "294-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/578.png"
+  },
+  {
+    "id": 579,
+    "name": "reuniclus",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "294-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/579.png"
+  },
+  {
+    "id": 580,
+    "name": "ducklett",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "295-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/580.png"
+  },
+  {
+    "id": 581,
+    "name": "swanna",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "295-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/581.png"
+  },
+  {
+    "id": 582,
+    "name": "vanillite",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "296-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/582.png"
+  },
+  {
+    "id": 583,
+    "name": "vanillish",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "296-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/583.png"
+  },
+  {
+    "id": 584,
+    "name": "vanilluxe",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "296-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/584.png"
+  },
+  {
+    "id": 585,
+    "name": "deerling",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "297-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/585.png"
+  },
+  {
+    "id": 586,
+    "name": "sawsbuck",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "297-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/586.png"
+  },
+  {
+    "id": 587,
+    "name": "emolga",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "298-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/587.png"
+  },
+  {
+    "id": 588,
+    "name": "karrablast",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "299-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/588.png"
+  },
+  {
+    "id": 589,
+    "name": "escavalier",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "299-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/589.png"
+  },
+  {
+    "id": 590,
+    "name": "foongus",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "300-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/590.png"
+  },
+  {
+    "id": 591,
+    "name": "amoonguss",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "300-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/591.png"
+  },
+  {
+    "id": 592,
+    "name": "frillish",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "301-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/592.png"
+  },
+  {
+    "id": 593,
+    "name": "jellicent",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "301-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/593.png"
+  },
+  {
+    "id": 594,
+    "name": "alomomola",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "302-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/594.png"
+  },
+  {
+    "id": 595,
+    "name": "joltik",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "303-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/595.png"
+  },
+  {
+    "id": 596,
+    "name": "galvantula",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "303-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/596.png"
+  },
+  {
+    "id": 597,
+    "name": "ferroseed",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "304-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/597.png"
+  },
+  {
+    "id": 598,
+    "name": "ferrothorn",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "304-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/598.png"
+  },
+  {
+    "id": 599,
+    "name": "klink",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "305-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/599.png"
+  },
+  {
+    "id": 600,
+    "name": "klang",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "305-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/600.png"
+  },
+  {
+    "id": 601,
+    "name": "klinklang",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "305-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/601.png"
+  },
+  {
+    "id": 602,
+    "name": "tynamo",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "306-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/602.png"
+  },
+  {
+    "id": 603,
+    "name": "eelektrik",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "306-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/603.png"
+  },
+  {
+    "id": 604,
+    "name": "eelektross",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "306-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/604.png"
+  },
+  {
+    "id": 605,
+    "name": "elgyem",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "307-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/605.png"
+  },
+  {
+    "id": 606,
+    "name": "beheeyem",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "307-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/606.png"
+  },
+  {
+    "id": 607,
+    "name": "litwick",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "308-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/607.png"
+  },
+  {
+    "id": 608,
+    "name": "lampent",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "308-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/608.png"
+  },
+  {
+    "id": 609,
+    "name": "chandelure",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "308-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png"
+  },
+  {
+    "id": 610,
+    "name": "axew",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "309-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/610.png"
+  },
+  {
+    "id": 611,
+    "name": "fraxure",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "309-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/611.png"
+  },
+  {
+    "id": 612,
+    "name": "haxorus",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "309-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/612.png"
+  },
+  {
+    "id": 613,
+    "name": "cubchoo",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "310-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/613.png"
+  },
+  {
+    "id": 614,
+    "name": "beartic",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "310-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/614.png"
+  },
+  {
+    "id": 615,
+    "name": "cryogonal",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "311-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/615.png"
+  },
+  {
+    "id": 616,
+    "name": "shelmet",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "312-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/616.png"
+  },
+  {
+    "id": 617,
+    "name": "accelgor",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "312-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/617.png"
+  },
+  {
+    "id": 618,
+    "name": "stunfisk",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "313-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png"
+  },
+  {
+    "id": 619,
+    "name": "mienfoo",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "314-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/619.png"
+  },
+  {
+    "id": 620,
+    "name": "mienshao",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "314-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/620.png"
+  },
+  {
+    "id": 621,
+    "name": "druddigon",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "315-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/621.png"
+  },
+  {
+    "id": 622,
+    "name": "golett",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "316-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/622.png"
+  },
+  {
+    "id": 623,
+    "name": "golurk",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "316-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/623.png"
+  },
+  {
+    "id": 624,
+    "name": "pawniard",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "317-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/624.png"
+  },
+  {
+    "id": 625,
+    "name": "bisharp",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "317-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/625.png"
+  },
+  {
+    "id": 626,
+    "name": "bouffalant",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "318-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/626.png"
+  },
+  {
+    "id": 627,
+    "name": "rufflet",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "319-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/627.png"
+  },
+  {
+    "id": 628,
+    "name": "braviary",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "319-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/628.png"
+  },
+  {
+    "id": 629,
+    "name": "vullaby",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "320-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/629.png"
+  },
+  {
+    "id": 630,
+    "name": "mandibuzz",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "320-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/630.png"
+  },
+  {
+    "id": 631,
+    "name": "heatmor",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "321-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/631.png"
+  },
+  {
+    "id": 632,
+    "name": "durant",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "322-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/632.png"
+  },
+  {
+    "id": 633,
+    "name": "deino",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "323-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/633.png"
+  },
+  {
+    "id": 634,
+    "name": "zweilous",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "323-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/634.png"
+  },
+  {
+    "id": 635,
+    "name": "hydreigon",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "323-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png"
+  },
+  {
+    "id": 636,
+    "name": "larvesta",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "324-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/636.png"
+  },
+  {
+    "id": 637,
+    "name": "volcarona",
+    "generation": 5,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "324-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png"
+  },
+  {
+    "id": 638,
+    "name": "cobalion",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "325-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png"
+  },
+  {
+    "id": 639,
+    "name": "terrakion",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "326-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/639.png"
+  },
+  {
+    "id": 640,
+    "name": "virizion",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "327-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png"
+  },
+  {
+    "id": 641,
+    "name": "tornadus",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "328-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png"
+  },
+  {
+    "id": 642,
+    "name": "thundurus",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "329-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png"
+  },
+  {
+    "id": 643,
+    "name": "reshiram",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "330-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png"
+  },
+  {
+    "id": 644,
+    "name": "zekrom",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "331-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png"
+  },
+  {
+    "id": 645,
+    "name": "landorus",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "332-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png"
+  },
+  {
+    "id": 646,
+    "name": "kyurem",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "333-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png"
+  },
+  {
+    "id": 647,
+    "name": "keldeo",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "334-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png"
+  },
+  {
+    "id": 648,
+    "name": "meloetta",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "335-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png"
+  },
+  {
+    "id": 649,
+    "name": "genesect",
+    "generation": 5,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "336-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/649.png"
+  },
+  {
+    "id": 650,
+    "name": "chespin",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "337-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png"
+  },
+  {
+    "id": 651,
+    "name": "quilladin",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "337-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/651.png"
+  },
+  {
+    "id": 652,
+    "name": "chesnaught",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "337-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/652.png"
+  },
+  {
+    "id": 653,
+    "name": "fennekin",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "338-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png"
+  },
+  {
+    "id": 654,
+    "name": "braixen",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "338-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/654.png"
+  },
+  {
+    "id": 655,
+    "name": "delphox",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "338-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png"
+  },
+  {
+    "id": 656,
+    "name": "froakie",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "339-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png"
+  },
+  {
+    "id": 657,
+    "name": "frogadier",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "339-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/657.png"
+  },
+  {
+    "id": 658,
+    "name": "greninja",
+    "generation": 6,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "339-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png"
+  },
+  {
+    "id": 659,
+    "name": "bunnelby",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "340-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/659.png"
+  },
+  {
+    "id": 660,
+    "name": "diggersby",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "340-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png"
+  },
+  {
+    "id": 661,
+    "name": "fletchling",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "341-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/661.png"
+  },
+  {
+    "id": 662,
+    "name": "fletchinder",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "341-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/662.png"
+  },
+  {
+    "id": 663,
+    "name": "talonflame",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "341-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png"
+  },
+  {
+    "id": 664,
+    "name": "scatterbug",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "342-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/664.png"
+  },
+  {
+    "id": 665,
+    "name": "spewpa",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "342-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/665.png"
+  },
+  {
+    "id": 666,
+    "name": "vivillon",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "342-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png"
+  },
+  {
+    "id": 667,
+    "name": "litleo",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "343-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/667.png"
+  },
+  {
+    "id": 668,
+    "name": "pyroar",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "343-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png"
+  },
+  {
+    "id": 669,
+    "name": "flabebe",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "344-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/669.png"
+  },
+  {
+    "id": 670,
+    "name": "floette",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "344-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/670.png"
+  },
+  {
+    "id": 671,
+    "name": "florges",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "344-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png"
+  },
+  {
+    "id": 672,
+    "name": "skiddo",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "345-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/672.png"
+  },
+  {
+    "id": 673,
+    "name": "gogoat",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "345-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/673.png"
+  },
+  {
+    "id": 674,
+    "name": "pancham",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "346-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/674.png"
+  },
+  {
+    "id": 675,
+    "name": "pangoro",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "346-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png"
+  },
+  {
+    "id": 676,
+    "name": "furfrou",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "347-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png"
+  },
+  {
+    "id": 677,
+    "name": "espurr",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "348-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/677.png"
+  },
+  {
+    "id": 678,
+    "name": "meowstic",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "348-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png"
+  },
+  {
+    "id": 679,
+    "name": "honedge",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "349-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/679.png"
+  },
+  {
+    "id": 680,
+    "name": "doublade",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "349-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/680.png"
+  },
+  {
+    "id": 681,
+    "name": "aegislash",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "349-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png"
+  },
+  {
+    "id": 682,
+    "name": "spritzee",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "350-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png"
+  },
+  {
+    "id": 683,
+    "name": "aromatisse",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "350-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png"
+  },
+  {
+    "id": 684,
+    "name": "swirlix",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "351-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/684.png"
+  },
+  {
+    "id": 685,
+    "name": "slurpuff",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "351-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/685.png"
+  },
+  {
+    "id": 686,
+    "name": "inkay",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "352-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png"
+  },
+  {
+    "id": 687,
+    "name": "malamar",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "352-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png"
+  },
+  {
+    "id": 688,
+    "name": "binacle",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "353-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/688.png"
+  },
+  {
+    "id": 689,
+    "name": "barbaracle",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "353-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png"
+  },
+  {
+    "id": 690,
+    "name": "skrelp",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "354-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/690.png"
+  },
+  {
+    "id": 691,
+    "name": "dragalge",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "354-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png"
+  },
+  {
+    "id": 692,
+    "name": "clauncher",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "355-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/692.png"
+  },
+  {
+    "id": 693,
+    "name": "clawitzer",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "355-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/693.png"
+  },
+  {
+    "id": 694,
+    "name": "helioptile",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "356-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/694.png"
+  },
+  {
+    "id": 695,
+    "name": "heliolisk",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "356-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png"
+  },
+  {
+    "id": 696,
+    "name": "tyrunt",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "357-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/696.png"
+  },
+  {
+    "id": 697,
+    "name": "tyrantrum",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "357-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png"
+  },
+  {
+    "id": 698,
+    "name": "amaura",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "358-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/698.png"
+  },
+  {
+    "id": 699,
+    "name": "aurorus",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "358-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png"
+  },
+  {
+    "id": 700,
+    "name": "sylveon",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "67-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png"
+  },
+  {
+    "id": 701,
+    "name": "hawlucha",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "359-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png"
+  },
+  {
+    "id": 702,
+    "name": "dedenne",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "360-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/702.png"
+  },
+  {
+    "id": 703,
+    "name": "carbink",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "361-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/703.png"
+  },
+  {
+    "id": 704,
+    "name": "goomy",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "362-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/704.png"
+  },
+  {
+    "id": 705,
+    "name": "sliggoo",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "362-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/705.png"
+  },
+  {
+    "id": 706,
+    "name": "goodra",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "362-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png"
+  },
+  {
+    "id": 707,
+    "name": "klefki",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "363-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png"
+  },
+  {
+    "id": 708,
+    "name": "phantump",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "364-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/708.png"
+  },
+  {
+    "id": 709,
+    "name": "trevenant",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "364-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png"
+  },
+  {
+    "id": 710,
+    "name": "pumpkaboo",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "365-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png"
+  },
+  {
+    "id": 711,
+    "name": "gourgeist",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "365-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png"
+  },
+  {
+    "id": 712,
+    "name": "bergmite",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "366-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/712.png"
+  },
+  {
+    "id": 713,
+    "name": "avalugg",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "366-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/713.png"
+  },
+  {
+    "id": 714,
+    "name": "noibat",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "367-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png"
+  },
+  {
+    "id": 715,
+    "name": "noivern",
+    "generation": 6,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "367-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png"
+  },
+  {
+    "id": 716,
+    "name": "xerneas",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "368-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png"
+  },
+  {
+    "id": 717,
+    "name": "yveltal",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "369-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png"
+  },
+  {
+    "id": 718,
+    "name": "zygarde",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "370-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png"
+  },
+  {
+    "id": 719,
+    "name": "diancie",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "371-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/719.png"
+  },
+  {
+    "id": 720,
+    "name": "hoopa",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "372-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png"
+  },
+  {
+    "id": 721,
+    "name": "volcanion",
+    "generation": 6,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "373-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/721.png"
+  },
+  {
+    "id": 722,
+    "name": "rowlet",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "374-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png"
+  },
+  {
+    "id": 723,
+    "name": "dartrix",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "374-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/723.png"
+  },
+  {
+    "id": 724,
+    "name": "decidueye",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "374-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png"
+  },
+  {
+    "id": 725,
+    "name": "litten",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "375-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/725.png"
+  },
+  {
+    "id": 726,
+    "name": "torracat",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "375-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/726.png"
+  },
+  {
+    "id": 727,
+    "name": "incineroar",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "375-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png"
+  },
+  {
+    "id": 728,
+    "name": "popplio",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "376-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png"
+  },
+  {
+    "id": 729,
+    "name": "brionne",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "376-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/729.png"
+  },
+  {
+    "id": 730,
+    "name": "primarina",
+    "generation": 7,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "376-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png"
+  },
+  {
+    "id": 731,
+    "name": "pikipek",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "377-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/731.png"
+  },
+  {
+    "id": 732,
+    "name": "trumbeak",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "377-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/732.png"
+  },
+  {
+    "id": 733,
+    "name": "toucannon",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "377-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png"
+  },
+  {
+    "id": 734,
+    "name": "yungoos",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "378-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/734.png"
+  },
+  {
+    "id": 735,
+    "name": "gumshoos",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "378-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/735.png"
+  },
+  {
+    "id": 736,
+    "name": "grubbin",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "379-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/736.png"
+  },
+  {
+    "id": 737,
+    "name": "charjabug",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "379-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/737.png"
+  },
+  {
+    "id": 738,
+    "name": "vikavolt",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "379-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/738.png"
+  },
+  {
+    "id": 739,
+    "name": "crabrawler",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "380-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/739.png"
+  },
+  {
+    "id": 740,
+    "name": "crabominable",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "380-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png"
+  },
+  {
+    "id": 741,
+    "name": "oricorio",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "381-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png"
+  },
+  {
+    "id": 742,
+    "name": "cutiefly",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "382-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/742.png"
+  },
+  {
+    "id": 743,
+    "name": "ribombee",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "382-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/743.png"
+  },
+  {
+    "id": 744,
+    "name": "rockruff",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "383-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/744.png"
+  },
+  {
+    "id": 745,
+    "name": "lycanroc",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "383-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
+  },
+  {
+    "id": 746,
+    "name": "wishiwashi",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "384-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png"
+  },
+  {
+    "id": 747,
+    "name": "mareanie",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "385-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/747.png"
+  },
+  {
+    "id": 748,
+    "name": "toxapex",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "385-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png"
+  },
+  {
+    "id": 749,
+    "name": "mudbray",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "386-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/749.png"
+  },
+  {
+    "id": 750,
+    "name": "mudsdale",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "386-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/750.png"
+  },
+  {
+    "id": 751,
+    "name": "dewpider",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "387-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/751.png"
+  },
+  {
+    "id": 752,
+    "name": "araquanid",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "387-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/752.png"
+  },
+  {
+    "id": 753,
+    "name": "fomantis",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "388-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/753.png"
+  },
+  {
+    "id": 754,
+    "name": "lurantis",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "388-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png"
+  },
+  {
+    "id": 755,
+    "name": "morelull",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "389-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/755.png"
+  },
+  {
+    "id": 756,
+    "name": "shiinotic",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "389-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/756.png"
+  },
+  {
+    "id": 757,
+    "name": "salandit",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "390-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/757.png"
+  },
+  {
+    "id": 758,
+    "name": "salazzle",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "390-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png"
+  },
+  {
+    "id": 759,
+    "name": "stufful",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "391-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/759.png"
+  },
+  {
+    "id": 760,
+    "name": "bewear",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "391-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/760.png"
+  },
+  {
+    "id": 761,
+    "name": "bounsweet",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "392-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/761.png"
+  },
+  {
+    "id": 762,
+    "name": "steenee",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "392-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/762.png"
+  },
+  {
+    "id": 763,
+    "name": "tsareena",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "392-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png"
+  },
+  {
+    "id": 764,
+    "name": "comfey",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "393-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/764.png"
+  },
+  {
+    "id": 765,
+    "name": "oranguru",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "394-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/765.png"
+  },
+  {
+    "id": 766,
+    "name": "passimian",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "395-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/766.png"
+  },
+  {
+    "id": 767,
+    "name": "wimpod",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "396-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/767.png"
+  },
+  {
+    "id": 768,
+    "name": "golisopod",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "396-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/768.png"
+  },
+  {
+    "id": 769,
+    "name": "sandygast",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "397-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/769.png"
+  },
+  {
+    "id": 770,
+    "name": "palossand",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "397-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/770.png"
+  },
+  {
+    "id": 771,
+    "name": "pyukumuku",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "398-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/771.png"
+  },
+  {
+    "id": 772,
+    "name": "type-null",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "399-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/772.png"
+  },
+  {
+    "id": 773,
+    "name": "silvally",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "399-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/773.png"
+  },
+  {
+    "id": 774,
+    "name": "minior",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "400-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/774.png"
+  },
+  {
+    "id": 775,
+    "name": "komala",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "401-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/775.png"
+  },
+  {
+    "id": 776,
+    "name": "turtonator",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "402-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/776.png"
+  },
+  {
+    "id": 777,
+    "name": "togedemaru",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "403-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/777.png"
+  },
+  {
+    "id": 778,
+    "name": "mimikyu",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "404-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png"
+  },
+  {
+    "id": 779,
+    "name": "bruxish",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "405-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/779.png"
+  },
+  {
+    "id": 780,
+    "name": "drampa",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "406-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/780.png"
+  },
+  {
+    "id": 781,
+    "name": "dhelmise",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "407-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/781.png"
+  },
+  {
+    "id": 782,
+    "name": "jangmo-o",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "408-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/782.png"
+  },
+  {
+    "id": 783,
+    "name": "hakamo-o",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "408-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/783.png"
+  },
+  {
+    "id": 784,
+    "name": "kommo-o",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "408-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png"
+  },
+  {
+    "id": 785,
+    "name": "tapu-koko",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "409-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/785.png"
+  },
+  {
+    "id": 786,
+    "name": "tapu-lele",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "410-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/786.png"
+  },
+  {
+    "id": 787,
+    "name": "tapu-bulu",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "411-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/787.png"
+  },
+  {
+    "id": 788,
+    "name": "tapu-fini",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "412-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/788.png"
+  },
+  {
+    "id": 789,
+    "name": "cosmog",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "413-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/789.png"
+  },
+  {
+    "id": 790,
+    "name": "cosmoem",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "413-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/790.png"
+  },
+  {
+    "id": 791,
+    "name": "solgaleo",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "413-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png"
+  },
+  {
+    "id": 792,
+    "name": "lunala",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "413-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png"
+  },
+  {
+    "id": 793,
+    "name": "nihilego",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "414-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/793.png"
+  },
+  {
+    "id": 794,
+    "name": "buzzwole",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "415-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png"
+  },
+  {
+    "id": 795,
+    "name": "pheromosa",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "416-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/795.png"
+  },
+  {
+    "id": 796,
+    "name": "xurkitree",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "417-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png"
+  },
+  {
+    "id": 797,
+    "name": "celesteela",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "418-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/797.png"
+  },
+  {
+    "id": 798,
+    "name": "kartana",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "419-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/798.png"
+  },
+  {
+    "id": 799,
+    "name": "guzzlord",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "420-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/799.png"
+  },
+  {
+    "id": 800,
+    "name": "necrozma",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "421-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png"
+  },
+  {
+    "id": 801,
+    "name": "magearna",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "422-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/801.png"
+  },
+  {
+    "id": 802,
+    "name": "marshadow",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "423-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/802.png"
+  },
+  {
+    "id": 803,
+    "name": "poipole",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "424-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/803.png"
+  },
+  {
+    "id": 804,
+    "name": "naganadel",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "424-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/804.png"
+  },
+  {
+    "id": 805,
+    "name": "stakataka",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "425-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/805.png"
+  },
+  {
+    "id": 806,
+    "name": "blacephalon",
+    "generation": 7,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "426-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/806.png"
+  },
+  {
+    "id": 807,
+    "name": "zeraora",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "427-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png"
+  },
+  {
+    "id": 808,
+    "name": "meltan",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "428-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/808.png"
+  },
+  {
+    "id": 809,
+    "name": "melmetal",
+    "generation": 7,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "429-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/809.png"
+  },
+  {
+    "id": 810,
+    "name": "grookey",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "430-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/810.png"
+  },
+  {
+    "id": 811,
+    "name": "thwackey",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "430-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/811.png"
+  },
+  {
+    "id": 812,
+    "name": "rillaboom",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "430-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/812.png"
+  },
+  {
+    "id": 813,
+    "name": "scorbunny",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "431-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png"
+  },
+  {
+    "id": 814,
+    "name": "raboot",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "431-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/814.png"
+  },
+  {
+    "id": 815,
+    "name": "cinderace",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "431-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png"
+  },
+  {
+    "id": 816,
+    "name": "sobble",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "432-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png"
+  },
+  {
+    "id": 817,
+    "name": "drizzile",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "432-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/817.png"
+  },
+  {
+    "id": 818,
+    "name": "inteleon",
+    "generation": 8,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "432-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/818.png"
+  },
+  {
+    "id": 819,
+    "name": "skwovet",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "433-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/819.png"
+  },
+  {
+    "id": 820,
+    "name": "greedent",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "433-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/820.png"
+  },
+  {
+    "id": 821,
+    "name": "rookidee",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "434-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/821.png"
+  },
+  {
+    "id": 822,
+    "name": "corvisquire",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "434-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/822.png"
+  },
+  {
+    "id": 823,
+    "name": "corviknight",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "434-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png"
+  },
+  {
+    "id": 824,
+    "name": "blipbug",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "435-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/824.png"
+  },
+  {
+    "id": 825,
+    "name": "dottler",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "435-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/825.png"
+  },
+  {
+    "id": 826,
+    "name": "orbeetle",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "435-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/826.png"
+  },
+  {
+    "id": 827,
+    "name": "nickit",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "436-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/827.png"
+  },
+  {
+    "id": 828,
+    "name": "thievul",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "436-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/828.png"
+  },
+  {
+    "id": 829,
+    "name": "gossifleur",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "437-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/829.png"
+  },
+  {
+    "id": 830,
+    "name": "eldegoss",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "437-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/830.png"
+  },
+  {
+    "id": 831,
+    "name": "wooloo",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "438-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/831.png"
+  },
+  {
+    "id": 832,
+    "name": "dubwool",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "438-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/832.png"
+  },
+  {
+    "id": 833,
+    "name": "chewtle",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "439-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/833.png"
+  },
+  {
+    "id": 834,
+    "name": "drednaw",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "439-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/834.png"
+  },
+  {
+    "id": 835,
+    "name": "yamper",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "440-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/835.png"
+  },
+  {
+    "id": 836,
+    "name": "boltund",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "440-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/836.png"
+  },
+  {
+    "id": 837,
+    "name": "rolycoly",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "441-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/837.png"
+  },
+  {
+    "id": 838,
+    "name": "carkol",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "441-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/838.png"
+  },
+  {
+    "id": 839,
+    "name": "coalossal",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "441-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/839.png"
+  },
+  {
+    "id": 840,
+    "name": "applin",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "442-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/840.png"
+  },
+  {
+    "id": 841,
+    "name": "flapple",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "442-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/841.png"
+  },
+  {
+    "id": 842,
+    "name": "appletun",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "442-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/842.png"
+  },
+  {
+    "id": 843,
+    "name": "silicobra",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "443-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/843.png"
+  },
+  {
+    "id": 844,
+    "name": "sandaconda",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "443-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/844.png"
+  },
+  {
+    "id": 845,
+    "name": "cramorant",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "444-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/845.png"
+  },
+  {
+    "id": 846,
+    "name": "arrokuda",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "445-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/846.png"
+  },
+  {
+    "id": 847,
+    "name": "barraskewda",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "445-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/847.png"
+  },
+  {
+    "id": 848,
+    "name": "toxel",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "446-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/848.png"
+  },
+  {
+    "id": 849,
+    "name": "toxtricity",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "446-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png"
+  },
+  {
+    "id": 850,
+    "name": "sizzlipede",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "447-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/850.png"
+  },
+  {
+    "id": 851,
+    "name": "centiskorch",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "447-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/851.png"
+  },
+  {
+    "id": 852,
+    "name": "clobbopus",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "448-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/852.png"
+  },
+  {
+    "id": 853,
+    "name": "grapploct",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "448-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/853.png"
+  },
+  {
+    "id": 854,
+    "name": "sinistea",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "449-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/854.png"
+  },
+  {
+    "id": 855,
+    "name": "polteageist",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "449-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png"
+  },
+  {
+    "id": 856,
+    "name": "hatenna",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "450-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/856.png"
+  },
+  {
+    "id": 857,
+    "name": "hattrem",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "450-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/857.png"
+  },
+  {
+    "id": 858,
+    "name": "hatterene",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "450-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/858.png"
+  },
+  {
+    "id": 859,
+    "name": "impidimp",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "451-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/859.png"
+  },
+  {
+    "id": 860,
+    "name": "morgrem",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "451-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/860.png"
+  },
+  {
+    "id": 861,
+    "name": "grimmsnarl",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "451-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/861.png"
+  },
+  {
+    "id": 862,
+    "name": "obstagoon",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "134-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/862.png"
+  },
+  {
+    "id": 863,
+    "name": "perrserker",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "22-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/863.png"
+  },
+  {
+    "id": 864,
+    "name": "cursola",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "113-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/864.png"
+  },
+  {
+    "id": 865,
+    "name": "sirfetchd",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "35-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/865.png"
+  },
+  {
+    "id": 866,
+    "name": "mr-rime",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "57-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/866.png"
+  },
+  {
+    "id": 867,
+    "name": "runerigus",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "287-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png"
+  },
+  {
+    "id": 868,
+    "name": "milcery",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "452-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/868.png"
+  },
+  {
+    "id": 869,
+    "name": "alcremie",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "452-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/869.png"
+  },
+  {
+    "id": 870,
+    "name": "falinks",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "453-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png"
+  },
+  {
+    "id": 871,
+    "name": "pincurchin",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "454-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/871.png"
+  },
+  {
+    "id": 872,
+    "name": "snom",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "455-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/872.png"
+  },
+  {
+    "id": 873,
+    "name": "frosmoth",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "455-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/873.png"
+  },
+  {
+    "id": 874,
+    "name": "stonjourner",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "456-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/874.png"
+  },
+  {
+    "id": 875,
+    "name": "eiscue",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "457-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/875.png"
+  },
+  {
+    "id": 876,
+    "name": "indeedee",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "458-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png"
+  },
+  {
+    "id": 877,
+    "name": "morpeko",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "459-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png"
+  },
+  {
+    "id": 878,
+    "name": "cufant",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "460-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/878.png"
+  },
+  {
+    "id": 879,
+    "name": "copperajah",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "460-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/879.png"
+  },
+  {
+    "id": 880,
+    "name": "dracozolt",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "461-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/880.png"
+  },
+  {
+    "id": 881,
+    "name": "arctozolt",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "462-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/881.png"
+  },
+  {
+    "id": 882,
+    "name": "dracovish",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "463-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/882.png"
+  },
+  {
+    "id": 883,
+    "name": "arctovish",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "464-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/883.png"
+  },
+  {
+    "id": 884,
+    "name": "duraludon",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "465-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/884.png"
+  },
+  {
+    "id": 885,
+    "name": "dreepy",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "466-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/885.png"
+  },
+  {
+    "id": 886,
+    "name": "drakloak",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "466-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/886.png"
+  },
+  {
+    "id": 887,
+    "name": "dragapult",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "466-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png"
+  },
+  {
+    "id": 888,
+    "name": "zacian",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "467-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png"
+  },
+  {
+    "id": 889,
+    "name": "zamazenta",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "468-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png"
+  },
+  {
+    "id": 890,
+    "name": "eternatus",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "469-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/890.png"
+  },
+  {
+    "id": 891,
+    "name": "kubfu",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "470-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/891.png"
+  },
+  {
+    "id": 892,
+    "name": "urshifu",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "470-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png"
+  },
+  {
+    "id": 893,
+    "name": "zarude",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "471-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/893.png"
+  },
+  {
+    "id": 894,
+    "name": "regieleki",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "472-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/894.png"
+  },
+  {
+    "id": 895,
+    "name": "regidrago",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "473-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/895.png"
+  },
+  {
+    "id": 896,
+    "name": "glastrier",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "474-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/896.png"
+  },
+  {
+    "id": 897,
+    "name": "spectrier",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "475-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/897.png"
+  },
+  {
+    "id": 898,
+    "name": "calyrex",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "476-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/898.png"
+  },
+  {
+    "id": 899,
+    "name": "wyrdeer",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "120-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png"
+  },
+  {
+    "id": 900,
+    "name": "kleavor",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "58-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/900.png"
+  },
+  {
+    "id": 901,
+    "name": "ursaluna",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "110-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/901.png"
+  },
+  {
+    "id": 902,
+    "name": "basculegion",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "280-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png"
+  },
+  {
+    "id": 903,
+    "name": "sneasler",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "109-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png"
+  },
+  {
+    "id": 904,
+    "name": "overqwil",
+    "generation": 8,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "106-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/904.png"
+  },
+  {
+    "id": 905,
+    "name": "enamorus",
+    "generation": 8,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "477-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/905.png"
+  },
+  {
+    "id": 906,
+    "name": "sprigatito",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "478-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png"
+  },
+  {
+    "id": 907,
+    "name": "floragato",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "478-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/907.png"
+  },
+  {
+    "id": 908,
+    "name": "meowscarada",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "478-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png"
+  },
+  {
+    "id": 909,
+    "name": "fuecoco",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "479-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png"
+  },
+  {
+    "id": 910,
+    "name": "crocalor",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "479-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/910.png"
+  },
+  {
+    "id": 911,
+    "name": "skeledirge",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "479-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png"
+  },
+  {
+    "id": 912,
+    "name": "quaxly",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 0,
+    "evolutionFamily": "480-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png"
+  },
+  {
+    "id": 913,
+    "name": "quaxwell",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "480-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/913.png"
+  },
+  {
+    "id": 914,
+    "name": "quaquaval",
+    "generation": 9,
+    "rarity": "starter",
+    "group": "starter",
+    "minCatchLevel": 20,
+    "evolutionFamily": "480-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png"
+  },
+  {
+    "id": 915,
+    "name": "lechonk",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "481-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/915.png"
+  },
+  {
+    "id": 916,
+    "name": "oinkologne",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "481-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/916.png"
+  },
+  {
+    "id": 917,
+    "name": "tarountula",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "482-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/917.png"
+  },
+  {
+    "id": 918,
+    "name": "spidops",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "482-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/918.png"
+  },
+  {
+    "id": 919,
+    "name": "nymble",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "483-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png"
+  },
+  {
+    "id": 920,
+    "name": "lokix",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "483-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/920.png"
+  },
+  {
+    "id": 921,
+    "name": "pawmi",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "484-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/921.png"
+  },
+  {
+    "id": 922,
+    "name": "pawmo",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "484-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/922.png"
+  },
+  {
+    "id": 923,
+    "name": "pawmot",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "484-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png"
+  },
+  {
+    "id": 924,
+    "name": "tandemaus",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "485-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/924.png"
+  },
+  {
+    "id": 925,
+    "name": "maushold",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "485-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png"
+  },
+  {
+    "id": 926,
+    "name": "fidough",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "486-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/926.png"
+  },
+  {
+    "id": 927,
+    "name": "dachsbun",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "486-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/927.png"
+  },
+  {
+    "id": 928,
+    "name": "smoliv",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "487-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/928.png"
+  },
+  {
+    "id": 929,
+    "name": "dolliv",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "487-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/929.png"
+  },
+  {
+    "id": 930,
+    "name": "arboliva",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "487-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png"
+  },
+  {
+    "id": 931,
+    "name": "squawkabilly",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "488-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png"
+  },
+  {
+    "id": 932,
+    "name": "nacli",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "489-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/932.png"
+  },
+  {
+    "id": 933,
+    "name": "naclstack",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "489-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/933.png"
+  },
+  {
+    "id": 934,
+    "name": "garganacl",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "489-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png"
+  },
+  {
+    "id": 935,
+    "name": "charcadet",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "490-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/935.png"
+  },
+  {
+    "id": 936,
+    "name": "armarouge",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "490-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png"
+  },
+  {
+    "id": 937,
+    "name": "ceruledge",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "490-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png"
+  },
+  {
+    "id": 938,
+    "name": "tadbulb",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "491-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/938.png"
+  },
+  {
+    "id": 939,
+    "name": "bellibolt",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "491-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png"
+  },
+  {
+    "id": 940,
+    "name": "wattrel",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "492-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/940.png"
+  },
+  {
+    "id": 941,
+    "name": "kilowattrel",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "492-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/941.png"
+  },
+  {
+    "id": 942,
+    "name": "maschiff",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "493-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/942.png"
+  },
+  {
+    "id": 943,
+    "name": "mabosstiff",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "493-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/943.png"
+  },
+  {
+    "id": 944,
+    "name": "shroodle",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "494-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/944.png"
+  },
+  {
+    "id": 945,
+    "name": "grafaiai",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "494-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/945.png"
+  },
+  {
+    "id": 946,
+    "name": "bramblin",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "495-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/946.png"
+  },
+  {
+    "id": 947,
+    "name": "brambleghast",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "495-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/947.png"
+  },
+  {
+    "id": 948,
+    "name": "toedscool",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "496-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/948.png"
+  },
+  {
+    "id": 949,
+    "name": "toedscruel",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "496-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/949.png"
+  },
+  {
+    "id": 950,
+    "name": "klawf",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "497-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/950.png"
+  },
+  {
+    "id": 951,
+    "name": "capsakid",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "498-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png"
+  },
+  {
+    "id": 952,
+    "name": "scovillain",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "498-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png"
+  },
+  {
+    "id": 953,
+    "name": "rellor",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "499-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png"
+  },
+  {
+    "id": 954,
+    "name": "rabsca",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "499-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/954.png"
+  },
+  {
+    "id": 955,
+    "name": "flittle",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "500-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/955.png"
+  },
+  {
+    "id": 956,
+    "name": "espathra",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "500-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png"
+  },
+  {
+    "id": 957,
+    "name": "tinkatink",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "501-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/957.png"
+  },
+  {
+    "id": 958,
+    "name": "tinkatuff",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "501-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/958.png"
+  },
+  {
+    "id": 959,
+    "name": "tinkaton",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "501-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png"
+  },
+  {
+    "id": 960,
+    "name": "wiglett",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "502-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/960.png"
+  },
+  {
+    "id": 961,
+    "name": "wugtrio",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "502-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/961.png"
+  },
+  {
+    "id": 962,
+    "name": "bombirdier",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "503-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/962.png"
+  },
+  {
+    "id": 963,
+    "name": "finizen",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "504-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/963.png"
+  },
+  {
+    "id": 964,
+    "name": "palafin",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "504-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png"
+  },
+  {
+    "id": 965,
+    "name": "varoom",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "505-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/965.png"
+  },
+  {
+    "id": 966,
+    "name": "revavroom",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "505-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/966.png"
+  },
+  {
+    "id": 967,
+    "name": "cyclizar",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "506-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/967.png"
+  },
+  {
+    "id": 968,
+    "name": "orthworm",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "507-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/968.png"
+  },
+  {
+    "id": 969,
+    "name": "glimmet",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "508-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/969.png"
+  },
+  {
+    "id": 970,
+    "name": "glimmora",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "508-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png"
+  },
+  {
+    "id": 971,
+    "name": "greavard",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "509-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/971.png"
+  },
+  {
+    "id": 972,
+    "name": "houndstone",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "509-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/972.png"
+  },
+  {
+    "id": 973,
+    "name": "flamigo",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "510-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/973.png"
+  },
+  {
+    "id": 974,
+    "name": "cetoddle",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "511-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/974.png"
+  },
+  {
+    "id": 975,
+    "name": "cetitan",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "511-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/975.png"
+  },
+  {
+    "id": 976,
+    "name": "veluza",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "512-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/976.png"
+  },
+  {
+    "id": 977,
+    "name": "dondozo",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "513-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/977.png"
+  },
+  {
+    "id": 978,
+    "name": "tatsugiri",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "514-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/978.png"
+  },
+  {
+    "id": 979,
+    "name": "annihilape",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "24-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png"
+  },
+  {
+    "id": 980,
+    "name": "clodsire",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "96-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/980.png"
+  },
+  {
+    "id": 981,
+    "name": "farigiraf",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "101-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/981.png"
+  },
+  {
+    "id": 982,
+    "name": "dudunsparce",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "103-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/982.png"
+  },
+  {
+    "id": 983,
+    "name": "kingambit",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "317-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png"
+  },
+  {
+    "id": 984,
+    "name": "great-tusk",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "515-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/984.png"
+  },
+  {
+    "id": 985,
+    "name": "scream-tail",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "516-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/985.png"
+  },
+  {
+    "id": 986,
+    "name": "brute-bonnet",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "517-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/986.png"
+  },
+  {
+    "id": 987,
+    "name": "flutter-mane",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "518-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png"
+  },
+  {
+    "id": 988,
+    "name": "slither-wing",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "519-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/988.png"
+  },
+  {
+    "id": 989,
+    "name": "sandy-shocks",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "520-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/989.png"
+  },
+  {
+    "id": 990,
+    "name": "iron-treads",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "521-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/990.png"
+  },
+  {
+    "id": 991,
+    "name": "iron-bundle",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "522-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/991.png"
+  },
+  {
+    "id": 992,
+    "name": "iron-hands",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "523-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/992.png"
+  },
+  {
+    "id": 993,
+    "name": "iron-jugulis",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "524-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/993.png"
+  },
+  {
+    "id": 994,
+    "name": "iron-moth",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "525-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/994.png"
+  },
+  {
+    "id": 995,
+    "name": "iron-thorns",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "526-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/995.png"
+  },
+  {
+    "id": 996,
+    "name": "frigibax",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "527-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/996.png"
+  },
+  {
+    "id": 997,
+    "name": "arctibax",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "527-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/997.png"
+  },
+  {
+    "id": 998,
+    "name": "baxcalibur",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "527-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png"
+  },
+  {
+    "id": 999,
+    "name": "gimmighoul",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "528-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/999.png"
+  },
+  {
+    "id": 1000,
+    "name": "gholdengo",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "528-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png"
+  },
+  {
+    "id": 1001,
+    "name": "wo-chien",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "529-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1001.png"
+  },
+  {
+    "id": 1002,
+    "name": "chien-pao",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "530-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1002.png"
+  },
+  {
+    "id": 1003,
+    "name": "ting-lu",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "531-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1003.png"
+  },
+  {
+    "id": 1004,
+    "name": "chi-yu",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "532-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1004.png"
+  },
+  {
+    "id": 1005,
+    "name": "roaring-moon",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "533-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1005.png"
+  },
+  {
+    "id": 1006,
+    "name": "iron-valiant",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "534-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1006.png"
+  },
+  {
+    "id": 1007,
+    "name": "koraidon",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "535-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png"
+  },
+  {
+    "id": 1008,
+    "name": "miraidon",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "536-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png"
+  },
+  {
+    "id": 1009,
+    "name": "walking-wake",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "537-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1009.png"
+  },
+  {
+    "id": 1010,
+    "name": "iron-leaves",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "538-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1010.png"
+  },
+  {
+    "id": 1011,
+    "name": "dipplin",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "442-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1011.png"
+  },
+  {
+    "id": 1012,
+    "name": "poltchageist",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "539-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1012.png"
+  },
+  {
+    "id": 1013,
+    "name": "sinistcha",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "539-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png"
+  },
+  {
+    "id": 1014,
+    "name": "okidogi",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "540-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1014.png"
+  },
+  {
+    "id": 1015,
+    "name": "munkidori",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "541-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1015.png"
+  },
+  {
+    "id": 1016,
+    "name": "fezandipiti",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "542-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1016.png"
+  },
+  {
+    "id": 1017,
+    "name": "ogerpon",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "543-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1017.png"
+  },
+  {
+    "id": 1018,
+    "name": "archaludon",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "465-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png"
+  },
+  {
+    "id": 1019,
+    "name": "hydrapple",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 20,
+    "evolutionFamily": "442-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png"
+  },
+  {
+    "id": 1020,
+    "name": "gouging-fire",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "544-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png"
+  },
+  {
+    "id": 1021,
+    "name": "raging-bolt",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "545-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png"
+  },
+  {
+    "id": 1022,
+    "name": "iron-boulder",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "547-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1022.png"
+  },
+  {
+    "id": 1023,
+    "name": "iron-crown",
+    "generation": 9,
+    "rarity": "rare",
+    "group": "rare",
+    "minCatchLevel": 0,
+    "evolutionFamily": "546-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1023.png"
+  },
+  {
+    "id": 1024,
+    "name": "terapagos",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "548-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png"
+  },
+  {
+    "id": 1025,
+    "name": "pecharunt",
+    "generation": 9,
+    "rarity": "legendary",
+    "group": "legendary",
+    "minCatchLevel": 50,
+    "evolutionFamily": "549-line",
+    "artworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1025.png"
   }
 ]

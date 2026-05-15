@@ -11,8 +11,8 @@ export function validatePokemonData(
   catalog: PokemonCatalogEntry[],
   buckets: RarityBucket[],
 ): void {
-  // 1. Ensure all catalog entries are within Pokedex 1-493
-  const invalidIds = catalog.filter((p) => p.id < 1 || p.id > 493);
+  // 1. Ensure all catalog entries are within Pokedex 1-1025
+  const invalidIds = catalog.filter((p) => p.id < 1 || p.id > 1025);
 
   if (invalidIds.length > 0) {
     throw new Error(

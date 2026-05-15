@@ -23,7 +23,7 @@ type SetupStep = "name" | "region" | "starter";
 interface Region {
   id: number;
   name: string;
-  generation: 1 | 2 | 3 | 4;
+  generation: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 }
 
 const REGIONS: Region[] = [
@@ -31,6 +31,11 @@ const REGIONS: Region[] = [
   { id: 2, name: "Johto", generation: 2 },
   { id: 3, name: "Hoenn", generation: 3 },
   { id: 4, name: "Sinnoh", generation: 4 },
+  { id: 5, name: "Unova", generation: 5 },
+  { id: 6, name: "Kalos", generation: 6 },
+  { id: 7, name: "Alola", generation: 7 },
+  { id: 8, name: "Galar", generation: 8 },
+  { id: 9, name: "Paldea", generation: 9 },
 ];
 
 /**
@@ -222,7 +227,7 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
           </summary>
           <ul className="rule-list" style={{ marginTop: "16px" }}>
             <li>One-minute catch windows</li>
-            <li>Only Pokemon 1-493 can appear</li>
+            <li>Only Pokemon 1-1025 can appear</li>
             <li>6 Pokemon party and 12 storage boxes</li>
             <li>Only party members level up when a Pokemon is caught</li>
             <li>No backend, all progress stays in your browser</li>

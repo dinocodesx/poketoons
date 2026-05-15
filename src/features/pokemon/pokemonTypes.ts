@@ -18,12 +18,12 @@ export type PokemonRarity =
  * These values are derived from PokeAPI and are read-only at runtime.
  */
 export interface PokemonCatalogEntry {
-  /** The unique Pokedex number (1-493). */
+  /** The unique Pokedex number (1-1025). */
   id: number;
   /** URL-friendly name (e.g., 'mr-mime'). */
   name: string;
-  /** Generation introduced (1-4). */
-  generation: 1 | 2 | 3 | 4;
+  /** Generation introduced (1-9). */
+  generation: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
   /** The rarity classification of this species. */
   rarity: PokemonRarity;
   /** 
