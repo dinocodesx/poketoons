@@ -12,6 +12,7 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
   const [starterPokemonId, setStarterPokemonId] = useState<number>(
     starters[0]?.id ?? 1,
   );
+  const [error, setError] = useState("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,9 +20,16 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
     const trimmedName = trainerName.trim();
 
     if (!trimmedName) {
+      setError("Please enter a trainer name.");
       return;
     }
 
+    if (!starterPokemonId) {
+      setError("Please select a starter Pokemon.");
+      return;
+    }
+
+    setError("");
     onCreateTrainer(trimmedName, starterPokemonId);
   }
 
@@ -29,7 +37,9 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
     <main className="setup-shell">
       <section className="setup-panel">
         <p className="eyebrow">Trainer Setup</p>
-        <h1>Choose your first partner</h1>
+        <h1 style={{ fontSize: "2rem", marginBottom: "16px" }}>
+          Choose your first partner
+        </h1>
         <p className="setup-copy">
           Build a browser-local collection, start timed catch sessions, and grow
           your newest Pokemon with every successful catch.
@@ -50,7 +60,7 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
           </label>
 
           <fieldset className="starter-grid">
-            <legend>Starter Pokemon</legend>
+            <legend style={{ marginBottom: "16px" }}>Starter Pokemon</legend>
             {starters.map((starter) => (
               <label
                 className={`starter-option ${
@@ -80,8 +90,50 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
           <button className="primary-button" type="submit">
             Create trainer
           </button>
+
+          {error && (
+            <div
+              style={{
+                marginTop: "16px",
+                padding: "12px",
+                background: "var(--error)",
+                color: "var(--error-border)",
+                borderRadius: "8px",
+                border: "1px solid var(--error-border)",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              {error}
+            </div>
+          )}
         </form>
       </section>
+
+      <details
+        className="setup-rules-dropdown"
+        style={{
+          marginTop: "24px",
+          width: "min(760px, 100%)",
+          background: "var(--panel-bg)",
+          border: "1px solid var(--panel-border)",
+          borderRadius: "12px",
+          padding: "16px",
+        }}
+      >
+        <summary
+          style={{ cursor: "pointer", fontWeight: "bold", outline: "none" }}
+        >
+          Game Rules Snapshot
+        </summary>
+        <ul className="rule-list" style={{ marginTop: "16px" }}>
+          <li>One-minute catch windows</li>
+          <li>Only Pokemon 1-251 can appear</li>
+          <li>Duplicates are always allowed</li>
+          <li>Each catch levels the newest 30 Pokemon by +1</li>
+          <li>No backend, all progress stays in your browser</li>
+        </ul>
+      </details>
     </main>
   );
 }

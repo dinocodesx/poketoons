@@ -1,13 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>poketoons</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>poketoons</title>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                background: #020202; /* Fallback for dark theme */
+                background: radial-gradient(
+                    circle at top,
+                    #19191d 0%,
+                    #030303 55%,
+                    #000 100%
+                );
+                color: #f5f5f5;
+                font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            }
+            #root {
+                min-height: 100vh;
+            }
+            .initial-loading {
+                display: grid;
+                place-items: center;
+                min-height: 100vh;
+                padding: 24px;
+            }
+            .initial-loading__panel {
+                width: min(760px, 100%);
+                text-align: left;
+            }
+            .initial-loading h1 {
+                font-family:
+                    "Avenir Next Condensed", "Arial Narrow", sans-serif;
+                margin-top: 0;
+            }
+            .initial-loading .eyebrow {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.05em;
+                color: #b7b7bf;
+                margin-bottom: 8px;
+            }
+            .initial-loading p {
+                color: #b7b7bf;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <main class="initial-loading">
+                <div class="initial-loading__panel">
+                    <p class="eyebrow">Loading Game</p>
+                    <h1>Poketoons</h1>
+                    <p>Catching some code...</p>
+                </div>
+            </main>
+        </div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
 </html>
