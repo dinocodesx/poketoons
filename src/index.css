@@ -422,7 +422,7 @@
         .box-sidebar {
             @apply w-full h-auto flex flex-col shrink-0 bg-app-bg p-0;
         }
-        
+
         .box-sidebar__header {
             @apply hidden;
         }
@@ -458,11 +458,11 @@
         .box-actions__buttons {
             @apply flex flex-col gap-2;
         }
-        
+
         .box-actions p {
             @apply mb-1 text-center;
         }
-        
+
         .box-actions button {
             @apply py-3.5 m-0;
         }
@@ -577,7 +577,6 @@
         @apply flex-1 flex flex-col items-center justify-center border border-dashed border-panel-border rounded-none p-6 text-center bg-[rgba(255,255,255,0.01)] overflow-hidden;
     }
 
-
     .guess-form {
         @apply w-full flex flex-col gap-3 mt-auto;
     }
@@ -650,7 +649,7 @@
         @apply bg-[rgba(169,116,116,0.15)] text-error;
     }
 
-    .history-badge--fleeing {
+    .history-badge--fled {
         @apply bg-[rgba(240,230,140,0.15)] text-[#f0e68c];
     }
 

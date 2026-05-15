@@ -20,8 +20,8 @@ import { loadPersistedGameState } from "./gameStorage";
 import { getPokemonById, getBucketByKey } from "../pokemon/pokemonCatalog";
 import evolutionData from "../../data/evolutions.json";
 
-/** 
- * Evolution configuration format. 
+/**
+ * Evolution configuration format.
  * Supports both linear and branching evolution paths.
  */
 interface EvolutionConfig {
@@ -237,12 +237,17 @@ function applyPartyLevelUp(party: (OwnedPokemon | null)[]) {
  * Handles the logic for a successful Pokemon catch.
  * Attempts to place the Pokemon in the first available slot (Party first, then Boxes).
  */
-function handleCatchEncounter(state: GameState, action: CatchEncounterAction): GameState {
+function handleCatchEncounter(
+  state: GameState,
+  action: CatchEncounterAction,
+): GameState {
   if (!state.activeEncounter) return state;
 
   // Determine starting level based on the encounter's rarity bucket
   const pokemonSpecies = getPokemonById(state.activeEncounter.pokemonId);
-  const bucket = pokemonSpecies ? getBucketByKey(pokemonSpecies.group) : undefined;
+  const bucket = pokemonSpecies
+    ? getBucketByKey(pokemonSpecies.group)
+    : undefined;
   const initialLevel = bucket?.minLevel ?? WILD_POKEMON_BASE_LEVEL;
 
   const newPokemon: OwnedPokemon = {
@@ -316,7 +321,7 @@ function handleCatchEncounter(state: GameState, action: CatchEncounterAction): G
 export function applyResolvedEncounterState(
   state: PersistedGameState,
   resolvedAt: number,
-  result: "missed" | "fleeing",
+  result: "missed" | "fled",
 ): PersistedGameState {
   if (!state.activeEncounter) return state;
 
@@ -341,15 +346,19 @@ export function applyResolvedEncounterState(
 /**
  * Handles swapping or moving Pokemon between party slots and boxes.
  */
-function handleMovePokemon(state: GameState, action: MovePokemonAction): GameState {
+function handleMovePokemon(
+  state: GameState,
+  action: MovePokemonAction,
+): GameState {
   const { source, destination } = action.payload;
   const nextParty = [...state.party];
   const nextBoxes = [...state.boxes];
 
   // Resolve source Pokemon
-  const pokemonToMove = source.type === "party"
-    ? nextParty[source.slotIndex]
-    : nextBoxes[source.boxIndex ?? 0][source.slotIndex];
+  const pokemonToMove =
+    source.type === "party"
+      ? nextParty[source.slotIndex]
+      : nextBoxes[source.boxIndex ?? 0][source.slotIndex];
 
   if (!pokemonToMove) return state;
 
@@ -363,9 +372,10 @@ function handleMovePokemon(state: GameState, action: MovePokemonAction): GameSta
   }
 
   // Resolve destination (for swapping)
-  const swapped = destination.type === "party"
-    ? nextParty[destination.slotIndex]
-    : nextBoxes[destination.boxIndex ?? 0][destination.slotIndex];
+  const swapped =
+    destination.type === "party"
+      ? nextParty[destination.slotIndex]
+      : nextBoxes[destination.boxIndex ?? 0][destination.slotIndex];
 
   // Deposit in destination
   if (destination.type === "party") {
@@ -392,7 +402,10 @@ function handleMovePokemon(state: GameState, action: MovePokemonAction): GameSta
 /**
  * Removes a Pokemon permanently from the trainer's collection.
  */
-function handleReleasePokemon(state: GameState, action: ReleasePokemonAction): GameState {
+function handleReleasePokemon(
+  state: GameState,
+  action: ReleasePokemonAction,
+): GameState {
   const { location } = action.payload;
   const nextParty = [...state.party];
   const nextBoxes = [...state.boxes];
@@ -431,8 +444,9 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
       return { ...action.payload, isHydrating: false };
 
     case "CREATE_TRAINER": {
-      const { name, starterPokemonId, createdAt, starterInstanceId } = action.payload;
-      
+      const { name, starterPokemonId, createdAt, starterInstanceId } =
+        action.payload;
+
       const trainer: TrainerProfile = { name, starterPokemonId, createdAt };
       const party = createEmptyParty();
       party[0] = {
@@ -508,13 +522,21 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
 
     case "MISS_ENCOUNTER":
       return {
-        ...applyResolvedEncounterState(state, action.payload.resolvedAt, "missed"),
+        ...applyResolvedEncounterState(
+          state,
+          action.payload.resolvedAt,
+          "missed",
+        ),
         isHydrating: state.isHydrating,
       };
 
     case "FLEE_ENCOUNTER":
       return {
-        ...applyResolvedEncounterState(state, action.payload.resolvedAt, "fleeing"),
+        ...applyResolvedEncounterState(
+          state,
+          action.payload.resolvedAt,
+          "fled",
+        ),
         isHydrating: state.isHydrating,
       };
 

@@ -134,7 +134,7 @@ export function useGameSession() {
           return {
             accepted: true,
             correct: false,
-            message: `Too many mistakes! ${formatPokemonName(pokemon.name)} ran away.`,
+            message: `Too many mistakes! ${formatPokemonName(pokemon.name)} fled.`,
           };
         }
 

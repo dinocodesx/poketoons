@@ -37,8 +37,8 @@ export function CatchHistoryPanel({
                 entry.result === "caught"
                   ? "history-badge--caught"
                   : entry.result === "missed"
-                  ? "history-badge--missed"
-                  : "history-badge--fleeing"
+                    ? "history-badge--missed"
+                    : "history-badge--fled"
               }`}
             >
               {entry.result}

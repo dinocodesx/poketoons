@@ -5,9 +5,9 @@ import type { PokemonCatalogEntry } from "../pokemon/pokemonTypes";
  * - 'active': The Pokemon is currently visible and can be guessed.
  * - 'caught': The encounter ended with a successful catch.
  * - 'missed': The encounter ended due to time or too many mistakes.
- * - 'fleeing': The encounter ended without any player interaction.
+ * - 'fled': The encounter ended without any player interaction.
  */
-export type EncounterStatus = "active" | "caught" | "missed" | "fleeing";
+export type EncounterStatus = "active" | "caught" | "missed" | "fled";
 
 /**
  * Represents the current status of a game session.
@@ -18,7 +18,7 @@ export type SessionStatus = "idle" | "active" | "ended";
 /**
  * The final result of an encounter recorded in history.
  */
-export type CatchResult = "caught" | "missed" | "fleeing";
+export type CatchResult = "caught" | "missed" | "fled";
 
 /**
  * Profile data for the player (Trainer).
@@ -131,7 +131,7 @@ export interface PersistedGameState {
  * Extends persisted state with runtime-only flags.
  */
 export interface GameState extends PersistedGameState {
-  /** 
+  /**
    * True while state is being loaded from storage.
    * Prevents UI flickers and hydration mismatches.
    */
