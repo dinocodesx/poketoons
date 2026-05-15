@@ -1,7 +1,7 @@
 import { getPokemonById } from "../pokemon/pokemonCatalog";
 import type { CollectionEntry, GameState, HistoryEntry } from "./gameTypes";
 
-const RECENT_HISTORY_LIMIT = 8;
+const RECENT_HISTORY_LIMIT = 10;
 
 export function selectSessionActive(state: GameState) {
   return state.currentSession?.status === "active";

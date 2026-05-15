@@ -9,6 +9,7 @@ interface SessionPanelProps {
     label: string;
     displayValue: string;
   };
+  className?: string;
 }
 
 export function SessionPanel({
@@ -17,9 +18,10 @@ export function SessionPanel({
   onEndSession,
   onStartSession,
   timer,
+  className = "",
 }: SessionPanelProps) {
   return (
-    <section className="section-card session-panel">
+    <section className={`section-card session-panel ${className}`.trim()}>
       <header className="section-card__header">
         <div>
           <h2>Session Control</h2>

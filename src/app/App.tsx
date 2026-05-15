@@ -8,7 +8,6 @@ import { SessionPanel } from "../components/SessionPanel";
 import { TrainerSetup } from "../components/TrainerSetup";
 import { useGameSession } from "../features/game/useGameSession";
 import { useEncounterTimer } from "../features/game/useEncounterTimer";
-import { formatPokemonName } from "../lib/string";
 import {
   selectCollectionEntries,
   selectCurrentEncounterPokemon,
@@ -16,7 +15,6 @@ import {
   selectSessionActive,
   selectStarterPokemon,
   selectTotalCaught,
-  selectTotalOwned,
 } from "../features/game/gameSelectors";
 
 function App() {
@@ -50,31 +48,6 @@ function App() {
 
   return (
     <main className="app-shell">
-      <header className="app-header">
-        <div>
-          <p className="eyebrow">Pokemon Catch Session</p>
-          <h1>Poketoons</h1>
-        </div>
-        <div className="header-meta">
-          <div>
-            <span className="meta-label">Trainer</span>
-            <strong>{game.state.trainer.name}</strong>
-          </div>
-          <div>
-            <span className="meta-label">Starter</span>
-            <strong>{formatPokemonName(starterPokemon.name)}</strong>
-          </div>
-          <div>
-            <span className="meta-label">Caught</span>
-            <strong>{selectTotalCaught(game.state)}</strong>
-          </div>
-          <div>
-            <span className="meta-label">Owned</span>
-            <strong>{selectTotalOwned(game.state)}</strong>
-          </div>
-        </div>
-      </header>
-
       <section className="dashboard-grid">
         <div className="dashboard-main">
           <SessionPanel
@@ -83,11 +56,13 @@ function App() {
             onEndSession={game.endSession}
             onStartSession={game.startSession}
             timer={timer}
+            className="h-1/4"
           />
 
           <SectionCard
             title="Active Encounter"
             description="Study the artwork and type the exact Pokemon name before the clock runs out."
+            className="h-3/4"
           >
             <EncounterCard
               encounter={game.state.activeEncounter}
@@ -106,20 +81,31 @@ function App() {
         </div>
 
         <div className="dashboard-side">
-          <CatchHistoryPanel history={recentHistory} />
-          <CollectionPanel entries={collectionEntries} />
-          <SectionCard
-            title="Rules Snapshot"
-            description="Local-only progression and rarity-based spawns."
-          >
-            <ul className="rule-list">
-              <li>One-minute catch windows</li>
-              <li>Only Pokemon 1-251 can appear</li>
-              <li>Duplicates are always allowed</li>
-              <li>Each catch levels the newest 30 Pokemon by +1</li>
-              <li>No backend, all progress stays in your browser</li>
-            </ul>
+          <SectionCard className="h-22">
+            <div className="flex justify-between items-center h-full">
+              <span className="meta-label">Caught</span>
+              <strong>{selectTotalCaught(game.state)}</strong>
+            </div>
           </SectionCard>
+          <CatchHistoryPanel history={recentHistory} className="flex-1" />
+        </div>
+
+        <div className="dashboard-side">
+          <SectionCard className="h-[88px]">
+            <div className="flex justify-between items-center h-full">
+              <span className="meta-label">Username</span>
+              <strong>{game.state.trainer.name}</strong>
+            </div>
+          </SectionCard>
+
+          <CollectionPanel
+            entries={collectionEntries.slice(0, 6)}
+            className="flex-1"
+          />
+
+          <button className="primary-button" style={{ marginTop: "auto" }}>
+            Box
+          </button>
         </div>
       </section>
     </main>

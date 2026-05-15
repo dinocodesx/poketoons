@@ -14,11 +14,8 @@ export function PokemonCollectionCard({ entry }: PokemonCollectionCardProps) {
         src={entry.pokemon.artworkUrl}
       />
       <div className="collection-card__body">
-        <div className="collection-card__header">
-          <h3>{formatPokemonName(entry.pokemon.name)}</h3>
-          <span>Lv. {entry.level}</span>
-        </div>
-        <p>{new Date(entry.caughtAt).toLocaleString()}</p>
+        <h3>{formatPokemonName(entry.pokemon.name)}</h3>
+        <span className="collection-card__level">Lv. {entry.level}</span>
       </div>
     </article>
   );
