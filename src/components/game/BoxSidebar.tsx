@@ -12,19 +12,15 @@ interface BoxSidebarProps {
 export function BoxSidebar({
   currentBoxIndex,
   onBoxChange,
-  onRelease,
-  canRelease,
-  selectedText,
-  onClose,
-}: BoxSidebarProps) {
+}: Pick<BoxSidebarProps, "currentBoxIndex" | "onBoxChange">) {
   return (
     <div className="box-sidebar">
-      <div className="flex flex-col items-center mb-2">
+      <div className="box-sidebar__header">
         <h2 className="text-xl">Storage</h2>
         <div className="w-full h-px bg-panel-border mt-2" />
       </div>
       
-      <div className="flex-1 overflow-auto box-nav">
+      <div className="box-nav">
         {Array.from({ length: BOX_COUNT }).map((_, i) => (
           <button
             key={`box-nav-${i}`}
@@ -36,20 +32,6 @@ export function BoxSidebar({
             Box {i + 1}
           </button>
         ))}
-      </div>
-
-      <div className="box-actions">
-        <p className="text-xs text-text-muted text-center mb-2">{selectedText}</p>
-        <button
-          className="secondary-button w-full text-error border-error-border mb-2"
-          disabled={!canRelease}
-          onClick={onRelease}
-        >
-          Release Pokemon
-        </button>
-        <button className="primary-button w-full" onClick={onClose}>
-          Close Storage
-        </button>
       </div>
     </div>
   );

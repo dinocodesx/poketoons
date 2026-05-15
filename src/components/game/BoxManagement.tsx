@@ -102,22 +102,36 @@ export function BoxManagement({
         onSlotClick={handleSlotClick}
       />
 
-      <div className="box-management__content">
-        <BoxSidebar
-          currentBoxIndex={currentBoxIndex}
-          onBoxChange={setCurrentBoxIndex}
-          onRelease={handleRelease}
-          canRelease={!!selectedLocation}
-          selectedText={selectedText}
-          onClose={onClose}
-        />
+      <div className="box-management__main">
+        <div className="box-management__content">
+          <BoxSidebar
+            currentBoxIndex={currentBoxIndex}
+            onBoxChange={setCurrentBoxIndex}
+          />
 
-        <BoxGrid
-          boxIndex={currentBoxIndex}
-          entries={currentBox}
-          selectedLocation={selectedLocation}
-          onSlotClick={handleSlotClick}
-        />
+          <BoxGrid
+            boxIndex={currentBoxIndex}
+            entries={currentBox}
+            selectedLocation={selectedLocation}
+            onSlotClick={handleSlotClick}
+          />
+        </div>
+
+        <div className="box-actions">
+          <p className="text-xs text-text-muted text-center mb-2">{selectedText}</p>
+          <div className="box-actions__buttons">
+            <button
+              className="secondary-button text-error border-error-border"
+              disabled={!!!selectedLocation}
+              onClick={handleRelease}
+            >
+              Release Pokemon
+            </button>
+            <button className="primary-button" onClick={onClose}>
+              Close Storage
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -20,10 +20,8 @@ export function PartyBar({
 
   return (
     <div className="party-bar">
-      <div className="flex flex-col items-center mb-2">
-        <span className="meta-label">Party</span>
-      </div>
-      <div className="flex-1 flex flex-col gap-4">
+      <span className="meta-label">Party</span>
+      <div className="party-bar__slots">
         {party.map((pokemon, index) => (
           <StorageSlot
             key={`party-${index}`}

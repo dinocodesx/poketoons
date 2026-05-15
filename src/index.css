@@ -191,148 +191,6 @@
         @apply flex flex-col gap-2.5;
     }
 
-    /* Mobile-specific layout overrides */
-    @media (max-width: 1024px) {
-        .dashboard-grid {
-            @apply flex flex-col h-auto p-4 gap-6;
-        }
-
-        .dashboard-main {
-            @apply order-1;
-        }
-
-        /* Target the first side panel (History) */
-        .dashboard-side:nth-child(2) {
-            @apply order-3 h-auto;
-        }
-
-        /* Target the second side panel (Trainer/Party) */
-        .dashboard-side:nth-child(3) {
-            @apply order-2 h-auto;
-        }
-
-        /* Adjust starter grid for mobile */
-        .starter-grid {
-            @apply grid-cols-1 gap-2;
-        }
-
-        .starter-option {
-            @apply flex-row justify-start p-3 gap-4;
-        }
-
-        .starter-option img {
-            @apply w-16 h-16;
-        }
-
-        .starter-option strong {
-            @apply text-lg;
-        }
-
-        /* Make active encounter more prominent on mobile */
-        .encounter-card {
-            @apply min-h-[350px];
-        }
-
-        .section-card {
-            @apply mb-0;
-        }
-
-        /* Stack buttons properly on mobile */
-        .action-row {
-            @apply grid grid-cols-1;
-        }
-
-        /* Adjust font sizes for mobile */
-        .app-header h1,
-        .loading-screen__panel h1,
-        .setup-panel h1 {
-            @apply text-[2.5rem];
-        }
-
-        /* Collection panel improvement for mobile */
-        .collection-card {
-            @apply px-4 py-3 gap-4;
-        }
-
-        .collection-card h3 {
-            @apply text-[1.1rem];
-        }
-
-        .collection-card img {
-            @apply w-12 h-12;
-        }
-
-        /* History panel improvement for mobile */
-        .history-list {
-            @apply grid grid-cols-1 gap-2;
-        }
-
-        .history-item {
-            @apply py-3;
-        }
-
-        /* Box management modal adjustments for mobile */
-        .box-management {
-            @apply flex flex-col p-0 overflow-hidden;
-        }
-
-        .box-management__content {
-            @apply flex flex-col flex-1 min-h-0 gap-0;
-        }
-
-        .party-bar {
-            @apply w-full h-auto flex-row overflow-x-auto overflow-y-hidden p-3 bg-surface-muted border-b border-panel-border shrink-0 gap-3;
-        }
-
-        .party-bar .meta-label {
-            @apply hidden;
-        }
-
-        .party-slot {
-            @apply w-14 h-14 shrink-0;
-        }
-
-        .box-sidebar {
-            @apply w-full h-auto order-1 flex flex-col shrink-0 bg-app-bg;
-        }
-        
-        .box-sidebar h2, .box-sidebar .w-full.h-px {
-            @apply hidden;
-        }
-
-        .box-nav {
-            @apply flex-row overflow-x-auto px-3 py-1 border-b border-panel-border bg-surface-muted;
-        }
-
-        .box-nav__item {
-            @apply px-4 py-2 border-b-0 border-r-0 text-sm whitespace-nowrap;
-        }
-
-        .box-nav__item--active {
-            @apply border-l-0 border-b-2 border-b-white bg-transparent;
-        }
-
-        .box-grid-container {
-            @apply flex-1 h-auto p-3 order-2 bg-app-bg overflow-y-auto;
-        }
-
-        .box-grid {
-            @apply grid-cols-5 gap-1;
-        }
-
-        .box-actions {
-            @apply order-3 p-4 bg-surface-muted border-t border-panel-border flex flex-col gap-2 mt-0;
-        }
-        
-        .box-actions p {
-            @apply mb-1 text-center;
-        }
-        
-        .box-actions button {
-            @apply py-3.5 m-0;
-        }
-    }
-
     .field span,
     .starter-grid legend {
         @apply text-[0.88rem] text-text-secondary;
@@ -553,6 +411,10 @@
         @apply fixed inset-0 bg-app-bg z-50 flex p-6 gap-6;
     }
 
+    .box-management__main {
+        @apply flex flex-col flex-1 gap-6 min-h-0;
+    }
+
     .box-management__content {
         @apply flex flex-1 gap-6 min-h-0 w-full;
     }
@@ -561,12 +423,28 @@
         @apply flex flex-col gap-4 border border-panel-border bg-surface-muted p-4 w-32 shrink-0 h-full overflow-y-auto;
     }
 
+    .party-bar__slots {
+        @apply flex flex-col gap-4;
+    }
+
     .party-bar .meta-label {
-        @apply text-center block w-full;
+        @apply text-center block w-full mb-2;
     }
 
     .party-slot {
         @apply border border-panel-border bg-panel-bg flex flex-col items-center justify-center p-2 cursor-pointer relative shrink-0;
+    }
+
+    .party-slot--selected {
+        @apply border-white ring-2 ring-white z-10;
+    }
+
+    .party-slot img {
+        @apply w-full h-full object-contain;
+    }
+
+    .party-slot__level {
+        @apply absolute top-1 right-1 text-[0.7rem] text-text-muted;
     }
 
     .box-grid-container {
@@ -608,6 +486,10 @@
         @apply w-48 flex flex-col gap-4 shrink-0;
     }
 
+    .box-sidebar__header {
+        @apply flex flex-col items-center mb-2;
+    }
+
     .box-nav {
         @apply flex flex-col border border-panel-border bg-surface-muted overflow-hidden;
     }
@@ -624,19 +506,169 @@
         @apply border-b-0;
     }
 
-    .party-slot--selected {
-        @apply border-white ring-2 ring-white z-10;
-    }
-
-    .party-slot img {
-        @apply w-full h-full object-contain;
-    }
-
-    .party-slot__level {
-        @apply absolute top-1 right-1 text-[0.7rem] text-text-muted;
-    }
-
     .box-actions {
-        @apply mt-auto flex flex-col gap-2;
+        @apply flex flex-col gap-2 shrink-0;
+    }
+
+    .box-actions__buttons {
+        @apply flex gap-4;
+    }
+
+    .box-actions__buttons button {
+        @apply flex-1;
+    }
+
+    /* Mobile-specific layout overrides - Placed at the very end of the layer */
+    @media (max-width: 1024px) {
+        .dashboard-grid {
+            @apply flex flex-col h-auto p-4 gap-6;
+        }
+
+        .dashboard-main {
+            @apply order-1;
+        }
+
+        /* Target the first side panel (History) */
+        .dashboard-side:nth-child(2) {
+            @apply order-3 h-auto;
+        }
+
+        /* Target the second side panel (Trainer/Party) */
+        .dashboard-side:nth-child(3) {
+            @apply order-2 h-auto;
+        }
+
+        /* Adjust starter grid for mobile */
+        .starter-grid {
+            @apply grid-cols-1 gap-2;
+        }
+
+        .starter-option {
+            @apply flex-row justify-start p-3 gap-4;
+        }
+
+        .starter-option img {
+            @apply w-16 h-16;
+        }
+
+        .starter-option strong {
+            @apply text-lg;
+        }
+
+        /* Make active encounter more prominent on mobile */
+        .encounter-card {
+            @apply min-h-[350px];
+        }
+
+        .section-card {
+            @apply mb-0;
+        }
+
+        /* Stack buttons properly on mobile */
+        .action-row {
+            @apply grid grid-cols-1;
+        }
+
+        /* Adjust font sizes for mobile */
+        .app-header h1,
+        .loading-screen__panel h1,
+        .setup-panel h1 {
+            @apply text-[2.5rem];
+        }
+
+        /* Collection panel improvement for mobile */
+        .collection-card {
+            @apply px-4 py-3 gap-4;
+        }
+
+        .collection-card h3 {
+            @apply text-[1.1rem];
+        }
+
+        .collection-card img {
+            @apply w-12 h-12;
+        }
+
+        /* History panel improvement for mobile */
+        .history-list {
+            @apply grid grid-cols-1 gap-2;
+        }
+
+        .history-item {
+            @apply py-3;
+        }
+
+        /* Box management modal adjustments for mobile */
+        .box-management {
+            @apply flex flex-col p-0 overflow-hidden bg-app-bg;
+        }
+
+        .box-management__main {
+            @apply flex flex-col flex-1 min-h-0 gap-0;
+        }
+
+        .box-management__content {
+            @apply flex flex-col flex-1 min-h-0 gap-0;
+        }
+
+        .party-bar {
+            @apply w-full h-auto p-3 bg-surface-muted border-b border-panel-border shrink-0;
+        }
+
+        .party-bar .meta-label {
+            @apply hidden;
+        }
+
+        .party-bar__slots {
+            @apply flex flex-row overflow-x-auto overflow-y-hidden gap-3;
+        }
+
+        .party-slot {
+            @apply w-14 h-14 shrink-0;
+        }
+
+        .box-sidebar {
+            @apply w-full h-auto flex flex-col shrink-0 bg-app-bg p-0;
+        }
+        
+        .box-sidebar__header {
+            @apply hidden;
+        }
+
+        .box-nav {
+            @apply flex flex-row overflow-x-auto px-3 py-0 border-b border-panel-border bg-surface-muted;
+        }
+
+        .box-nav__item {
+            @apply px-4 py-3 border-b-0 border-r-0 text-sm whitespace-nowrap;
+        }
+
+        .box-nav__item--active {
+            @apply border-l-0 border-b-2 border-b-white bg-transparent;
+        }
+
+        .box-grid-container {
+            @apply flex-1 h-auto p-3 bg-app-bg overflow-y-auto min-h-0;
+        }
+
+        .box-grid {
+            @apply grid-cols-5 gap-1 h-auto;
+        }
+
+        .box-actions {
+            @apply p-4 bg-surface-muted border-t border-panel-border flex flex-col gap-2 mt-0 shrink-0;
+        }
+
+        .box-actions__buttons {
+            @apply flex flex-col gap-2;
+        }
+        
+        .box-actions p {
+            @apply mb-1 text-center;
+        }
+        
+        .box-actions button {
+            @apply py-3.5 m-0;
+        }
     }
 }
