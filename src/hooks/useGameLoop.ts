@@ -1,28 +1,31 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
-import type { GameAction } from "./gameReducer";
-import type { GameState } from "./gameTypes";
-import { selectTotalCaught } from "./gameSelectors";
-import { pokemonCatalog, rarityBuckets } from "../pokemon/pokemonCatalog";
-import { pickSpawnPokemon } from "../pokemon/pokemonSpawn";
+import type { GameAction } from "../features/game/gameReducer";
+import type { GameState } from "../features/game/gameTypes";
+import { selectTotalCaught } from "../features/game/gameSelectors";
+import { pokemonCatalog, rarityBuckets } from "../features/pokemon/pokemonCatalog";
+import { pickSpawnPokemon } from "../features/pokemon/pokemonSpawn";
 
 /**
- * Hook to manage the core game loop (timer-based checks for encounters and expirations).
+ * Manages the background "clock" of the game.
+ * Performs periodic checks for encounter expiration and spawn scheduling.
  * 
- * @param state - The current game state.
- * @param dispatch - The dispatch function to update game state.
+ * DESIGN PATTERN: State-Ref Synchronization
+ * We use a ref to the current state to allow the interval loop to access the 
+ * latest data without being re-created every render, which ensures timing accuracy.
  */
 export function useGameLoop(
   state: GameState,
   dispatch: React.Dispatch<GameAction>,
 ) {
-  // Use a ref to always have the latest state inside the interval without re-subscribing
   const stateRef = useRef(state);
   
+  // Update ref on every render (sync point)
   useLayoutEffect(() => {
     stateRef.current = state;
   });
 
   useEffect(() => {
+    // Only run the loop if hydration is complete and a session is active
     if (state.isHydrating || state.currentSession?.status !== "active") {
       return undefined;
     }
@@ -31,13 +34,14 @@ export function useGameLoop(
       const currentState = stateRef.current;
       const now = Date.now();
 
-      // 1. Check if the active encounter has expired
+      // TASK 1: Check for expired encounters
       if (
         currentState.activeEncounter &&
         now >= currentState.activeEncounter.expiresAt
       ) {
         const hasAttempted = currentState.activeEncounter.mistakes > 0;
         
+        // Use 'MISS' if they tried and failed, 'FLEE' if they didn't try at all
         dispatch({
           type: hasAttempted ? "MISS_ENCOUNTER" : "FLEE_ENCOUNTER",
           payload: { resolvedAt: currentState.activeEncounter.expiresAt },
@@ -45,17 +49,17 @@ export function useGameLoop(
         return;
       }
 
-      // 2. If no active encounter, check if it's time to spawn a new one
+      // TASK 2: Schedule new spawns if idle
       if (
         !currentState.activeEncounter &&
         currentState.currentSession?.status === "active"
       ) {
         const nextEncounterAt = currentState.currentSession.nextEncounterAt ?? now;
 
-        if (now < nextEncounterAt) {
-          return;
-        }
+        // Still waiting for the next spawn cycle
+        if (now < nextEncounterAt) return;
 
+        // Perform weighted random selection
         const pokemonId = pickSpawnPokemon(
           pokemonCatalog,
           rarityBuckets,
@@ -75,7 +79,7 @@ export function useGameLoop(
           },
         });
       }
-    }, 250);
+    }, 250); // 4Hz tick rate is sufficient for UI precision without heavy CPU load
 
     return () => window.clearInterval(intervalId);
   }, [state.isHydrating, state.currentSession?.status, dispatch]);

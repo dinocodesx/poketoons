@@ -1,5 +1,5 @@
 /**
- * The possible rarity levels for Pokemon in the game.
+ * Categories determining encounter probability and power levels.
  */
 export type PokemonRarity =
   | "early_route"
@@ -14,39 +14,46 @@ export type PokemonRarity =
   | "legendary";
 
 /**
- * Represents an entry in the Pokemon species catalog.
+ * Static definition of a Pokemon species in the game's Pokedex.
+ * These values are derived from PokeAPI and are read-only at runtime.
  */
 export interface PokemonCatalogEntry {
   /** The unique Pokedex number (1-493). */
   id: number;
-  /** Normalized name for logic and storage. */
+  /** URL-friendly name (e.g., 'mr-mime'). */
   name: string;
-  /** The generation the Pokemon belongs to. */
+  /** Generation introduced (1-4). */
   generation: 1 | 2 | 3 | 4;
-  /** The rarity tier of the species. */
+  /** The rarity classification of this species. */
   rarity: PokemonRarity;
-  /** The spawn group the species belongs to. */
+  /** 
+   * The spawn group this species belongs to. 
+   * Used for selecting which bucket to pull from. 
+   */
   group: PokemonRarity;
-  /** The minimum catch count required for this species to spawn. */
+  /** 
+   * Minimum number of lifetime catches required to unlock this species spawn.
+   * Creates a progression curve for rare/powerful Pokemon.
+   */
   minCatchLevel: number;
-  /** The name of the evolution family the species belongs to. */
+  /** Identifier for grouping species into evolution trees. */
   evolutionFamily: string;
-  /** The URL for the Pokemon's official artwork. */
+  /** High-quality artwork URL. */
   artworkUrl: string;
 }
 
 /**
- * Represents a bucket used for weighted random spawn selection.
+ * Configuration for a weighted encounter pool.
  */
 export interface RarityBucket {
-  /** The rarity key associated with this bucket. */
+  /** Machine key matching PokemonRarity. */
   key: PokemonRarity;
-  /** A human-readable label for the rarity. */
+  /** Display label (e.g., 'Early Route'). */
   label: string;
-  /** The relative weight for spawning from this bucket. */
+  /** Relative weight (probability) of this bucket being selected. */
   weight: number;
-  /** The minimum level for Pokemon caught from this bucket. */
+  /** The starting level assigned to Pokemon caught from this bucket. */
   minLevel: number;
-  /** List of Pokemon IDs included in this bucket. */
+  /** List of species IDs included in this encounter pool. */
   pokemonIds: number[];
 }

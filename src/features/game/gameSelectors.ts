@@ -10,23 +10,23 @@ import type {
 const RECENT_HISTORY_LIMIT = 10;
 
 /**
- * Selector to check if a game session is currently active.
+ * Checks if a game session is currently in the 'active' state.
  */
-export function selectSessionActive(state: GameState) {
+export function selectSessionActive(state: GameState): boolean {
   return state.currentSession?.status === "active";
 }
 
 /**
- * Selector to get the total number of Pokemon caught by the trainer.
+ * Calculates total lifetime successful catches.
  */
-export function selectTotalCaught(state: GameState) {
+export function selectTotalCaught(state: GameState): number {
   return state.history.filter((entry) => entry.result === "caught").length;
 }
 
 /**
- * Selector to get the total number of Pokemon currently owned by the trainer.
+ * Calculates the current size of the trainer's collection (Party + Boxes).
  */
-export function selectTotalOwned(state: GameState) {
+export function selectTotalOwned(state: GameState): number {
   const partyCount = state.party.filter((p) => p !== null).length;
   const boxesCount = state.boxes.reduce(
     (acc, box) => acc + box.filter((s) => s !== null).length,
@@ -36,29 +36,23 @@ export function selectTotalOwned(state: GameState) {
 }
 
 /**
- * Selector to get the trainer's starter Pokemon catalog entry.
+ * Retrieves the species data for the trainer's original starter choice.
  */
 export function selectStarterPokemon(state: GameState) {
-  if (!state.trainer) {
-    return null;
-  }
-
+  if (!state.trainer) return null;
   return getPokemonById(state.trainer.starterPokemonId) ?? null;
 }
 
 /**
- * Selector to get the catalog entry for the Pokemon in the current encounter.
+ * Retrieves the species data for the Pokemon in the current wild encounter.
  */
 export function selectCurrentEncounterPokemon(state: GameState) {
-  if (!state.activeEncounter) {
-    return null;
-  }
-
+  if (!state.activeEncounter) return null;
   return getPokemonById(state.activeEncounter.pokemonId) ?? null;
 }
 
 /**
- * Helper to enhance an owned Pokemon with catalog details.
+ * Internal helper to join an OwnedPokemon instance with its static species data.
  */
 function enhancePokemon(owned: OwnedPokemon): CollectionEntry | null {
   const pokemon = getPokemonById(owned.pokemonId);
@@ -67,7 +61,7 @@ function enhancePokemon(owned: OwnedPokemon): CollectionEntry | null {
 }
 
 /**
- * Selector to get the trainer's party with catalog data.
+ * Returns the current party populated with full species details.
  */
 export function selectPartyEntries(
   state: GameState,
@@ -76,7 +70,7 @@ export function selectPartyEntries(
 }
 
 /**
- * Selector to get a specific box with catalog data.
+ * Returns a specific storage box populated with full species details.
  */
 export function selectBoxEntries(
   state: GameState,
@@ -88,8 +82,8 @@ export function selectBoxEntries(
 }
 
 /**
- * Selector to get the most recent catch history entries, enhanced with catalog data.
- * Returns entries in reverse chronological order.
+ * Returns the N most recent encounter results for display in the catch history.
+ * Entries are returned in reverse-chronological order (newest first).
  */
 export function selectRecentHistoryEntries(state: GameState): HistoryEntry[] {
   return [...state.history]
@@ -97,10 +91,7 @@ export function selectRecentHistoryEntries(state: GameState): HistoryEntry[] {
     .slice(0, RECENT_HISTORY_LIMIT)
     .flatMap((entry) => {
       const pokemon = getPokemonById(entry.pokemonId);
-
-      if (!pokemon) {
-        return [];
-      }
+      if (!pokemon) return [];
 
       return [
         {

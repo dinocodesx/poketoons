@@ -17,16 +17,33 @@ import type {
 } from "./gameTypes";
 import { loadPersistedGameState } from "./gameStorage";
 import { getPokemonById, getBucketByKey } from "../pokemon/pokemonCatalog";
+import evolutionData from "../../data/evolutions.json";
+
+/** 
+ * Evolution configuration format. 
+ * Supports both linear and branching evolution paths.
+ */
+interface EvolutionConfig {
+  /** Species ID(s) to evolve into. */
+  to: number | number[];
+  /** Level threshold for evolution. */
+  level: number;
+}
+
+/** Static evolution mapping for all Gen 1-4 species. */
+const evolutions = evolutionData as Record<string, EvolutionConfig>;
 
 /**
- * Helper to create an empty party.
+ * Creates a fixed-size empty party array.
+ * @returns Array of length PARTY_SIZE filled with null.
  */
 function createEmptyParty(): (OwnedPokemon | null)[] {
   return Array(PARTY_SIZE).fill(null);
 }
 
 /**
- * Helper to create empty boxes.
+ * Creates the initial storage box structure.
+ * @returns 2D array [BOX_COUNT][BOX_SLOT_COUNT].
  */
 function createEmptyBoxes(): (OwnedPokemon | null)[][] {
   return Array(BOX_COUNT)
@@ -35,7 +52,7 @@ function createEmptyBoxes(): (OwnedPokemon | null)[][] {
 }
 
 /**
- * The initial state for a fresh game.
+ * Default state for a new player.
  */
 export const initialPersistedGameState: PersistedGameState = {
   version: GAME_STATE_VERSION,
@@ -52,14 +69,16 @@ const persisted = loadPersistedGameState();
 const isVersionValid = persisted?.version === GAME_STATE_VERSION;
 
 /**
- * The initial state used by the useReducer hook, including hydration status.
+ * The initial state used by the useReducer hook.
+ * Seeds from localStorage if a valid version exists.
  */
 export const initialGameState: GameState = {
   ...(isVersionValid ? persisted : initialPersistedGameState),
   isHydrating: true,
 };
 
-/** Action to create a new trainer profile and assign a starter Pokemon. */
+// --- Action Definitions ---
+
 interface CreateTrainerAction {
   type: "CREATE_TRAINER";
   payload: {
@@ -70,13 +89,11 @@ interface CreateTrainerAction {
   };
 }
 
-/** Action to hydrate the state from persisted storage. */
 interface HydrateAction {
   type: "HYDRATE";
   payload: PersistedGameState;
 }
 
-/** Action to start a new manual catching session. */
 interface StartSessionAction {
   type: "START_SESSION";
   payload: {
@@ -90,7 +107,6 @@ interface StartSessionAction {
   };
 }
 
-/** Action to end the current manual catching session. */
 interface EndSessionAction {
   type: "END_SESSION";
   payload: {
@@ -98,7 +114,6 @@ interface EndSessionAction {
   };
 }
 
-/** Action to spawn a new encounter during an active session. */
 interface SpawnEncounterAction {
   type: "SPAWN_ENCOUNTER";
   payload: {
@@ -110,7 +125,6 @@ interface SpawnEncounterAction {
   };
 }
 
-/** Action to record a successful catch. */
 interface CatchEncounterAction {
   type: "CATCH_ENCOUNTER";
   payload: {
@@ -119,7 +133,6 @@ interface CatchEncounterAction {
   };
 }
 
-/** Action to record a missed encounter (too many mistakes). */
 interface MissEncounterAction {
   type: "MISS_ENCOUNTER";
   payload: {
@@ -127,7 +140,6 @@ interface MissEncounterAction {
   };
 }
 
-/** Action to record a fleeing encounter (time ran out without attempt). */
 interface FleeEncounterAction {
   type: "FLEE_ENCOUNTER";
   payload: {
@@ -135,12 +147,10 @@ interface FleeEncounterAction {
   };
 }
 
-/** Action to record an incorrect guess. */
 interface RecordMistakeAction {
   type: "RECORD_MISTAKE";
 }
 
-/** Action to move a Pokemon from one slot to another (Party <-> Box or Box <-> Box). */
 interface MovePokemonAction {
   type: "MOVE_POKEMON";
   payload: {
@@ -149,7 +159,6 @@ interface MovePokemonAction {
   };
 }
 
-/** Action to release a Pokemon. */
 interface ReleasePokemonAction {
   type: "RELEASE_POKEMON";
   payload: {
@@ -157,7 +166,6 @@ interface ReleasePokemonAction {
   };
 }
 
-/** Union of all possible game actions. */
 export type GameAction =
   | CreateTrainerAction
   | HydrateAction
@@ -171,8 +179,10 @@ export type GameAction =
   | MovePokemonAction
   | ReleasePokemonAction;
 
+// --- Domain Logic Handlers (SRP) ---
+
 /**
- * Helper to build a history entry object.
+ * Internal helper to build history records.
  */
 function buildHistoryEntry(
   encounterId: string,
@@ -181,91 +191,52 @@ function buildHistoryEntry(
   resolvedAt: number,
   sessionId: string | null,
 ): CatchHistoryEntry {
-  return {
-    encounterId,
-    pokemonId,
-    result,
-    resolvedAt,
-    sessionId,
-  };
+  return { encounterId, pokemonId, result, resolvedAt, sessionId };
 }
 
 /**
- * Applies level-up logic to the trainer's party.
- * As per rules, only Pokemon in the party gain +1 level (capped at MAX_POKEMON_LEVEL).
+ * Increments levels for the trainer's active party and checks for evolutions.
+ * @param party - Current trainer party.
+ * @returns Updated party array.
  */
 function applyPartyLevelUp(party: (OwnedPokemon | null)[]) {
   return party.map((pokemon) => {
-    if (!pokemon) {
-      return null;
+    if (!pokemon) return null;
+
+    const nextLevel = Math.min(MAX_POKEMON_LEVEL, pokemon.level + 1);
+    let currentPokemonId = pokemon.pokemonId;
+
+    // Check evolution mapping
+    const evoConfig = evolutions[currentPokemonId.toString()];
+    if (evoConfig && nextLevel >= evoConfig.level) {
+      if (Array.isArray(evoConfig.to)) {
+        // Branching Evolution: Randomly select a candidate
+        const randomIndex = Math.floor(Math.random() * evoConfig.to.length);
+        currentPokemonId = evoConfig.to[randomIndex];
+      } else {
+        // Linear Evolution
+        currentPokemonId = evoConfig.to;
+      }
     }
 
     return {
       ...pokemon,
-      level: Math.min(MAX_POKEMON_LEVEL, pokemon.level + 1),
+      level: nextLevel,
+      pokemonId: currentPokemonId,
     };
   });
 }
 
 /**
- * Pure helper to transition the state into a resolved (non-caught) encounter state.
- * Shared between manual resolution and timer-based resolution.
- */
-export function applyResolvedEncounterState(
-  state: PersistedGameState,
-  resolvedAt: number,
-  result: "missed" | "fleeing",
-): PersistedGameState {
-  if (!state.activeEncounter) {
-    return state;
-  }
-
-  const historyEntry = buildHistoryEntry(
-    state.activeEncounter.encounterId,
-    state.activeEncounter.pokemonId,
-    result,
-    resolvedAt,
-    state.currentSession?.sessionId ?? null,
-  );
-
-  return {
-    ...state,
-    currentSession: state.currentSession
-      ? {
-          ...state.currentSession,
-          activeEncounterId: null,
-        }
-      : null,
-    activeEncounter: null,
-    history: [...state.history, historyEntry],
-  };
-}
-
-/**
- * Helper to create a trainer profile object.
- */
-function createTrainerProfile(
-  name: string,
-  starterPokemonId: number,
-  createdAt: number,
-): TrainerProfile {
-  return {
-    name,
-    starterPokemonId,
-    createdAt,
-  };
-}
-
-/**
  * Handles the logic for a successful Pokemon catch.
+ * Attempts to place the Pokemon in the first available slot (Party first, then Boxes).
  */
 function handleCatchEncounter(state: GameState, action: CatchEncounterAction): GameState {
-  if (!state.activeEncounter) {
-    return state;
-  }
+  if (!state.activeEncounter) return state;
 
-  const pokemon = getPokemonById(state.activeEncounter.pokemonId);
-  const bucket = pokemon ? getBucketByKey(pokemon.group) : undefined;
+  // Determine starting level based on the encounter's rarity bucket
+  const pokemonSpecies = getPokemonById(state.activeEncounter.pokemonId);
+  const bucket = pokemonSpecies ? getBucketByKey(pokemonSpecies.group) : undefined;
   const initialLevel = bucket?.minLevel ?? WILD_POKEMON_BASE_LEVEL;
 
   const newPokemon: OwnedPokemon = {
@@ -278,40 +249,38 @@ function handleCatchEncounter(state: GameState, action: CatchEncounterAction): G
 
   const nextParty = [...state.party];
   const nextBoxes = [...state.boxes];
-  let placed = false;
+  let isPlaced = false;
 
-  // 1. Try to place in party
+  // 1. Attempt placement in Party
   const emptyPartySlot = nextParty.findIndex((p) => p === null);
   if (emptyPartySlot !== -1) {
     nextParty[emptyPartySlot] = newPokemon;
-    placed = true;
+    isPlaced = true;
   } else {
-    // 2. Try to place in boxes
+    // 2. Attempt placement in Boxes
     for (let b = 0; b < nextBoxes.length; b++) {
       const emptyBoxSlot = nextBoxes[b].findIndex((s) => s === null);
       if (emptyBoxSlot !== -1) {
         nextBoxes[b] = [...nextBoxes[b]];
         nextBoxes[b][emptyBoxSlot] = newPokemon;
-        placed = true;
+        isPlaced = true;
         break;
       }
     }
   }
 
-  // Only level up and record history if the catch was actually placed somewhere
-  if (!placed) {
+  // If storage is full, the encounter still ends but no Pokemon is added
+  if (!isPlaced) {
     return {
       ...state,
       currentSession: state.currentSession
-        ? {
-            ...state.currentSession,
-            activeEncounterId: null,
-          }
+        ? { ...state.currentSession, activeEncounterId: null }
         : null,
       activeEncounter: null,
     };
   }
 
+  // Only the active party gains levels upon a successful catch
   const finalParty = applyPartyLevelUp(nextParty);
 
   const historyEntry = buildHistoryEntry(
@@ -327,10 +296,7 @@ function handleCatchEncounter(state: GameState, action: CatchEncounterAction): G
     party: finalParty,
     boxes: nextBoxes,
     currentSession: state.currentSession
-      ? {
-          ...state.currentSession,
-          activeEncounterId: null,
-        }
+      ? { ...state.currentSession, activeEncounterId: null }
       : null,
     activeEncounter: null,
     history: [...state.history, historyEntry],
@@ -338,13 +304,43 @@ function handleCatchEncounter(state: GameState, action: CatchEncounterAction): G
 }
 
 /**
- * Handles moving a Pokemon between slots or swapping them.
+ * Transitions the game state into a resolved encounter state (non-caught).
+ * Shared between manual 'miss' and timer-based 'flee'.
+ */
+export function applyResolvedEncounterState(
+  state: PersistedGameState,
+  resolvedAt: number,
+  result: "missed" | "fleeing",
+): PersistedGameState {
+  if (!state.activeEncounter) return state;
+
+  const historyEntry = buildHistoryEntry(
+    state.activeEncounter.encounterId,
+    state.activeEncounter.pokemonId,
+    result,
+    resolvedAt,
+    state.currentSession?.sessionId ?? null,
+  );
+
+  return {
+    ...state,
+    currentSession: state.currentSession
+      ? { ...state.currentSession, activeEncounterId: null }
+      : null,
+    activeEncounter: null,
+    history: [...state.history, historyEntry],
+  };
+}
+
+/**
+ * Handles swapping or moving Pokemon between party slots and boxes.
  */
 function handleMovePokemon(state: GameState, action: MovePokemonAction): GameState {
   const { source, destination } = action.payload;
   const nextParty = [...state.party];
   const nextBoxes = [...state.boxes];
 
+  // Resolve source Pokemon
   const pokemonToMove = source.type === "party"
     ? nextParty[source.slotIndex]
     : nextBoxes[source.boxIndex ?? 0][source.slotIndex];
@@ -360,7 +356,7 @@ function handleMovePokemon(state: GameState, action: MovePokemonAction): GameSta
     nextBoxes[bIndex][source.slotIndex] = null;
   }
 
-  // Get what's at destination (for swap)
+  // Resolve destination (for swapping)
   const swapped = destination.type === "party"
     ? nextParty[destination.slotIndex]
     : nextBoxes[destination.boxIndex ?? 0][destination.slotIndex];
@@ -374,7 +370,7 @@ function handleMovePokemon(state: GameState, action: MovePokemonAction): GameSta
     nextBoxes[bIndex][destination.slotIndex] = pokemonToMove;
   }
 
-  // Put swapped back to source
+  // Handle Swap: Put displaced Pokemon back into the source slot
   if (swapped) {
     if (source.type === "party") {
       nextParty[source.slotIndex] = swapped;
@@ -388,7 +384,7 @@ function handleMovePokemon(state: GameState, action: MovePokemonAction): GameSta
 }
 
 /**
- * Handles releasing a Pokemon.
+ * Removes a Pokemon permanently from the trainer's collection.
  */
 function handleReleasePokemon(state: GameState, action: ReleasePokemonAction): GameState {
   const { location } = action.payload;
@@ -408,42 +404,27 @@ function handleReleasePokemon(state: GameState, action: ReleasePokemonAction): G
 
 /**
  * The core reducer managing all game state transitions.
- * Ensures state is updated immutably and according to game rules.
- * 
- * @param state - The current game state.
- * @param action - The action to apply.
- * @returns The new game state.
+ * Adheres to Redux-style immutable patterns.
  */
 export function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
     case "HYDRATE":
-      return {
-        ...action.payload,
-        isHydrating: false,
-      };
+      return { ...action.payload, isHydrating: false };
 
     case "CREATE_TRAINER": {
-      const trainer = createTrainerProfile(
-        action.payload.name,
-        action.payload.starterPokemonId,
-        action.payload.createdAt,
-      );
-
-      const newParty = createEmptyParty();
-      newParty[0] = {
-        instanceId: action.payload.starterInstanceId,
-        pokemonId: action.payload.starterPokemonId,
+      const { name, starterPokemonId, createdAt, starterInstanceId } = action.payload;
+      
+      const trainer: TrainerProfile = { name, starterPokemonId, createdAt };
+      const party = createEmptyParty();
+      party[0] = {
+        instanceId: starterInstanceId,
+        pokemonId: starterPokemonId,
         level: STARTER_LEVEL,
-        caughtAt: action.payload.createdAt,
+        caughtAt: createdAt,
         caughtInSessionId: null,
       };
 
-      return {
-        ...state,
-        trainer,
-        party: newParty,
-        boxes: createEmptyBoxes(),
-      };
+      return { ...state, trainer, party, boxes: createEmptyBoxes() };
     }
 
     case "START_SESSION":
@@ -489,7 +470,6 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         currentSession: state.currentSession
           ? {
               ...state.currentSession,
-              status: "active",
               activeEncounterId: action.payload.encounterId,
               nextEncounterAt: action.payload.nextEncounterAt,
             }

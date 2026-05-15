@@ -1,39 +1,40 @@
-import { useReducer } from "react";
-import { SESSION_CYCLE_MS } from "./gameConstants";
-import { gameReducer, initialGameState } from "./gameReducer";
-import { selectTotalCaught } from "./gameSelectors";
-import { formatPokemonName } from "../../lib/string";
+import { useReducer, useCallback, useMemo } from "react";
+import { SESSION_CYCLE_MS } from "../features/game/gameConstants";
+import { gameReducer, initialGameState } from "../features/game/gameReducer";
+import { selectTotalCaught } from "../features/game/gameSelectors";
+import { formatPokemonName } from "../lib/string";
 import {
   starterChoices,
   pokemonCatalog,
   rarityBuckets,
   getPokemonById,
-} from "../pokemon/pokemonCatalog";
+} from "../features/pokemon/pokemonCatalog";
 import {
   isCorrectPokemonGuess,
   pickSpawnPokemon,
-} from "../pokemon/pokemonSpawn";
+} from "../features/pokemon/pokemonSpawn";
 import { useGamePersistence } from "./useGamePersistence";
 import { useGameLoop } from "./useGameLoop";
-import type { GuessAttemptResult, StorageLocation } from "./gameTypes";
+import type { GuessAttemptResult, StorageLocation } from "../features/game/gameTypes";
 
 /**
- * The main orchestrator hook for the Pokemon Catching Game.
- * Combines state management, persistence, and game loop logic into a unified API.
+ * The primary orchestrator hook for the Pokemon Catching Game.
+ * Implements the 'Facade' pattern to provide a clean, action-oriented API to the UI
+ * while encapsulating complex state transitions, persistence, and the game loop.
  * 
- * @returns An object containing the current game state, choices, and action functions.
+ * @returns {Object} Game state and action API.
  */
 export function useGameSession() {
   const [state, dispatch] = useReducer(gameReducer, initialGameState);
 
-  // Initialize persistence and loop side effects
+  // side effects: handle persistence and time-based loop checks
   useGamePersistence(state, dispatch);
   useGameLoop(state, dispatch);
 
   /**
    * Initializes the trainer profile with a name and a starter Pokemon.
    */
-  function createTrainer(name: string, starterPokemonId: number) {
+  const createTrainer = useCallback((name: string, starterPokemonId: number) => {
     dispatch({
       type: "CREATE_TRAINER",
       payload: {
@@ -43,15 +44,13 @@ export function useGameSession() {
         starterInstanceId: crypto.randomUUID(),
       },
     });
-  }
+  }, []);
 
   /**
-   * Starts a manual catching session and spawns the first encounter.
+   * Starts a manual catching session and triggers the first wild spawn.
    */
-  function startSession() {
-    if (!state.trainer || state.currentSession?.status === "active") {
-      return;
-    }
+  const startSession = useCallback(() => {
+    if (!state.trainer || state.currentSession?.status === "active") return;
 
     const now = Date.now();
     const pokemonId = pickSpawnPokemon(
@@ -60,9 +59,7 @@ export function useGameSession() {
       selectTotalCaught(state),
     );
 
-    if (!pokemonId) {
-      return;
-    }
+    if (!pokemonId) return;
 
     dispatch({
       type: "START_SESSION",
@@ -76,32 +73,29 @@ export function useGameSession() {
         cycleDurationMs: SESSION_CYCLE_MS,
       },
     });
-  }
+  }, [state]);
 
   /**
-   * Ends the current catching session and clears the active encounter.
+   * Ends the current catching session and cleans up active encounters.
    */
-  function endSession() {
-    if (state.currentSession?.status !== "active") {
-      return;
-    }
+  const endSession = useCallback(() => {
+    if (state.currentSession?.status !== "active") return;
 
     dispatch({
       type: "END_SESSION",
-      payload: {
-        endedAt: Date.now(),
-      },
+      payload: { endedAt: Date.now() },
     });
-  }
+  }, [state.currentSession?.status]);
 
   /**
-   * Processes a player's guess for the current encounter.
-   * If correct, the Pokemon is caught and added to the collection.
+   * Validates a player's guess against the active encounter.
+   * If correct, updates state to record the catch and trigger level-ups.
+   * If incorrect, tracks mistakes and handles runaway logic.
    * 
-   * @param guess - The name of the Pokemon guessed by the player.
-   * @returns A result object with feedback for the UI.
+   * @param {string} guess - The user-input Pokemon name.
+   * @returns {GuessAttemptResult} Result for UI feedback.
    */
-  function submitGuess(guess: string): GuessAttemptResult {
+  const submitGuess = useCallback((guess: string): GuessAttemptResult => {
     if (!state.activeEncounter || state.currentSession?.status !== "active") {
       return {
         accepted: false,
@@ -111,7 +105,6 @@ export function useGameSession() {
     }
 
     const pokemon = getPokemonById(state.activeEncounter.pokemonId);
-
     if (!pokemon) {
       return {
         accepted: false,
@@ -120,9 +113,11 @@ export function useGameSession() {
       };
     }
 
+    // Check guess correctness (normalized)
     if (!isCorrectPokemonGuess(guess, pokemon)) {
       const newMistakes = state.activeEncounter.mistakes + 1;
 
+      // 3 mistakes rule: Pokemon runs away
       if (newMistakes >= 3) {
         dispatch({
           type: "MISS_ENCOUNTER",
@@ -132,9 +127,7 @@ export function useGameSession() {
         return {
           accepted: true,
           correct: false,
-          message: `Too many mistakes! ${formatPokemonName(
-            pokemon.name,
-          )} ran away.`,
+          message: `Too many mistakes! ${formatPokemonName(pokemon.name)} ran away.`,
         };
       }
 
@@ -147,6 +140,7 @@ export function useGameSession() {
       };
     }
 
+    // Success: Catch the Pokemon
     dispatch({
       type: "CATCH_ENCOUNTER",
       payload: {
@@ -158,31 +152,32 @@ export function useGameSession() {
     return {
       accepted: true,
       correct: true,
-      message: `${formatPokemonName(pokemon.name)} was caught.`,
+      message: `${formatPokemonName(pokemon.name)} was caught!`,
     };
-  }
+  }, [state.activeEncounter, state.currentSession?.status]);
 
   /**
-   * Moves a Pokemon between slots.
+   * Swaps or moves a Pokemon within the collection storage.
    */
-  function movePokemon(source: StorageLocation, destination: StorageLocation) {
+  const movePokemon = useCallback((source: StorageLocation, destination: StorageLocation) => {
     dispatch({
       type: "MOVE_POKEMON",
       payload: { source, destination },
     });
-  }
+  }, []);
 
   /**
-   * Releases a Pokemon back into the wild.
+   * Permanently releases a Pokemon from the collection.
    */
-  function releasePokemon(location: StorageLocation) {
+  const releasePokemon = useCallback((location: StorageLocation) => {
     dispatch({
       type: "RELEASE_POKEMON",
       payload: { location },
     });
-  }
+  }, []);
 
-  return {
+  // Memoize the public API to prevent unnecessary re-renders in consumer components
+  return useMemo(() => ({
     state,
     starterChoices,
     createTrainer,
@@ -191,5 +186,13 @@ export function useGameSession() {
     submitGuess,
     movePokemon,
     releasePokemon,
-  };
+  }), [
+    state,
+    createTrainer,
+    startSession,
+    endSession,
+    submitGuess,
+    movePokemon,
+    releasePokemon
+  ]);
 }

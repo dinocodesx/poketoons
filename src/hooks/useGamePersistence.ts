@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import type { GameAction } from "./gameReducer";
-import type { GameState } from "./gameTypes";
-import { hydrateGameState } from "./gameHydration";
-import { savePersistedGameState } from "./gameStorage";
+import type { GameAction } from "../features/game/gameReducer";
+import type { GameState } from "../features/game/gameTypes";
+import { hydrateGameState } from "../features/game/gameHydration";
+import { savePersistedGameState } from "../features/game/gameStorage";
 
 /**
  * Hook to manage game state persistence (loading from and saving to localStorage).

@@ -2,14 +2,14 @@
   {
     "key": "early_route",
     "label": "Early Route",
-    "weight": 32,
+    "weight": 36,
     "minLevel": 2,
     "pokemonIds": [16, 19, 21, 161, 163, 263, 276, 396, 399]
   },
   {
     "key": "forest",
     "label": "Forest",
-    "weight": 30,
+    "weight": 32,
     "minLevel": 5,
     "pokemonIds": [
       10, 11, 12, 13, 14, 15, 43, 44, 45, 46, 47, 48, 49, 69, 70, 71, 265, 266,
@@ -19,7 +19,7 @@
   {
     "key": "no_evo",
     "label": "No-Evo",
-    "weight": 18,
+    "weight": 20,
     "minLevel": 15,
     "pokemonIds": [
       131, 132, 142, 201, 225, 235, 241, 302, 327, 351, 369, 370, 417, 441, 442,
