@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { CatchHistoryPanel } from "../components/game/CatchHistoryPanel";
-import { CollectionPanel } from "../components/game/CollectionPanel";
-import { EncounterCard } from "../components/game/EncounterCard";
-import { GuessForm } from "../components/game/GuessForm";
-import { LoadingScreen } from "../components/ui/LoadingScreen";
-import { SectionCard } from "../components/ui/SectionCard";
-import { SessionPanel } from "../components/game/SessionPanel";
-import { TrainerSetup } from "../components/game/TrainerSetup";
-import { BoxManagement } from "../components/game/BoxManagement";
-import { useGameSession } from "../hooks/useGameSession";
-import { useEncounterTimer } from "../hooks/useEncounterTimer";
+import { CatchHistoryPanel } from "../domains/encounter/components/CatchHistoryPanel";
+import { CollectionPanel } from "../domains/storage/components/CollectionPanel";
+import { EncounterCard } from "../domains/encounter/components/EncounterCard";
+import { GuessForm } from "../domains/encounter/components/GuessForm";
+import { LoadingScreen } from "../shared/ui/LoadingScreen";
+import { SectionCard } from "../shared/ui/SectionCard";
+import { SessionPanel } from "../domains/encounter/components/SessionPanel";
+import { TrainerSetup } from "../domains/trainer/components/TrainerSetup";
+import { BoxManagement } from "../domains/storage/components/BoxManagement";
+import { useGameSession } from "./hooks/useGameSession";
+import { useEncounterTimer } from "../domains/encounter/hooks/useEncounterTimer";
 import {
   selectBoxEntries,
   selectCurrentEncounterPokemon,
@@ -18,7 +18,7 @@ import {
   selectSessionActive,
   selectStarterPokemon,
   selectTotalCaught,
-} from "../features/game/gameSelectors";
+} from "./selectors";
 
 /**
  * The root Application component for Poketoons.

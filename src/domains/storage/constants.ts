@@ -1,0 +1,9 @@
+export const MAX_POKEMON_LEVEL = 100;
+export const STARTER_LEVEL = 5;
+export const WILD_POKEMON_BASE_LEVEL = 1;
+export const PARTY_SIZE = 6;
+export const INITIAL_BOX_COUNT = 12;
+export const MAX_BOX_COUNT = 32;
+export const BOX_ROWS = 5;
+export const BOX_COLS = 6;
+export const BOX_SLOT_COUNT = BOX_ROWS * BOX_COLS;
