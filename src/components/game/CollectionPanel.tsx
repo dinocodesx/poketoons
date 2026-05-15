@@ -7,7 +7,7 @@ import type { CollectionEntry } from "../../features/game/gameTypes";
  */
 interface CollectionPanelProps {
   /** Array of owned Pokemon entries from the collection. */
-  entries: CollectionEntry[];
+  entries: (CollectionEntry | null)[];
   /** Additional CSS class names. */
   className?: string;
 }

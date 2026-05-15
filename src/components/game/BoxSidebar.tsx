@@ -1,4 +1,3 @@
-import React from "react";
 import { BOX_COUNT } from "../../features/game/gameConstants";
 
 interface BoxSidebarProps {

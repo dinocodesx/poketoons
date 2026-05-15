@@ -1,4 +1,3 @@
-import React from "react";
 import { StorageSlot } from "./StorageSlot";
 import type { CollectionEntry, StorageLocation } from "../../features/game/gameTypes";
 
