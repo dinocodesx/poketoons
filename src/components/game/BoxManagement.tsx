@@ -15,10 +15,14 @@ interface BoxManagementProps {
   party: (CollectionEntry | null)[];
   /** Strategy function to retrieve entries for a specific box. */
   getBoxEntries: (boxIndex: number) => (CollectionEntry | null)[];
+  /** The total number of boxes owned by the trainer. */
+  boxCount: number;
   /** Callback to trigger a move/swap between storage locations. */
   onMove: (source: StorageLocation, destination: StorageLocation) => void;
   /** Callback to release a Pokemon back into the wild. */
   onRelease: (location: StorageLocation) => void;
+  /** Callback to add a new storage box. */
+  onAddBox: () => void;
   /** Callback to close the management interface. */
   onClose: () => void;
 }
@@ -34,8 +38,10 @@ interface BoxManagementProps {
 export function BoxManagement({
   party,
   getBoxEntries,
+  boxCount,
   onMove,
   onRelease,
+  onAddBox,
   onClose,
 }: BoxManagementProps) {
   // Track which box is currently visible (0 to BOX_COUNT-1)
@@ -107,6 +113,8 @@ export function BoxManagement({
           <BoxSidebar
             currentBoxIndex={currentBoxIndex}
             onBoxChange={setCurrentBoxIndex}
+            boxCount={boxCount}
+            onAddBox={onAddBox}
           />
 
           <BoxGrid

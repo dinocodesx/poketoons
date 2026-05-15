@@ -36,9 +36,14 @@ export const WILD_POKEMON_BASE_LEVEL = 1;
 export const PARTY_SIZE = 6;
 
 /**
- * The number of storage boxes available to the trainer.
+ * The initial number of storage boxes available to the trainer.
  */
-export const BOX_COUNT = 12;
+export const INITIAL_BOX_COUNT = 12;
+
+/**
+ * The maximum number of storage boxes a trainer can have.
+ */
+export const MAX_BOX_COUNT = 32;
 
 /**
  * The number of rows in each storage box.

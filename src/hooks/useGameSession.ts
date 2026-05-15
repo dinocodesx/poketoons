@@ -176,6 +176,13 @@ export function useGameSession() {
     });
   }, []);
 
+  /**
+   * Adds a new empty storage box.
+   */
+  const addBox = useCallback(() => {
+    dispatch({ type: "ADD_BOX" });
+  }, []);
+
   // Memoize the public API to prevent unnecessary re-renders in consumer components
   return useMemo(() => ({
     state,
@@ -186,6 +193,7 @@ export function useGameSession() {
     submitGuess,
     movePokemon,
     releasePokemon,
+    addBox,
   }), [
     state,
     createTrainer,
@@ -193,6 +201,7 @@ export function useGameSession() {
     endSession,
     submitGuess,
     movePokemon,
-    releasePokemon
+    releasePokemon,
+    addBox
   ]);
 }

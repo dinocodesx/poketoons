@@ -1,5 +1,6 @@
 import {
-  BOX_COUNT,
+  INITIAL_BOX_COUNT,
+  MAX_BOX_COUNT,
   BOX_SLOT_COUNT,
   GAME_STATE_VERSION,
   MAX_POKEMON_LEVEL,
@@ -43,10 +44,10 @@ function createEmptyParty(): (OwnedPokemon | null)[] {
 
 /**
  * Creates the initial storage box structure.
- * @returns 2D array [BOX_COUNT][BOX_SLOT_COUNT].
+ * @returns 2D array [INITIAL_BOX_COUNT][BOX_SLOT_COUNT].
  */
 function createEmptyBoxes(): (OwnedPokemon | null)[][] {
-  return Array(BOX_COUNT)
+  return Array(INITIAL_BOX_COUNT)
     .fill(null)
     .map(() => Array(BOX_SLOT_COUNT).fill(null));
 }
@@ -166,6 +167,10 @@ interface ReleasePokemonAction {
   };
 }
 
+interface AddBoxAction {
+  type: "ADD_BOX";
+}
+
 export type GameAction =
   | CreateTrainerAction
   | HydrateAction
@@ -177,7 +182,8 @@ export type GameAction =
   | FleeEncounterAction
   | RecordMistakeAction
   | MovePokemonAction
-  | ReleasePokemonAction;
+  | ReleasePokemonAction
+  | AddBoxAction;
 
 // --- Domain Logic Handlers (SRP) ---
 
@@ -403,6 +409,19 @@ function handleReleasePokemon(state: GameState, action: ReleasePokemonAction): G
 }
 
 /**
+ * Adds a new empty box to the storage system if within limits.
+ */
+function handleAddBox(state: GameState): GameState {
+  if (state.boxes.length >= MAX_BOX_COUNT) return state;
+
+  const newBox = Array(BOX_SLOT_COUNT).fill(null);
+  return {
+    ...state,
+    boxes: [...state.boxes, newBox],
+  };
+}
+
+/**
  * The core reducer managing all game state transitions.
  * Adheres to Redux-style immutable patterns.
  */
@@ -514,6 +533,9 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
 
     case "RELEASE_POKEMON":
       return handleReleasePokemon(state, action);
+
+    case "ADD_BOX":
+      return handleAddBox(state);
 
     default:
       return state;

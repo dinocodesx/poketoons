@@ -144,8 +144,10 @@ function App() {
           party={partyEntries}
           // Selector-currying to keep BoxManagement focused on its own logic
           getBoxEntries={(boxIndex) => selectBoxEntries(game.state, boxIndex)}
+          boxCount={game.state.boxes.length}
           onMove={game.movePokemon}
           onRelease={game.releasePokemon}
+          onAddBox={game.addBox}
           onClose={() => setIsBoxOpen(false)}
         />
       )}

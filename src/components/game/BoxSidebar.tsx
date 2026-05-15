@@ -1,18 +1,20 @@
-import { BOX_COUNT } from "../../features/game/gameConstants";
+import { MAX_BOX_COUNT } from "../../features/game/gameConstants";
 
 interface BoxSidebarProps {
   currentBoxIndex: number;
   onBoxChange: (index: number) => void;
-  onRelease: () => void;
-  canRelease: boolean;
-  selectedText: string;
-  onClose: () => void;
+  boxCount: number;
+  onAddBox: () => void;
 }
 
 export function BoxSidebar({
   currentBoxIndex,
   onBoxChange,
-}: Pick<BoxSidebarProps, "currentBoxIndex" | "onBoxChange">) {
+  boxCount,
+  onAddBox,
+}: BoxSidebarProps) {
+  const canAddBox = boxCount < MAX_BOX_COUNT;
+
   return (
     <div className="box-sidebar">
       <div className="box-sidebar__header">
@@ -21,7 +23,7 @@ export function BoxSidebar({
       </div>
       
       <div className="box-nav">
-        {Array.from({ length: BOX_COUNT }).map((_, i) => (
+        {Array.from({ length: boxCount }).map((_, i) => (
           <button
             key={`box-nav-${i}`}
             className={`box-nav__item ${
@@ -32,6 +34,15 @@ export function BoxSidebar({
             Box {i + 1}
           </button>
         ))}
+        {canAddBox && (
+          <button
+            className="box-nav__item box-nav__item--add"
+            onClick={onAddBox}
+            title="Add New Box"
+          >
+            + Add Box
+          </button>
+        )}
       </div>
     </div>
   );
