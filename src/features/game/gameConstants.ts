@@ -7,7 +7,7 @@ export const GAME_STORAGE_KEY = "poketoons.game-state";
  * The current version of the game state schema.
  * Used for future-proofing and potential migrations.
  */
-export const GAME_STATE_VERSION = 1;
+export const GAME_STATE_VERSION = 4;
 
 /**
  * The duration of a single session cycle (encounter + wait period) in milliseconds.
@@ -31,6 +31,26 @@ export const STARTER_LEVEL = 5;
 export const WILD_POKEMON_BASE_LEVEL = 1;
 
 /**
- * The number of recently caught Pokemon that gain a level after each successful catch.
+ * The number of Pokemon that can be in a trainer's party at once.
  */
-export const RECENT_LEVEL_UP_COUNT = 30;
+export const PARTY_SIZE = 6;
+
+/**
+ * The number of storage boxes available to the trainer.
+ */
+export const BOX_COUNT = 12;
+
+/**
+ * The number of rows in each storage box.
+ */
+export const BOX_ROWS = 5;
+
+/**
+ * The number of columns in each storage box.
+ */
+export const BOX_COLS = 6;
+
+/**
+ * The total number of slots in a single storage box.
+ */
+export const BOX_SLOT_COUNT = BOX_ROWS * BOX_COLS;

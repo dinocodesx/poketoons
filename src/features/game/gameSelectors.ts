@@ -1,5 +1,10 @@
 import { getPokemonById } from "../pokemon/pokemonCatalog";
-import type { CollectionEntry, GameState, HistoryEntry } from "./gameTypes";
+import type {
+  CollectionEntry,
+  GameState,
+  HistoryEntry,
+  OwnedPokemon,
+} from "./gameTypes";
 
 /** Maximum number of history entries to show in the recent history panel. */
 const RECENT_HISTORY_LIMIT = 10;
@@ -22,7 +27,12 @@ export function selectTotalCaught(state: GameState) {
  * Selector to get the total number of Pokemon currently owned by the trainer.
  */
 export function selectTotalOwned(state: GameState) {
-  return state.ownedPokemon.length;
+  const partyCount = state.party.filter((p) => p !== null).length;
+  const boxesCount = state.boxes.reduce(
+    (acc, box) => acc + box.filter((s) => s !== null).length,
+    0,
+  );
+  return partyCount + boxesCount;
 }
 
 /**
@@ -48,24 +58,33 @@ export function selectCurrentEncounterPokemon(state: GameState) {
 }
 
 /**
- * Selector to get the full collection of owned Pokemon, enhanced with catalog data.
- * Returns entries in reverse chronological order (newest first).
+ * Helper to enhance an owned Pokemon with catalog details.
  */
-export function selectCollectionEntries(state: GameState): CollectionEntry[] {
-  return [...state.ownedPokemon].reverse().flatMap((ownedPokemon) => {
-    const pokemon = getPokemonById(ownedPokemon.pokemonId);
+function enhancePokemon(owned: OwnedPokemon): CollectionEntry | null {
+  const pokemon = getPokemonById(owned.pokemonId);
+  if (!pokemon) return null;
+  return { ...owned, pokemon };
+}
 
-    if (!pokemon) {
-      return [];
-    }
+/**
+ * Selector to get the trainer's party with catalog data.
+ */
+export function selectPartyEntries(
+  state: GameState,
+): (CollectionEntry | null)[] {
+  return state.party.map((p) => (p ? enhancePokemon(p) : null));
+}
 
-    return [
-      {
-        ...ownedPokemon,
-        pokemon,
-      },
-    ];
-  });
+/**
+ * Selector to get a specific box with catalog data.
+ */
+export function selectBoxEntries(
+  state: GameState,
+  boxIndex: number,
+): (CollectionEntry | null)[] {
+  const box = state.boxes[boxIndex];
+  if (!box) return [];
+  return box.map((p) => (p ? enhancePokemon(p) : null));
 }
 
 /**

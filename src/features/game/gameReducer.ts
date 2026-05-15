@@ -1,7 +1,9 @@
 import {
+  BOX_COUNT,
+  BOX_SLOT_COUNT,
   GAME_STATE_VERSION,
   MAX_POKEMON_LEVEL,
-  RECENT_LEVEL_UP_COUNT,
+  PARTY_SIZE,
   STARTER_LEVEL,
   WILD_POKEMON_BASE_LEVEL,
 } from "./gameConstants";
@@ -11,7 +13,25 @@ import type {
   PersistedGameState,
   TrainerProfile,
   OwnedPokemon,
+  StorageLocation,
 } from "./gameTypes";
+import { loadPersistedGameState } from "./gameStorage";
+
+/**
+ * Helper to create an empty party.
+ */
+function createEmptyParty(): (OwnedPokemon | null)[] {
+  return Array(PARTY_SIZE).fill(null);
+}
+
+/**
+ * Helper to create empty boxes.
+ */
+function createEmptyBoxes(): (OwnedPokemon | null)[][] {
+  return Array(BOX_COUNT)
+    .fill(null)
+    .map(() => Array(BOX_SLOT_COUNT).fill(null));
+}
 
 /**
  * The initial state for a fresh game.
@@ -19,17 +39,22 @@ import type {
 export const initialPersistedGameState: PersistedGameState = {
   version: GAME_STATE_VERSION,
   trainer: null,
-  ownedPokemon: [],
+  party: createEmptyParty(),
+  boxes: createEmptyBoxes(),
   currentSession: null,
   activeEncounter: null,
   history: [],
 };
 
+// Synchronously check storage for hydration status to prevent UI blink on refresh.
+const persisted = loadPersistedGameState();
+const isVersionValid = persisted?.version === GAME_STATE_VERSION;
+
 /**
  * The initial state used by the useReducer hook, including hydration status.
  */
 export const initialGameState: GameState = {
-  ...initialPersistedGameState,
+  ...(isVersionValid ? persisted : initialPersistedGameState),
   isHydrating: true,
 };
 
@@ -101,6 +126,23 @@ interface MissEncounterAction {
   };
 }
 
+/** Action to move a Pokemon from one slot to another (Party <-> Box or Box <-> Box). */
+interface MovePokemonAction {
+  type: "MOVE_POKEMON";
+  payload: {
+    source: StorageLocation;
+    destination: StorageLocation;
+  };
+}
+
+/** Action to release a Pokemon. */
+interface ReleasePokemonAction {
+  type: "RELEASE_POKEMON";
+  payload: {
+    location: StorageLocation;
+  };
+}
+
 /** Union of all possible game actions. */
 export type GameAction =
   | CreateTrainerAction
@@ -109,7 +151,9 @@ export type GameAction =
   | EndSessionAction
   | SpawnEncounterAction
   | CatchEncounterAction
-  | MissEncounterAction;
+  | MissEncounterAction
+  | MovePokemonAction
+  | ReleasePokemonAction;
 
 /**
  * Helper to build a history entry object.
@@ -131,15 +175,13 @@ function buildHistoryEntry(
 }
 
 /**
- * Applies level-up logic to the most recently caught Pokemon in the collection.
- * As per rules, the newest 30 Pokemon gain +1 level (capped at MAX_POKEMON_LEVEL).
+ * Applies level-up logic to the trainer's party.
+ * As per rules, only Pokemon in the party gain +1 level (capped at MAX_POKEMON_LEVEL).
  */
-function applyLevelUpWindow(collection: OwnedPokemon[]) {
-  const startIndex = Math.max(0, collection.length - RECENT_LEVEL_UP_COUNT);
-
-  return collection.map((pokemon, index) => {
-    if (index < startIndex) {
-      return pokemon;
+function applyPartyLevelUp(party: (OwnedPokemon | null)[]) {
+  return party.map((pokemon) => {
+    if (!pokemon) {
+      return null;
     }
 
     return {
@@ -198,6 +240,152 @@ function createTrainerProfile(
 }
 
 /**
+ * Handles the logic for a successful Pokemon catch.
+ */
+function handleCatchEncounter(state: GameState, action: CatchEncounterAction): GameState {
+  if (!state.activeEncounter) {
+    return state;
+  }
+
+  const newPokemon: OwnedPokemon = {
+    instanceId: action.payload.ownedPokemonInstanceId,
+    pokemonId: state.activeEncounter.pokemonId,
+    level: WILD_POKEMON_BASE_LEVEL,
+    caughtAt: action.payload.resolvedAt,
+    caughtInSessionId: state.currentSession?.sessionId ?? null,
+  };
+
+  const nextParty = [...state.party];
+  const nextBoxes = [...state.boxes];
+  let placed = false;
+
+  // 1. Try to place in party
+  const emptyPartySlot = nextParty.findIndex((p) => p === null);
+  if (emptyPartySlot !== -1) {
+    nextParty[emptyPartySlot] = newPokemon;
+    placed = true;
+  } else {
+    // 2. Try to place in boxes
+    for (let b = 0; b < nextBoxes.length; b++) {
+      const emptyBoxSlot = nextBoxes[b].findIndex((s) => s === null);
+      if (emptyBoxSlot !== -1) {
+        nextBoxes[b] = [...nextBoxes[b]];
+        nextBoxes[b][emptyBoxSlot] = newPokemon;
+        placed = true;
+        break;
+      }
+    }
+  }
+
+  // Only level up and record history if the catch was actually placed somewhere
+  if (!placed) {
+    return {
+      ...state,
+      currentSession: state.currentSession
+        ? {
+            ...state.currentSession,
+            activeEncounterId: null,
+          }
+        : null,
+      activeEncounter: null,
+    };
+  }
+
+  const finalParty = applyPartyLevelUp(nextParty);
+
+  const historyEntry = buildHistoryEntry(
+    state.activeEncounter.encounterId,
+    state.activeEncounter.pokemonId,
+    "caught",
+    action.payload.resolvedAt,
+    state.currentSession?.sessionId ?? null,
+  );
+
+  return {
+    ...state,
+    party: finalParty,
+    boxes: nextBoxes,
+    currentSession: state.currentSession
+      ? {
+          ...state.currentSession,
+          activeEncounterId: null,
+        }
+      : null,
+    activeEncounter: null,
+    history: [...state.history, historyEntry],
+  };
+}
+
+/**
+ * Handles moving a Pokemon between slots or swapping them.
+ */
+function handleMovePokemon(state: GameState, action: MovePokemonAction): GameState {
+  const { source, destination } = action.payload;
+  const nextParty = [...state.party];
+  const nextBoxes = [...state.boxes];
+
+  const pokemonToMove = source.type === "party"
+    ? nextParty[source.slotIndex]
+    : nextBoxes[source.boxIndex ?? 0][source.slotIndex];
+
+  if (!pokemonToMove) return state;
+
+  // Withdraw from source
+  if (source.type === "party") {
+    nextParty[source.slotIndex] = null;
+  } else {
+    const bIndex = source.boxIndex ?? 0;
+    nextBoxes[bIndex] = [...nextBoxes[bIndex]];
+    nextBoxes[bIndex][source.slotIndex] = null;
+  }
+
+  // Get what's at destination (for swap)
+  const swapped = destination.type === "party"
+    ? nextParty[destination.slotIndex]
+    : nextBoxes[destination.boxIndex ?? 0][destination.slotIndex];
+
+  // Deposit in destination
+  if (destination.type === "party") {
+    nextParty[destination.slotIndex] = pokemonToMove;
+  } else {
+    const bIndex = destination.boxIndex ?? 0;
+    nextBoxes[bIndex] = [...nextBoxes[bIndex]];
+    nextBoxes[bIndex][destination.slotIndex] = pokemonToMove;
+  }
+
+  // Put swapped back to source
+  if (swapped) {
+    if (source.type === "party") {
+      nextParty[source.slotIndex] = swapped;
+    } else {
+      const bIndex = source.boxIndex ?? 0;
+      nextBoxes[bIndex][source.slotIndex] = swapped;
+    }
+  }
+
+  return { ...state, party: nextParty, boxes: nextBoxes };
+}
+
+/**
+ * Handles releasing a Pokemon.
+ */
+function handleReleasePokemon(state: GameState, action: ReleasePokemonAction): GameState {
+  const { location } = action.payload;
+  const nextParty = [...state.party];
+  const nextBoxes = [...state.boxes];
+
+  if (location.type === "party") {
+    nextParty[location.slotIndex] = null;
+  } else {
+    const bIndex = location.boxIndex ?? 0;
+    nextBoxes[bIndex] = [...nextBoxes[bIndex]];
+    nextBoxes[bIndex][location.slotIndex] = null;
+  }
+
+  return { ...state, party: nextParty, boxes: nextBoxes };
+}
+
+/**
  * The core reducer managing all game state transitions.
  * Ensures state is updated immutably and according to game rules.
  * 
@@ -220,18 +408,20 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         action.payload.createdAt,
       );
 
+      const newParty = createEmptyParty();
+      newParty[0] = {
+        instanceId: action.payload.starterInstanceId,
+        pokemonId: action.payload.starterPokemonId,
+        level: STARTER_LEVEL,
+        caughtAt: action.payload.createdAt,
+        caughtInSessionId: null,
+      };
+
       return {
         ...state,
         trainer,
-        ownedPokemon: [
-          {
-            instanceId: action.payload.starterInstanceId,
-            pokemonId: action.payload.starterPokemonId,
-            level: STARTER_LEVEL,
-            caughtAt: action.payload.createdAt,
-            caughtInSessionId: null,
-          },
-        ],
+        party: newParty,
+        boxes: createEmptyBoxes(),
       };
     }
 
@@ -291,52 +481,20 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         },
       };
 
-    case "CATCH_ENCOUNTER": {
-      if (!state.activeEncounter) {
-        return state;
-      }
-
-      // 1. Append the new Pokemon and apply level-up rules
-      const newCollection = applyLevelUpWindow([
-        ...state.ownedPokemon,
-        {
-          instanceId: action.payload.ownedPokemonInstanceId,
-          pokemonId: state.activeEncounter.pokemonId,
-          level: WILD_POKEMON_BASE_LEVEL,
-          caughtAt: action.payload.resolvedAt,
-          caughtInSessionId: state.currentSession?.sessionId ?? null,
-        },
-      ]);
-
-      // 2. Build history entry
-      const historyEntry = buildHistoryEntry(
-        state.activeEncounter.encounterId,
-        state.activeEncounter.pokemonId,
-        "caught",
-        action.payload.resolvedAt,
-        state.currentSession?.sessionId ?? null,
-      );
-
-      // 3. Clear active encounter and update history
-      return {
-        ...state,
-        ownedPokemon: newCollection,
-        currentSession: state.currentSession
-          ? {
-              ...state.currentSession,
-              activeEncounterId: null,
-            }
-          : null,
-        activeEncounter: null,
-        history: [...state.history, historyEntry],
-      };
-    }
+    case "CATCH_ENCOUNTER":
+      return handleCatchEncounter(state, action);
 
     case "MISS_ENCOUNTER":
       return {
         ...applyMissedEncounterState(state, action.payload.resolvedAt),
         isHydrating: state.isHydrating,
       };
+
+    case "MOVE_POKEMON":
+      return handleMovePokemon(state, action);
+
+    case "RELEASE_POKEMON":
+      return handleReleasePokemon(state, action);
 
     default:
       return state;

@@ -140,8 +140,8 @@ export function TrainerSetup({ starters, onCreateTrainer }: TrainerSetupProps) {
         <ul className="rule-list" style={{ marginTop: "16px" }}>
           <li>One-minute catch windows</li>
           <li>Only Pokemon 1-251 can appear</li>
-          <li>Duplicates are always allowed</li>
-          <li>Each catch levels the newest 30 Pokemon by +1</li>
+          <li>6 Pokemon party and 12 storage boxes</li>
+          <li>Only party members level up when a Pokemon is caught</li>
           <li>No backend, all progress stays in your browser</li>
         </ul>
       </details>

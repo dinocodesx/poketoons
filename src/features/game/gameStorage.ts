@@ -12,7 +12,8 @@ export function savePersistedGameState(state: PersistedGameState): void {
     const data: PersistedGameState = {
       version: state.version,
       trainer: state.trainer,
-      ownedPokemon: state.ownedPokemon,
+      party: state.party,
+      boxes: state.boxes,
       currentSession: state.currentSession,
       activeEncounter: state.activeEncounter,
       history: state.history,
@@ -37,9 +38,16 @@ export function loadPersistedGameState(): PersistedGameState | null {
       return null;
     }
 
-    return JSON.parse(raw) as PersistedGameState;
+    const parsed = JSON.parse(raw);
+    
+    // Basic structural validation to ensure it's at least an object
+    if (!parsed || typeof parsed !== "object") {
+      return null;
+    }
+
+    return parsed as PersistedGameState;
   } catch (error) {
-    console.error("Failed to load game state:", error);
+    console.warn("Failed to load game state from storage:", error);
     return null;
   }
 }

@@ -1,4 +1,5 @@
 import { pickWeightedRandom } from "../../lib/random";
+import { normalizeGuess } from "../../lib/string";
 import type { PokemonCatalogEntry, RarityBucket } from "./pokemonTypes";
 
 /**
@@ -13,7 +14,7 @@ export function isCorrectPokemonGuess(
   guess: string,
   pokemon: PokemonCatalogEntry,
 ) {
-  return guess.trim().toLowerCase() === pokemon.name.toLowerCase();
+  return normalizeGuess(guess) === normalizeGuess(pokemon.name);
 }
 
 /**

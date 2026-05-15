@@ -43,4 +43,27 @@ export function validatePokemonData(
         .join(", ")}`,
     );
   }
+
+  // 4. Ensure minCatchLevel is non-negative and valid
+  const invalidCatchLevels = catalog.filter((p) => p.minCatchLevel < 0);
+  if (invalidCatchLevels.length > 0) {
+    throw new Error(
+      `Catalog contains invalid minCatchLevel values for: ${invalidCatchLevels
+        .map((p) => p.name)
+        .join(", ")}`,
+    );
+  }
+
+  // 5. Ensure there are always some Pokemon available at catch level 0 (common bucket)
+  const commonBucket = buckets.find((b) => b.key === "common");
+  if (commonBucket) {
+    const level0Count = commonBucket.pokemonIds.filter((id) => {
+      const p = catalog.find((entry) => entry.id === id);
+      return p && p.minCatchLevel === 0;
+    }).length;
+
+    if (level0Count === 0) {
+      throw new Error("No Pokemon available in common bucket at catch level 0.");
+    }
+  }
 }

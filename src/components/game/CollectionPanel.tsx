@@ -13,34 +13,30 @@ interface CollectionPanelProps {
 }
 
 /**
- * Displays a grid view of the trainer's Pokemon collection.
- * Shows a limited preview if many Pokemon are owned.
+ * Displays a list view of the trainer's Pokemon party.
  */
 export function CollectionPanel({
   entries,
   className = "",
 }: CollectionPanelProps) {
-  const minSlots = 6;
-  const displayEntries = [...entries];
-  const placeholderCount = Math.max(0, minSlots - entries.length);
-
   return (
-    <SectionCard title="Collection" className={className}>
+    <SectionCard title="Party" className={className}>
       <div className="collection-grid">
-        {displayEntries.map((entry) => (
-          <PokemonCollectionCard entry={entry} key={entry.instanceId} />
-        ))}
-        {Array.from({ length: placeholderCount }).map((_, index) => (
-          <div
-            key={`placeholder-${index}`}
-            className="collection-card collection-card--empty"
-          >
-            {entries.length === 0 && index === 0 && (
-              <span className="empty-slot-text">
-                caught pokemons will be shown here
-              </span>
-            )}
-          </div>
+        {entries.map((entry, index) => (
+          entry ? (
+            <PokemonCollectionCard entry={entry} key={entry.instanceId} />
+          ) : (
+            <div
+              key={`placeholder-${index}`}
+              className="collection-card collection-card--empty"
+            >
+              {index === 0 && (
+                <span className="empty-slot-text">
+                  Empty slot
+                </span>
+              )}
+            </div>
+          )
         ))}
       </div>
     </SectionCard>

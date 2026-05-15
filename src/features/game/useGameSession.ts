@@ -15,7 +15,7 @@ import {
 } from "../pokemon/pokemonSpawn";
 import { useGamePersistence } from "./useGamePersistence";
 import { useGameLoop } from "./useGameLoop";
-import type { GuessAttemptResult } from "./gameTypes";
+import type { GuessAttemptResult, StorageLocation } from "./gameTypes";
 
 /**
  * The main orchestrator hook for the Pokemon Catching Game.
@@ -143,6 +143,26 @@ export function useGameSession() {
     };
   }
 
+  /**
+   * Moves a Pokemon between slots.
+   */
+  function movePokemon(source: StorageLocation, destination: StorageLocation) {
+    dispatch({
+      type: "MOVE_POKEMON",
+      payload: { source, destination },
+    });
+  }
+
+  /**
+   * Releases a Pokemon back into the wild.
+   */
+  function releasePokemon(location: StorageLocation) {
+    dispatch({
+      type: "RELEASE_POKEMON",
+      payload: { location },
+    });
+  }
+
   return {
     state,
     starterChoices,
@@ -150,5 +170,7 @@ export function useGameSession() {
     startSession,
     endSession,
     submitGuess,
+    movePokemon,
+    releasePokemon,
   };
 }

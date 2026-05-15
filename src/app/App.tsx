@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CatchHistoryPanel } from "../components/game/CatchHistoryPanel";
 import { CollectionPanel } from "../components/game/CollectionPanel";
 import { EncounterCard } from "../components/game/EncounterCard";
@@ -6,11 +7,13 @@ import { LoadingScreen } from "../components/ui/LoadingScreen";
 import { SectionCard } from "../components/ui/SectionCard";
 import { SessionPanel } from "../components/game/SessionPanel";
 import { TrainerSetup } from "../components/game/TrainerSetup";
+import { BoxManagement } from "../components/game/BoxManagement";
 import { useGameSession } from "../features/game/useGameSession";
 import { useEncounterTimer } from "../features/game/useEncounterTimer";
 import {
-  selectCollectionEntries,
+  selectBoxEntries,
   selectCurrentEncounterPokemon,
+  selectPartyEntries,
   selectRecentHistoryEntries,
   selectSessionActive,
   selectStarterPokemon,
@@ -19,11 +22,14 @@ import {
 
 function App() {
   const game = useGameSession();
+  const [isBoxOpen, setIsBoxOpen] = useState(false);
+
   const sessionActive = selectSessionActive(game.state);
   const currentEncounterPokemon = selectCurrentEncounterPokemon(game.state);
   const starterPokemon = selectStarterPokemon(game.state);
-  const collectionEntries = selectCollectionEntries(game.state);
+  const partyEntries = selectPartyEntries(game.state);
   const recentHistory = selectRecentHistoryEntries(game.state);
+  
   const timer = useEncounterTimer({
     activeEncounter: game.state.activeEncounter,
     isSessionActive: sessionActive,
@@ -33,6 +39,7 @@ function App() {
         : null,
   });
 
+  // State loading & Onboarding
   if (game.state.isHydrating) {
     return <LoadingScreen />;
   }
@@ -89,21 +96,35 @@ function App() {
         <div className="dashboard-side">
           <SectionCard className="h-22">
             <div className="flex justify-between items-center h-full">
-              <span className="meta-label">Username</span>
+              <span className="meta-label">Trainer</span>
               <strong>{game.state.trainer.name}</strong>
             </div>
           </SectionCard>
 
           <CollectionPanel
-            entries={collectionEntries.slice(0, 6)}
+            entries={partyEntries}
             className="flex-1"
           />
 
-          <button className="primary-button" style={{ marginTop: "auto" }}>
-            Box
+          <button 
+            className="primary-button" 
+            style={{ marginTop: "auto" }}
+            onClick={() => setIsBoxOpen(true)}
+          >
+            Manage Storage
           </button>
         </div>
       </section>
+
+      {isBoxOpen && (
+        <BoxManagement
+          party={partyEntries}
+          getBoxEntries={(boxIndex) => selectBoxEntries(game.state, boxIndex)}
+          onMove={game.movePokemon}
+          onRelease={game.releasePokemon}
+          onClose={() => setIsBoxOpen(false)}
+        />
+      )}
     </main>
   );
 }

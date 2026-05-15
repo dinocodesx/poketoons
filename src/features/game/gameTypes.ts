@@ -103,8 +103,10 @@ export interface PersistedGameState {
   version: number;
   /** The trainer's profile, or null if not yet created. */
   trainer: TrainerProfile | null;
-  /** Array of all Pokemon instances owned by the trainer. */
-  ownedPokemon: OwnedPokemon[];
+  /** The trainer's current party of Pokemon. Always length PARTY_SIZE. */
+  party: (OwnedPokemon | null)[];
+  /** The trainer's storage boxes. Array of BOX_COUNT boxes, each with BOX_SLOT_COUNT slots. */
+  boxes: (OwnedPokemon | null)[][];
   /** The current or most recent session data. */
   currentSession: GameSession | null;
   /** The currently active encounter, if any. */
@@ -135,6 +137,15 @@ export interface CollectionEntry extends OwnedPokemon {
 export interface HistoryEntry extends CatchHistoryEntry {
   /** Full catalog data for the Pokemon species. */
   pokemon: PokemonCatalogEntry;
+}
+
+/**
+ * Represents a location in the storage system (Party or Box).
+ */
+export interface StorageLocation {
+  type: "party" | "box";
+  boxIndex?: number;
+  slotIndex: number;
 }
 
 /**

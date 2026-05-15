@@ -382,4 +382,95 @@
     .rule-list li {
         @apply p-3.5 rounded-none border border-panel-border bg-surface-muted;
     }
+
+    .box-management {
+        @apply fixed inset-0 bg-app-bg z-50 flex p-6 gap-6;
+    }
+
+    .box-management__content {
+        @apply flex flex-1 gap-6 min-h-0 w-full;
+    }
+
+    .party-bar {
+        @apply flex flex-col gap-4 border border-panel-border bg-surface-muted p-4 w-32 shrink-0 h-full overflow-y-auto;
+    }
+
+    .party-bar .meta-label {
+        @apply text-center block w-full;
+    }
+
+    .party-slot {
+        @apply border border-panel-border bg-panel-bg flex flex-col items-center justify-center p-2 cursor-pointer relative shrink-0;
+    }
+
+    .box-grid-container {
+        @apply flex-1 h-full border border-panel-border bg-surface-muted p-4 overflow-auto;
+    }
+
+    .box-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        @apply gap-2 h-full overflow-hidden;
+    }
+
+    .box-slot {
+        @apply border border-panel-border bg-panel-bg flex flex-col items-center justify-center p-2 cursor-pointer transition-colors relative;
+    }
+
+    .box-slot:hover {
+        @apply border-panel-border-strong bg-surface-highlight;
+    }
+
+    .box-slot--selected {
+        @apply border-white ring-2 ring-white z-10;
+    }
+
+    .box-slot--empty {
+        @apply border-dashed opacity-30;
+    }
+
+    .box-slot img {
+        @apply w-full h-full object-contain;
+    }
+
+    .box-slot__level {
+        @apply absolute top-1 right-1 text-[0.6rem] text-text-muted;
+    }
+
+    .box-sidebar {
+        @apply w-48 flex flex-col gap-4 shrink-0;
+    }
+
+    .box-nav {
+        @apply flex flex-col border border-panel-border bg-surface-muted overflow-hidden;
+    }
+
+    .box-nav__item {
+        @apply px-4 py-3 border-b border-panel-border text-left hover:bg-surface-highlight transition-colors;
+    }
+
+    .box-nav__item--active {
+        @apply bg-surface-highlight border-l-4 border-l-white;
+    }
+
+    .box-nav__item:last-child {
+        @apply border-b-0;
+    }
+
+    .party-slot--selected {
+        @apply border-white ring-2 ring-white z-10;
+    }
+
+    .party-slot img {
+        @apply w-full h-full object-contain;
+    }
+
+    .party-slot__level {
+        @apply absolute top-1 right-1 text-[0.7rem] text-text-muted;
+    }
+
+    .box-actions {
+        @apply mt-auto flex flex-col gap-2;
+    }
 }

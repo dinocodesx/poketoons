@@ -4,6 +4,7 @@ import {
 } from "./gameReducer";
 import type { PersistedGameState } from "./gameTypes";
 import { loadPersistedGameState } from "./gameStorage";
+import { GAME_STATE_VERSION } from "./gameConstants";
 
 /**
  * Hydrates the game state from storage and performs a cleanup check.
@@ -16,7 +17,7 @@ import { loadPersistedGameState } from "./gameStorage";
 export function hydrateGameState(now: number): PersistedGameState {
   const persisted = loadPersistedGameState();
 
-  if (!persisted) {
+  if (!persisted || persisted.version !== GAME_STATE_VERSION) {
     return initialPersistedGameState;
   }
 
